@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cm10nbbwlwx23"]
+
+[ext_resource type="PackedScene" uid="uid://dwpja8dndgxi0" path="res://hobbithouse.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dh43d1cwqg3h4" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="Texture2D" uid="uid://m2wwxs3pkq6g" path="res://158_green grass PBR texture_seamless.jpg" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cugldkvsjdxmt" path="res://table.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cf2km5r6talbf" path="res://shelf.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cscns1iq86e5i" path="res://chest.tscn" id="5_272bh"]
+[ext_resource type="PackedScene" uid="uid://dx2m42jeibym6" path="res://fireplace.tscn" id="6_7mycd"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_3p65x"]
+rayleigh_color = Color(0.1292, 0.32197994, 0.68, 1)
+energy_multiplier = 3.88
+
+[sub_resource type="Sky" id="Sky_fdjtx"]
+sky_material = SubResource("PhysicalSkyMaterial_3p65x")
+
+[sub_resource type="Environment" id="Environment_0ox0n"]
+background_mode = 2
+sky = SubResource("Sky_fdjtx")
+ambient_light_source = 3
+reflected_light_source = 1
+ssil_intensity = 16.0
+glow_enabled = true
+glow_strength = 0.95
+glow_bloom = 1.0
+glow_blend_mode = 0
+volumetric_fog_emission = Color(0.8862616, 0.88626146, 0.8862615, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_texture = ExtResource("2_0xm2m")
+uv1_scale = Vector3(10, 10, 10)
+uv2_scale = Vector3(1.355, 1.355, 1.355)
+
+[node name="main" type="Node3D" unique_id=20799515]
+script = ExtResource("1_lquwl")
+CAM_SWITCH_TIME = 0.5
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1535926618]
+environment = SubResource("Environment_0ox0n")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment" unique_id=391440642]
+transform = Transform3D(0.5203396, 0.25819457, -0.8139915, 0.36652243, 0.7934107, 0.48596385, 0.7713028, -0.55121225, 0.3182087, -10.664469, 3.1062121, 0)
+light_color = Color(1, 0.92156863, 0.8, 1)
+light_indirect_energy = 16.0
+shadow_enabled = true
+
+[node name="cams" type="Node3D" parent="." unique_id=1259729573]
+
+[node name="prep_table" type="Camera3D" parent="cams" unique_id=329381897]
+transform = Transform3D(-2.1289956e-08, -0.8733698, 0.48705778, -3.8176193e-08, 0.48705778, 0.8733698, -1, -7.1054274e-15, -4.3711374e-08, -1.742235, 4.469628, 0)
+current = true
+fov = 54.5
+
+[node name="shelf" type="Camera3D" parent="cams" unique_id=210918336]
+transform = Transform3D(-1, -4.9531764e-08, 1.4264059e-07, 0, 0.9446659, 0.32803404, -1.509958e-07, 0.32803404, -0.9446659, 3.391763, 3.65271, 3.5994873)
+
+[node name="fire" type="Camera3D" parent="cams" unique_id=1271590873]
+transform = Transform3D(1.192488e-08, 0.64144963, -0.7671651, 0, 0.7671651, 0.64144963, 0.99999994, -7.64921e-09, 9.148352e-09, 8.634125, 2.5744019, -0.16608715)
+fov = 45.0
+
+[node name="chest" type="Camera3D" parent="cams" unique_id=699639304]
+transform = Transform3D(1, -7.127174e-07, 1.0312357e-06, 0, 0.82264555, 0.5685546, -1.2535602e-06, -0.5685546, 0.82264555, 4.2072196, 3.895298, -1.3699303)
+fov = 45.0
+
+[node name="trans" type="Camera3D" parent="cams" unique_id=82423611]
+
+[node name="touch_grass" type="CSGBox3D" parent="." unique_id=388024183]
+transform = Transform3D(0.9999887, 0.0047551654, 0, -0.0047551654, 0.9999887, 0, 0, 0, 1, 2.3073425, -1.1481757, -3.2976913)
+size = Vector3(94.50311, 0.25927734, 79.16356)
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="hobbithouse" parent="." unique_id=824726559 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8168335, 0, -4.3711498e-05)
+
+[node name="table" parent="." unique_id=1285984100 instance=ExtResource("3_h2yge")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -3.592, -0.672, 0)
+
+[node name="chest" parent="." unique_id=2013447582 instance=ExtResource("5_272bh")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.3723574, -0.93578506, -7.3014665)
+
+[node name="shelf" parent="." unique_id=1590615951 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(-1.1, 0, 1.6609539e-07, 0, 1.1, 0, -1.6609539e-07, 0, -1.1, 3.6200047, 1.9057863, 7.4205685)
+
+[node name="fireplace" parent="." unique_id=2096928325 instance=ExtResource("6_7mycd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.205579, -0.31651175, -0.11219901)
