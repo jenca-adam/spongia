@@ -6,9 +6,11 @@ var CAM_SWITCH_TIME = 1.0;
 @export
 var CAM_SWITCH_EASE = Tween.EASE_OUT
 var switching = 0
+@export var START_CAM:Camera3D
 func _zizi(new_cam:Camera3D):
 	switching = 0
 	new_cam.make_current()
+	
 func switch_cam(prev_node:Camera3D, cam_node:Camera3D, rot_offset=Vector3.ZERO):
 	switching = 1
 	
@@ -47,3 +49,6 @@ func _input(event: InputEvent):
 		cam_node.rotation.y+=2*PI*off
 		switch_cam(cur_cam_node, cam_node)
 		cur_cam = next_cam
+func _ready():
+	switch_cam(START_CAM, START_CAM)
+	cur_cam = cams.find(START_CAM.name)

@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dwpja8dndgxi0"]
 
 [ext_resource type="Texture2D" uid="uid://bc45neb12x4nu" path="res://hobbithouse_94_cracked paint wood PBR texture-seamless.jpg" id="1_p3y7k"]
+[ext_resource type="AudioStream" uid="uid://clmda31trut5w" path="res://sound/birds.wav" id="2_6odjr"]
 [ext_resource type="Texture2D" uid="uid://1ur75mp8ydvr" path="res://hobbithouse_46_worn plaster pbr texture-seamless.jpg" id="2_7tn2d"]
 [ext_resource type="Texture2D" uid="uid://ctqpuemor336x" path="res://wall-normal.png" id="3_7tn2d"]
 
@@ -91,6 +92,13 @@ shadow_mesh = SubResource("ArrayMesh_nter0")
 [node name="Cylinder" type="MeshInstance3D" parent="." unique_id=1428786760]
 transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 0.45284653, 0, 0)
 mesh = SubResource("ArrayMesh_ob1w3")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Cylinder" unique_id=238147913]
+transform = Transform3D(0.95238096, 0, 0, 0, 0.9146767, 0.26532257, 0, -0.26532257, 0.9146767, -10.52669, 2.3029823, -1.7029899e-07)
+stream = ExtResource("2_6odjr")
+volume_db = -5.0
+autoplay = true
+max_distance = 15.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Cylinder" unique_id=152107169]
 transform = Transform3D(0.9523809, 0, 0, 0, 0.9146766, 0.26532254, 0, -0.26532254, 0.9146766, 0, 4.658785, 0)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://w80lt8fmqexc"
+path="res://.godot/imported/LSC3107 Ormandy Mahler 1 (ii).mp3-35337164d389483f839aa303500ad18e.mp3str"
+
+[deps]
+
+source_file="res://sound/LSC3107 Ormandy Mahler 1 (ii).mp3"
+dest_files=["res://.godot/imported/LSC3107 Ormandy Mahler 1 (ii).mp3-35337164d389483f839aa303500ad18e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

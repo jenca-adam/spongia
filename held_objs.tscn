@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b47lcdxl176ux"]
+
+[ext_resource type="Script" uid="uid://bpuhk0kh6cynq" path="res://held_objs.gd" id="1_74xjd"]
+
+[node name="held_objs" type="Node3D" unique_id=1656386798]
+script = ExtResource("1_74xjd")
+GRAB_ANIM_EASING = 1
+
+[node name="slot1" type="Node3D" parent="." unique_id=1608311870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, 0)
+
+[node name="slot2" type="Node3D" parent="." unique_id=1436567258]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, 0)

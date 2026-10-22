@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c3rf4l1pevrvv"
+path="res://.godot/imported/DOORCreak_Creaking door 2 (ID 3205)_BigSoundBank.com.wav-4b32366875655e291b379961769d8c6d.sample"
+
+[deps]
+
+source_file="res://DOORCreak_Creaking door 2 (ID 3205)_BigSoundBank.com.wav"
+dest_files=["res://.godot/imported/DOORCreak_Creaking door 2 (ID 3205)_BigSoundBank.com.wav-4b32366875655e291b379961769d8c6d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
