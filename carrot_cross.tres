@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b6k8kxtiags05"]
+
+[ext_resource type="Texture2D" uid="uid://br3vhdithlkg4" path="res://carrot_cross.jpg" id="1_hpqf4"]
+
+[resource]
+albedo_texture = ExtResource("1_hpqf4")

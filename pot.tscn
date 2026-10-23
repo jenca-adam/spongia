@@ -140,9 +140,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.38)
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_rit2d")
 
-[connection signal="grab" from="." to="." method="_on_grab"]
 [connection signal="grab" from="." to="offset/occluder" method="_on_pot_grab"]
 [connection signal="ungrab" from="." to="offset/occluder" method="_on_pot_ungrab"]
-[connection signal="input_event" from="offset/hover" to="." method="_on_hover_input_event"]
-[connection signal="mouse_entered" from="offset/hover" to="." method="_on_hover_mouse_entered"]
-[connection signal="mouse_exited" from="offset/hover" to="." method="_on_hover_mouse_exited"]

@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dhtoyxgk7k1jq"]
+
+[ext_resource type="Shader" uid="uid://b3n6reqqxurib" path="res://cuttable_x.gdshader" id="1_mwmvy"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_mwmvy")
+shader_parameter/model_xmin = -0.1
+shader_parameter/model_xmax = 0.1
+shader_parameter/width = 0.01
+shader_parameter/x_target = 0.0

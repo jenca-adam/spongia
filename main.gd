@@ -7,6 +7,7 @@ var CAM_SWITCH_TIME = 1.0;
 var CAM_SWITCH_EASE = Tween.EASE_OUT
 var switching = 0
 @export var START_CAM:Camera3D
+@onready var held_objs = $cams/trans/held_objs
 func _zizi(new_cam:Camera3D):
 	switching = 0
 	new_cam.make_current()
@@ -30,10 +31,10 @@ func switch_cam(prev_node:Camera3D, cam_node:Camera3D, rot_offset=Vector3.ZERO):
 func _input(event: InputEvent):
 	var next_cam = cur_cam
 	var off=0
-	if (event.is_action_released("next_cam") and not switching):
+	if (event.is_action_released("next_cam") and not switching and held_objs.used_item==null and held_objs.active_item==null):
 		next_cam = (cur_cam+1)%len(cams)
 		
-	elif event.is_action_released("prev_cam") and not switching:
+	elif event.is_action_released("prev_cam") and not switching and held_objs.used_item==null and held_objs.active_item==null:
 		next_cam = (cur_cam-1)%len(cams)
 	if (next_cam!=cur_cam):
 		
@@ -49,6 +50,8 @@ func _input(event: InputEvent):
 		cam_node.rotation.y+=2*PI*off
 		switch_cam(cur_cam_node, cam_node)
 		cur_cam = next_cam
+	if event.is_action_released("DEBUG"):
+		print(held_objs.active_item)
 func _ready():
 	switch_cam(START_CAM, START_CAM)
 	cur_cam = cams.find(START_CAM.name)
