@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dcl1mrfsx6i4h"]
+
+[ext_resource type="Script" uid="uid://ktv0e4k2ypgs" path="res://category_panel.gd" id="1_2ftsh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3p65x"]
+bg_color = Color(0, 0, 0, 0.5019608)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="category_panel" type="PanelContainer" unique_id=1269296345]
+theme_override_styles/panel = SubResource("StyleBoxFlat_3p65x")
+script = ExtResource("1_2ftsh")
+
+[node name="margin" type="MarginContainer" parent="." unique_id=1179473154]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="category_label" type="Label" parent="margin" unique_id=1083209457]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "VEGETABLES"
+uppercase = true
+
+[connection signal="gui_input" from="margin" to="." method="_on_margin_gui_input"]

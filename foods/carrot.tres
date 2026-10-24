@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Food" format=3 uid="uid://bwnde8mulyrsj"]
+
+[ext_resource type="PackedScene" uid="uid://b8rmrnto84kws" path="res://carrot.tscn" id="1_6en85"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_kykui"]
+[ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="3_im3lu"]
+
+[sub_resource type="Texture2D" id="Texture2D_vivmo"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("3_im3lu")
+size = Vector2i(256, 256)
+scene = ExtResource("1_6en85")
+camera_fov = 76.0
+camera_distance = 0.4
+camera_position = Vector3(0, 0, 0)
+camera_rotation = Vector3(0, 1.5707964, 1.5707964)
+metadata/_custom_type_script = "uid://bt12obb4t0tm4"
+
+[resource]
+script = ExtResource("2_kykui")
+name = "Carrot"
+desc = "A long, orange, sweet vegetable"
+category = "vegetables"
+scene = ExtResource("1_6en85")
+thumbnail = SubResource("Texture2D_vivmo")

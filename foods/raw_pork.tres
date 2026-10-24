@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Food" format=3 uid="uid://clxbvh7gbogju"]
+
+[ext_resource type="PackedScene" uid="uid://dcjrn2ya30cls" path="res://raw_pork.tscn" id="1_ort3e"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_bjmlw"]
+[ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="3_0jlna"]
+
+[sub_resource type="Texture2D" id="Texture2D_vivmo"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("3_0jlna")
+size = Vector2i(256, 256)
+scene = ExtResource("1_ort3e")
+camera_fov = 76.0
+camera_distance = 0.6
+camera_position = Vector3(0, 0, 0)
+camera_rotation = Vector3(0, 0, 0)
+metadata/_custom_type_script = "uid://bt12obb4t0tm4"
+
+[resource]
+script = ExtResource("2_bjmlw")
+name = "Raw Pork"
+desc = "John"
+category = "meat"
+scene = ExtResource("1_ort3e")
+thumbnail = SubResource("Texture2D_vivmo")

@@ -29,11 +29,13 @@ func switch_cam(prev_node:Camera3D, cam_node:Camera3D, rot_offset=Vector3.ZERO):
 	await timer.timeout;
 	_zizi(cam_node)
 func _input(event: InputEvent):
+	if $ui_chest.visible:
+		return
 	var next_cam = cur_cam
 	var off=0
 	if (event.is_action_released("next_cam") and not switching and held_objs.used_item==null and held_objs.active_item==null):
 		next_cam = (cur_cam+1)%len(cams)
-		
+	
 	elif event.is_action_released("prev_cam") and not switching and held_objs.used_item==null and held_objs.active_item==null:
 		next_cam = (cur_cam-1)%len(cams)
 	if (next_cam!=cur_cam):

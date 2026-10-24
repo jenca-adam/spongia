@@ -24,6 +24,7 @@ func grab_item(item:Obj):
 		free_slots&=~2
 	item.reparent(target)
 	var pos_tween = get_tree().create_tween()
+	pos_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	pos_tween.tween_property(item, "position", Vector3.ZERO, GRAB_ANIM_TIME).set_ease(GRAB_ANIM_EASING)
 func drop_item(item:Obj):
 	if (item.get_parent() == slot1):
@@ -32,6 +33,7 @@ func drop_item(item:Obj):
 		free_slots|=2
 	item.reparent(item.original_parent)
 	item.ungrab.emit()
+
 func _input(event):
 	if (event.is_action_released("hide_grabbed_items")):
 		items_visible=not items_visible
@@ -41,14 +43,28 @@ func _input(event):
 		else:
 			target_position = neutral_position-Vector3(0,2,0);
 		var tween = get_tree().create_tween()
+		tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 		tween.tween_property(self, "position", target_position,0.2)
-func racist(mask=0b10):
+func racist(mask=0b10, exclude=[]):
 	var space_state = get_world_3d().direct_space_state
 	var mouse_pos = get_viewport().get_mouse_position()
 	var camera = get_viewport().get_camera_3d()
 	var src = camera.project_ray_origin(mouse_pos)
 	var dest = src+camera.project_ray_normal(mouse_pos)*1000.0
 	var query = PhysicsRayQueryParameters3D.create(src, dest, mask)
+	query.exclude=exclude
+	query.collide_with_areas=true
 	var result = space_state.intersect_ray(query)
+	
 	if result:
 		return result
+func megaracist(mask = 0b10, max_count=1000):
+	var results = []
+	var exclude = []
+	for i in range(max_count):
+		var result = racist(mask, exclude)
+		if not result:
+			break
+		results.append(result)
+		exclude.append(result["rid"])
+	return results

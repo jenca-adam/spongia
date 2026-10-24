@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://coc4pahhrqbqr"]
+
+[ext_resource type="Shader" uid="uid://bcbspyf7r5yo5" path="res://cuttable_y.gdshader" id="1_toxfo"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_toxfo")
+shader_parameter/model_ymin = -0.1
+shader_parameter/model_ymax = 0.1
+shader_parameter/width = 1.0
+shader_parameter/y_target = -0.33

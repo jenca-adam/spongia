@@ -5,7 +5,6 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_mwmvy")
-shader_parameter/model_xmin = -0.1
-shader_parameter/model_xmax = 0.1
-shader_parameter/width = 0.01
-shader_parameter/x_target = 0.0
+shader_parameter/cut_normal = Vector3(0, 0, 1)
+shader_parameter/cut_dist = 0.03
+shader_parameter/width = 0.0

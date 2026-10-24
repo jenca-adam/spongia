@@ -148,6 +148,13 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, -0.2, 0.025), Vector3(0, 0, 0.025)]
 }
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.1, 1, 0, -0.2, 0.025, 0.3, 1, 0, 0, 0.025)
 
 [sub_resource type="Animation" id="Animation_6jeej"]
 resource_name = "pick_up"
@@ -159,6 +166,18 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0.0009999999, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 1.5707964)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 1.5707964)]
@@ -178,6 +197,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 1.5707964), Vector3(0, 0, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.20000002),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 1.5707964), Vector3(0, 0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m161u"]
 _data = {
@@ -192,7 +223,7 @@ random_pitch = 1.3348398
 streams_count = 1
 stream_0/stream = ExtResource("6_d7nea")
 
-[node name="knife" type="Node3D" unique_id=32254624]
+[node name="knife" type="RigidBody3D" unique_id=568865001]
 script = ExtResource("1_pfkap")
 
 [node name="offset" type="Node3D" parent="." unique_id=657483695]
@@ -212,6 +243,9 @@ libraries/ = SubResource("AnimationLibrary_m161u")
 
 [node name="audio" type="AudioStreamPlayer3D" parent="." unique_id=1507126561]
 stream = SubResource("AudioStreamRandomizer_0ox0n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=950480699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.025)
 
 [connection signal="unuse" from="." to="." method="_on_unuse"]
 [connection signal="use" from="." to="." method="_on_use"]

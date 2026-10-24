@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode depth_test_disabled;
+render_mode unshaded;
 uniform float model_zmin = -0.1;
 uniform float model_zmax = 0.1;
 uniform float width;

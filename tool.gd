@@ -7,6 +7,8 @@ var using:=false
 
 func _ready():
 	super._ready()
+	rotatable=false
+	collision_layer=0
 	grab.connect(_play_anim_grab)
 	ungrab.connect(_play_anim_ungrab)
 func _play_anim_grab():

@@ -111,9 +111,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_uohrq")
 
-[node name="pot" type="Node3D" unique_id=1053787929]
+[node name="pot" type="RigidBody3D" unique_id=2048917052]
 script = ExtResource("1_mpq5e")
 hangs = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1807326457]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.377, -0.20783263, 6.019058e-08)
 
 [node name="offset" type="Node3D" parent="." unique_id=1191555699]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -0.20783263, 0)

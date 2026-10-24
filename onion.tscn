@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://c43nw1r7kuyh7" path="res://onion_Image_0.png" id="1_ctl4l"]
 [ext_resource type="Texture2D" uid="uid://didtqq1mnig74" path="res://onion_Image_0_2.png" id="2_54n37"]
 [ext_resource type="Texture2D" uid="uid://de61gkbtw86jt" path="res://onion_cross.jpg" id="2_exj4b"]
-[ext_resource type="Material" uid="uid://bp410dtomww5x" path="res://cuttable_z.tres" id="2_wpmb3"]
 [ext_resource type="Texture2D" uid="uid://btx2n8u5h46mg" path="res://onion_Image_1.png" id="3_wpmb3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpmb3"]
 albedo_texture = ExtResource("2_exj4b")
+uv1_scale = Vector3(3.775, 3.775, 3.775)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16vef"]
 resource_name = "Onion_Material"
@@ -57,16 +57,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_po6p7")
 
-[node name="onion" type="Node3D" unique_id=1237785485]
+[node name="onion" type="RigidBody3D" unique_id=1698887018]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_54n37")
-cut_highlight_width = 1.0
 cut_material_z = SubResource("StandardMaterial3D_wpmb3")
 cut_material_x = SubResource("StandardMaterial3D_wpmb3")
+cut_material_y = SubResource("StandardMaterial3D_wpmb3")
 
 [node name="offset" type="Node3D" parent="." unique_id=1062788230]
 
 [node name="model" type="MeshInstance3D" parent="offset" unique_id=470662391]
-material_overlay = ExtResource("2_wpmb3")
 mesh = SubResource("ArrayMesh_couco")
 
 [node name="cut_x" type="StaticBody3D" parent="offset" unique_id=1410901316]
@@ -82,7 +84,19 @@ collision_mask = 0
 input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="offset/cut_z" unique_id=431119055]
+debug_color = Color(0.97612745, 0, 0.41778758, 0.41960785)
+debug_fill = false
+
+[node name="cut_y" type="StaticBody3D" parent="offset" unique_id=271568460]
+collision_layer = 64
+collision_mask = 0
+input_ray_pickable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="offset/cut_y" unique_id=685458330]
+debug_color = Color(3.4172833e-06, 0.6493722, 0.050946347, 0.41960785)
 
 [node name="hover" type="StaticBody3D" parent="offset" unique_id=128549525]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="offset/hover" unique_id=1529133468]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1789040754]

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Food" format=3 uid="uid://dqrkp1clbogw0"]
+
+[ext_resource type="PackedScene" uid="uid://cbsxs70fqu2ra" path="res://potato.tscn" id="1_qswa1"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_r3oeu"]
+[ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="3_mxuls"]
+
+[sub_resource type="Texture2D" id="Texture2D_vivmo"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("3_mxuls")
+size = Vector2i(256, 256)
+scene = ExtResource("1_qswa1")
+camera_fov = 76.0
+camera_distance = 0.3
+camera_position = Vector3(0, 0, 0)
+camera_rotation = Vector3(0, 0, 0)
+metadata/_custom_type_script = "uid://bt12obb4t0tm4"
+
+[resource]
+script = ExtResource("2_r3oeu")
+name = "Potato"
+desc = "Boil 'em, mash 'em, stick 'em in a stew"
+category = "vegetables"
+scene = ExtResource("1_qswa1")
+thumbnail = SubResource("Texture2D_vivmo")
