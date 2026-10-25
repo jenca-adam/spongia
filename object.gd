@@ -5,12 +5,15 @@ signal ungrab
 var grabbed = false
 var active = false
 var original_parent;
-var grab_timeout:Timer
+var old_cl;
+var old_cm;
+var rot_lock=false;
 var can_drop=false;
 var drop_disabled = false;
 var hovered=false
 var in_container=false;
 var global_exclude=[]
+var enable_freeze_on_sleep=true
 signal unfrozen
 signal frozen
 @export var hangs = false
@@ -27,9 +30,12 @@ signal frozen
 @export var containable = false
 var aabb
 var rotating=false
+var tipped_on=-10000
 var query_shape := BoxShape3D.new()
 var rotating_origin:Vector2
 var rotating_base:Vector3
+var grab_timeout:Timer
+var container:ObjContainer
 signal release(what:Obj)
 signal cancel(what:Obj)
 func unfreeze():
@@ -47,6 +53,7 @@ func freeze_():
 	neutral_rotation=global_rotation
 
 func _ready():
+	
 	collision_layer=0
 	collision_mask = 0
 	collision_layer |= 1<<11
@@ -54,11 +61,10 @@ func _ready():
 		collision_layer |= 1<<10
 		collision_mask |= 1<<10
 		collision_mask |= 1<<12
+		collision_layer |= 1<<13
 	input_ray_pickable=false
 	#$thumb/thumbcam.hide()
-	grab_timeout=Timer.new()
-	add_child(grab_timeout)
-	grab_timeout.wait_time=0.1
+	
 	original_parent=get_parent()
 	query_shape.size =model.get_aabb().size
 	model.material_overlay = droppable_mat.duplicate_deep()
@@ -78,6 +84,8 @@ func _ready():
 	sleeping_state_changed.connect(_on_sleeping_state_changed)
 	max_contacts_reported=10
 	contact_monitor=true
+	if containable== null:
+		containable=false
 	freeze_()
 func neutralize_rotation():
 	pass
@@ -105,21 +113,23 @@ func _on_grab() -> void:
 	model.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 func would_collide() -> bool:
 	var query := PhysicsShapeQueryParameters3D.new()
-	query.shape = query_shape
-	# center the box on the AABB, not on the node origin
-	var xform: Transform3D = model.global_transform
-	xform.origin = model.global_transform * model.get_aabb().get_center()
-	query.transform = xform
+	query.shape =collision_shape.shape
+
+	query.transform = model.global_transform
 	query.collision_mask = 1
 	query.exclude = [shape.get_parent().get_rid(), get_rid()]+global_exclude
 	var space := get_world_3d().direct_space_state
-	
-	return space.intersect_shape(query, 1).size() > 0
+	var result=space.intersect_shape(query, 1)
+	if result:
+		print(result[0].collider.get_parent().get_parent())
+	return result.size()>0
 func _physics_process(delta):
+	if grab_timeout == null:
+		grab_timeout = $/root/main.held_objs.grab_timeout
 	if rotating:
 		var mouse_position = get_viewport().get_mouse_position()
 		global_rotation.y=rotating_base.y+rotating_origin.angle_to_point(mouse_position)
-	if freeze:
+	if freeze and not rot_lock:
 		global_rotation=Vector3(neutral_rotation.x, global_rotation.y, neutral_rotation.z)
 	if active:
 		var result = $/root/main.held_objs.racist(0b10|(0b100 if hangs else 0)|(1<<9 if containable else 0))
@@ -151,6 +161,8 @@ func _on_hover_input_event(camera: Node, event: InputEvent, event_position: Vect
 		elif not active and grabbed and $/root/main.held_objs.active_item==null and (grab_timeout.is_stopped() or grab_timeout.time_left<0.1):
 			$/root/main.held_objs.active_item=self
 			active=true
+			set_collision_layer_value(11, false)
+			set_collision_mask_value(11, false)
 			print("activating", self)
 func _input(event):
 	if event.is_action_released("rotation_begin") and hovered and rotatable and not rotating:
@@ -166,6 +178,8 @@ func _input(event):
 		return
 	if event.is_action_released("drop_obj") and active and can_drop:
 		print("deactivating (dropping)", self)
+		set_collision_layer_value(11, containable)
+		set_collision_mask_value(11, containable)
 		active=false
 		grabbed=false
 		$/root/main.held_objs.active_item=null
@@ -189,5 +203,5 @@ func _on_ungrab() -> void:
 
 
 func _on_sleeping_state_changed() -> void:
-	if (sleeping and not freeze):
+	if (sleeping and not freeze and enable_freeze_on_sleep):
 		freeze_()

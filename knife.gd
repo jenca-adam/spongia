@@ -3,14 +3,13 @@ extends Tool
 var cutting: Array[Cuttable] = []
 var cut_axis = 0
 
-# Returns an array of [Cuttable, Vector3 position], one entry per unique Cuttable
 func get_cutting() -> Array:
 	var results = $/root/main.held_objs.megaracist(0b10000 << cut_axis)
 	var hits: Array = []
 	for result in results:
 		var cuttable = result["collider"].get_parent().get_parent() as Cuttable
 		
-		if cuttable == null or not cuttable.freeze:
+		if cuttable == null :#or not cuttable.freeze:
 			continue
 		
 		hits.append([cuttable, result["position"]])
@@ -28,7 +27,7 @@ func _get_axis_offset_basis() -> Basis:
 		_: return Basis.from_euler(Vector3(0, 0, -PI/2))
 func _on_use() -> void:
 	var hits = get_cutting()
-	var aabb2 = model.get_aabb() * model.transform # do not precalculate to account for anim
+	var aabb2 = model.get_aabb()*model.transform#do not precalculate to account for anim
 
 	if hits.size() > 0:
 		var new_cutting: Array[Cuttable] = []

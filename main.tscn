@@ -11,7 +11,9 @@
 [ext_resource type="AudioStream" uid="uid://w80lt8fmqexc" path="res://sound/LSC3107 Ormandy Mahler 1 (ii).mp3" id="8_kek77"]
 [ext_resource type="PackedScene" uid="uid://ca2qd327o4unc" path="res://bowl.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://bgw2bg1o55wcm" path="res://pot.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://iii5g0bsx0qy" path="res://board.tscn" id="13_w48qg"]
 [ext_resource type="PackedScene" uid="uid://0sgn0wdcmned" path="res://knife.tscn" id="13_ycdy4"]
+[ext_resource type="PhysicsMaterial" uid="uid://bvu6hxbdmykpn" path="res://rough_ph.tres" id="15_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://o20xbya0jn82" path="res://ui_chest.tscn" id="15_vivmo"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_3p65x"]
@@ -37,6 +39,9 @@ volumetric_fog_emission = Color(0.8862616, 0.88626146, 0.8862615, 1)
 albedo_texture = ExtResource("2_0xm2m")
 uv1_scale = Vector3(10, 10, 10)
 uv2_scale = Vector3(1.355, 1.355, 1.355)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_fdjtx"]
+plane = Plane(0, 1, 0, 1.96)
 
 [node name="main" type="Node3D" unique_id=20799515 node_paths=PackedStringArray("START_CAM")]
 script = ExtResource("1_lquwl")
@@ -106,10 +111,22 @@ parameters/looping = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5114355, 2.2850661, 6.990576)
 
 [node name="pot" parent="." unique_id=879433023 instance=ExtResource("11_efxa6")]
-transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0.74705267, -0.6069893, 7.7065916)
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 3.1728363, 3.3352242, 7.7065916)
 
 [node name="knife" parent="." unique_id=32254624 instance=ExtResource("13_ycdy4")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.948669, 1.0124959, 1.7246819)
-hangs = false
+
+[node name="board" parent="." unique_id=1614343060 instance=ExtResource("13_w48qg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.8039126, 0.9790112, -0.8191948)
 
 [node name="ui_chest" parent="." unique_id=1664958176 instance=ExtResource("15_vivmo")]
+
+[node name="ground" type="StaticBody3D" parent="." unique_id=649103032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2945147, -3.3074496, -4.680645)
+collision_layer = 6144
+collision_mask = 2048
+physics_material_override = ExtResource("15_2cqfq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground" unique_id=565248134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50487256, 0)
+shape = SubResource("WorldBoundaryShape3D_fdjtx")

@@ -3,12 +3,17 @@ var free_slots = 0b11
 var items_visible=true
 var active_item = null
 var used_item = null
+var grab_timeout:Timer
 @onready var slot1 = get_node("slot1")
 @onready var slot2 = get_node("slot2")
 
 @export var GRAB_ANIM_TIME = 0.2
 @export var GRAB_ANIM_EASING:Tween.EaseType
 @onready var neutral_position = position
+func _ready():
+	grab_timeout=Timer.new()
+	add_child(grab_timeout)
+	grab_timeout.wait_time=0.1
 func grab_item(item:Obj):
 	if (free_slots)==0 or active_item!=null:
 		return
@@ -50,7 +55,7 @@ func racist(mask=0b10, exclude=[]):
 	var mouse_pos = get_viewport().get_mouse_position()
 	var camera = get_viewport().get_camera_3d()
 	var src = camera.project_ray_origin(mouse_pos)
-	var dest = src+camera.project_ray_normal(mouse_pos)*1000.0
+	var dest = src+camera.project_ray_normal(mouse_pos)*10000.0
 	var query = PhysicsRayQueryParameters3D.create(src, dest, mask)
 	query.exclude=exclude
 	query.collide_with_areas=true

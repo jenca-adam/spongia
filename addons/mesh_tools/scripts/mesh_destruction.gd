@@ -19,7 +19,8 @@ static func slice_mesh(
 	var y_axis: Vector3 = normal.cross(x_axis).normalized()
 	var basis: Basis = Basis(x_axis, y_axis, normal)
 	var slice_transform: Transform3D = Transform3D(basis, origin)
-
+	if not slice_transform.is_finite():
+		breakpoint
 	return _slice_with_csg(slice_transform, target_mesh, cut_material)
 
 

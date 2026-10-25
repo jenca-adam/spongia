@@ -67,7 +67,7 @@ cut_material_y = SubResource("StandardMaterial3D_44wkx")
 [node name="offset" type="Node3D" parent="." unique_id=1984090280]
 
 [node name="model" type="MeshInstance3D" parent="offset" unique_id=621048297]
-transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, -0.027208794, 0.017162913, 0.025343483)
+transform = Transform3D(0.3, 0, 0, 0, -1.3113417e-08, 0.3, 0, -0.3, -1.3113417e-08, -0.027208794, 0.017162913, 0.025343483)
 mesh = SubResource("ArrayMesh_xgx6b")
 
 [node name="cut_x" type="StaticBody3D" parent="offset" unique_id=1336054237]

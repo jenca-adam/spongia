@@ -48,7 +48,9 @@ func _ready():
 	model.material_overlay = droppable_mat.duplicate_deep()
 	frozen.connect(_on_frozen)
 	unfrozen.connect(_on_unfrozen)
-
+func _physics_process(delta):
+	super._physics_process(delta)
+	_update_cut_colliders() ### WORKAROUND: _notification doesn't seem to be called if the body's not asleep
 func _notification(what):
 	if what == NOTIFICATION_TRANSFORM_CHANGED:
 		_update_cut_colliders()
