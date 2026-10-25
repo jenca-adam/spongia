@@ -1,5 +1,6 @@
 extends Node3D
 const cams = ["prep_table","chest", "fire", "shelf"];
+
 var cur_cam = 0;
 @export
 var CAM_SWITCH_TIME = 1.0;
@@ -8,6 +9,7 @@ var CAM_SWITCH_EASE = Tween.EASE_OUT
 var switching = 0
 @export var START_CAM:Camera3D
 @onready var held_objs = $cams/trans/held_objs
+@onready var admin_cam= $cams/admin_table
 func _zizi(new_cam:Camera3D):
 	switching = 0
 	new_cam.make_current()
@@ -29,14 +31,30 @@ func switch_cam(prev_node:Camera3D, cam_node:Camera3D, rot_offset=Vector3.ZERO):
 	await timer.timeout;
 	_zizi(cam_node)
 func _input(event: InputEvent):
-	if $ui_chest.visible:
+	if $ui_chest.visible or switching  or held_objs.used_item!=null or held_objs.active_item!=null:
 		return
 	var next_cam = cur_cam
 	var off=0
-	if (event.is_action_released("next_cam") and not switching and held_objs.used_item==null and held_objs.active_item==null):
+	
+	if event.is_action_pressed("admin_cam_enable") and not admin_cam.current:
+		var cur_cam_node: Camera3D = get_node("cams/%s"%cams[cur_cam]);
+		if abs(admin_cam.rotation.y - cur_cam_node.rotation.y)>PI:
+			if (admin_cam.rotation.y-cur_cam_node.rotation.y<0):
+				off=1
+			else:
+				off=-1
+		admin_cam.rotation.y+=2*PI*off
+		switch_cam(cur_cam_node, admin_cam)
+		return
+	if event.is_action_pressed("admin_cam_disable") and admin_cam.current:
+		var new_cam_node:  Camera3D = get_node("cams/%s"%cams[cur_cam])
+		switch_cam(admin_cam,new_cam_node)
+	if admin_cam.current:
+		return
+	if (event.is_action_pressed("next_cam") and not switching and held_objs.used_item==null and held_objs.active_item==null):
 		next_cam = (cur_cam+1)%len(cams)
 	
-	elif event.is_action_released("prev_cam") and not switching and held_objs.used_item==null and held_objs.active_item==null:
+	elif event.is_action_pressed("prev_cam") and not switching and held_objs.used_item==null and held_objs.active_item==null:
 		next_cam = (cur_cam-1)%len(cams)
 	if (next_cam!=cur_cam):
 		

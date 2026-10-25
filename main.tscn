@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://0sgn0wdcmned" path="res://knife.tscn" id="13_ycdy4"]
 [ext_resource type="PhysicsMaterial" uid="uid://bvu6hxbdmykpn" path="res://rough_ph.tres" id="15_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://o20xbya0jn82" path="res://ui_chest.tscn" id="15_vivmo"]
+[ext_resource type="PackedScene" uid="uid://bygx1ju56xt02" path="res://admin_table.tscn" id="16_2cqfq"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_3p65x"]
 rayleigh_color = Color(0.1292, 0.32197994, 0.68, 1)
@@ -63,6 +64,10 @@ shadow_enabled = true
 transform = Transform3D(-2.1289956e-08, -0.8733698, 0.48705778, -3.8176193e-08, 0.48705778, 0.8733698, -1, -7.1054274e-15, -4.3711374e-08, -1.742235, 4.469628, 0)
 current = true
 fov = 54.5
+
+[node name="admin_table" type="Camera3D" parent="cams" unique_id=1559819762]
+transform = Transform3D(-1, 8.742278e-08, -4.371139e-08, -4.371139e-08, 1.9106855e-15, 1, 8.742278e-08, 1, 1.9106855e-15, 4.668347, 3.661569, 0)
+current = true
 
 [node name="shelf" type="Camera3D" parent="cams" unique_id=210918336]
 transform = Transform3D(-1, -4.9531764e-08, 1.4264059e-07, 0, 0.9446659, 0.32803404, -1.509958e-07, 0.32803404, -0.9446659, 3.391763, 3.65271, 3.5994873)
@@ -130,3 +135,6 @@ physics_material_override = ExtResource("15_2cqfq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground" unique_id=565248134]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50487256, 0)
 shape = SubResource("WorldBoundaryShape3D_fdjtx")
+
+[node name="admin" parent="." unique_id=1095139935 instance=ExtResource("16_2cqfq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.668347, -0.706, 0)
