@@ -1,0 +1,86 @@
+Názov tímu: Giggler
+Názov hry: ????
+Vývojové prostredie a prostriedky: Godot
+
+Textúry:
+    Rezová textúra cibule:
+        https://commons.wikimedia.org/wiki/File:White_onion_cross_section.jpg
+        orezané.
+        Creative Commons BY-SA
+    Rezová textúra mrkvy:
+        https://commons.wikimedia.org/wiki/File:Carrot_cross_section_02.jpg
+        orezané
+        Creative Commons BY-SA
+    Rezová textúra  zemiaku:
+        https://en.wikipedia.org/wiki/File:Potato_and_cross_section.jpg
+        Creative Commons BY-ND
+        Attribution must be provided in a prominent location to "Fir0002/Flagstaffotos".
+    Tmavé drevo:
+        https://www.sketchuptextureclub.com/textures/architecture/wood/cracking-paint/cracked-paint-wood-pbr-texture-seamless-21862
+         https://www.sketchuptextureclub.com/terms-of-use
+    Stena:
+        https://www.sketchuptextureclub.com/textures/architecture/plaster/old-plaster/worn-plaster-pbr-texture-seamless-22371
+        -||-
+    Tmavý Kov:
+        https://www.sketchuptextureclub.com/textures/materials/metals/basic-metals/wrought-iron-metal-texture-seamless-09793
+        -||-
+    Svetlý kov:
+        https://www.sketchuptextureclub.com/textures/materials/metals/basic-metals/polished-stainless-steel-metal-texture-seamless-09731
+        -||-
+    Tráva
+        https://www.sketchuptextureclub.com/textures/nature-elements/vegetation/green-grass/green-grass-pbr-texture-seamless-22094
+        -||-
+    Tehly
+        https://www.sketchuptextureclub.com/textures/architecture/bricks/old-bricks/old-wall-brick-texture-seamless-20529
+        -||-
+    Rúčka noža
+        https://www.poliigon.com/texture/dry-blast-mold-plastic-texture-black/7495
+        Polligon Free License https://www.poliigon.com/terms
+    Tanier
+        https://www.poliigon.com/texture/speckled-glazed-ceramic-pottery-texture-white/10861
+        -||-
+    Svetlé drevo
+        https://www.poliigon.com/texture/slip-match-oak-wood-veneer-texture/7760        -||-
+    Miska
+        https://www.filterforge.com/filters/14730.html
+
+3D Modely:
+    Truhlica
+        Multipainkiller Studio - Treasure Chest
+        CC-BY
+        https://sketchfab.com/3d-models/treasure-chest-b124919b7bc3470c82daeef72823f941
+    Mrkva
+        Meerschaum Digital - Carrot
+        CC-BY
+        https://sketchfab.com/3d-models/carrot-4cfcef5d26834657a0e1204d2ff32523     Zemiak
+        Meerschaum Digital - Potato
+        CC-BY
+        https://sketchfab.com/3d-models/potato-1e66110d80f049efa4f76f010417b853
+    Cibuľa
+        rhcreations - Onion
+        CC-BY
+        https://sketchfab.com/3d-models/onion-1eb9bc82080f4d9a98ad696f26ab1576
+    Mäso 1
+        Plaggy_CC0 - Raw Meat
+        https://pixabay.com/3d-models/raw-meat-meat-food-red-uncooked-584/
+        Pixabay Content License https://pixabay.com/service/license-summary/
+    Ostatné 3D modely vytvoril Adam Jenča v Blenderi
+Hudba:
+        Gustav Mahler - Sinfonie No.1 D-dur "Titan" - II. Blumine: Andante Allegretto. Eugene Ormandy, Philadelphia Orchestra. Public Domain.
+Zvukové efekty:
+    Vŕzganie:
+        https://bigsoundbank.com/creaking-door-2-s3205.html
+        CC0
+    Ohnisko:
+        https://bigsoundbank.com/fireplace-5-s2857.html
+        CC0
+    Vtáčiky:
+        https://bigsoundbank.com/evening-birds-s1859.html
+        CC0
+    Úder noža o podložku
+        https://bigsoundbank.com/door-s0015.html
+        CC0
+Kód:
+    pluginy:
+        SceneTexture - https://godotengine.org/asset-library/asset/3506 - MIT
+        Mesh Tools - https://store.godotengine.org/asset/ar3d/mesh-tools/
