@@ -9,7 +9,7 @@ func get_cutting() -> Array:
 	for result in results:
 		var cuttable = result["collider"].get_parent().get_parent() as Cuttable
 		
-		if cuttable == null :#or not cuttable.freeze:
+		if cuttable == null or(cuttable.in_container and not cuttable.container.can_cut_contents):#or not cuttable.freeze:
 			continue
 		
 		hits.append([cuttable, result["position"]])

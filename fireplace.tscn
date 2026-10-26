@@ -939,6 +939,9 @@ animations = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_0ox0n"]
 size = Vector3(0.45326233, 0.027954102, 0.9630127)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fdjtx"]
+size = Vector3(3.718628, 2.6582336, 3.7824097)
+
 [node name="fireplace" type="Node3D" unique_id=2096928325]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
@@ -1004,3 +1007,12 @@ collision_mask = 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=160844129]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.047020014, 0.007081449, 1.4826703)
 shape = SubResource("BoxShape3D_0ox0n")
+
+[node name="oven" type="Area3D" parent="." unique_id=821601916]
+collision_layer = 16777216
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="oven" unique_id=2040448758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7954254, 0)
+shape = SubResource("BoxShape3D_fdjtx")

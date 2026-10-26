@@ -3,6 +3,13 @@
 [ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="1_chq0b"]
 [ext_resource type="PackedScene" uid="uid://dvbjaurrdb7wa" path="res://onion.tscn" id="1_jbamt"]
 [ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="3_44wkx"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="3_qgkpp"]
+
+[sub_resource type="Resource" id="Resource_mxuls"]
+script = ExtResource("3_qgkpp")
+healthy = 0.4
+filling = 0.2
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
 
 [sub_resource type="Texture2D" id="Texture2D_vivmo"]
 resource_local_to_scene = false
@@ -11,7 +18,7 @@ script = ExtResource("3_44wkx")
 size = Vector2i(256, 256)
 scene = ExtResource("1_jbamt")
 camera_fov = 76.0
-camera_distance = 0.4
+camera_distance = 0.3
 camera_position = Vector3(0, 0, 0)
 camera_rotation = Vector3(0, 0, 0)
 metadata/_custom_type_script = "uid://bt12obb4t0tm4"
@@ -23,3 +30,4 @@ desc = "It's an onion"
 category = "vegetables"
 scene = ExtResource("1_jbamt")
 thumbnail = SubResource("Texture2D_vivmo")
+taste_vector = SubResource("Resource_mxuls")

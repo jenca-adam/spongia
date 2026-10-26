@@ -2,19 +2,8 @@
 
 [ext_resource type="Script" uid="uid://fgbfl4c3ehrf" path="res://container.gd" id="1_6yfex"]
 [ext_resource type="Texture2D" uid="uid://drb1d5an18ujy" path="res://bowl_clay.jpg" id="2_6yfex"]
-[ext_resource type="Shader" uid="uid://bybahn1jj8dwq" path="res://outline.gdshader" id="2_f4wr4"]
+[ext_resource type="Material" uid="uid://dowsjik5yvsox" path="res://droppable.tres" id="2_f4wr4"]
 [ext_resource type="Texture2D" uid="uid://cjviws2tjcill" path="res://bowl_clay-normal.jpg" id="3_f4wr4"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fk38n"]
-transparency = 1
-albedo_color = Color(1, 1, 1, 0)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_f4wr4"]
-render_priority = -128
-next_pass = SubResource("StandardMaterial3D_fk38n")
-shader = ExtResource("2_f4wr4")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/outline_width = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uuv68"]
 resource_name = "Material.001"
@@ -74,7 +63,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2376889, 0)
 
 [node name="model" type="MeshInstance3D" parent="offset" unique_id=422750392]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-material_overlay = SubResource("ShaderMaterial_f4wr4")
+material_overlay = ExtResource("2_f4wr4")
 mesh = SubResource("ArrayMesh_spgwu")
 
 [node name="hover" type="StaticBody3D" parent="offset" unique_id=794575604]

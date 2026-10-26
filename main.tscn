@@ -16,6 +16,8 @@
 [ext_resource type="PhysicsMaterial" uid="uid://bvu6hxbdmykpn" path="res://rough_ph.tres" id="15_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://o20xbya0jn82" path="res://ui_chest.tscn" id="15_vivmo"]
 [ext_resource type="PackedScene" uid="uid://bygx1ju56xt02" path="res://admin_table.tscn" id="16_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://cltc8qx5uvaoj" path="res://ui_order.tscn" id="17_yaehf"]
+[ext_resource type="PackedScene" uid="uid://6l7tklcbmtpv" path="res://plate.tscn" id="18_074og"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_3p65x"]
 rayleigh_color = Color(0.1292, 0.32197994, 0.68, 1)
@@ -116,10 +118,10 @@ parameters/looping = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5114355, 2.2850661, 6.990576)
 
 [node name="pot" parent="." unique_id=879433023 instance=ExtResource("11_efxa6")]
-transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 3.1728363, 3.3352242, 7.7065916)
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 3.1728363, 3.1624463, 7.7065916)
 
 [node name="knife" parent="." unique_id=32254624 instance=ExtResource("13_ycdy4")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.948669, 1.0124959, 1.7246819)
+transform = Transform3D(-3.278354e-08, 0, -0.75, 0, 0.75, 0, 0.75, 0, -3.278354e-08, -3.948669, 1.0124959, 1.7246819)
 
 [node name="board" parent="." unique_id=1614343060 instance=ExtResource("13_w48qg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.8039126, 0.9790112, -0.8191948)
@@ -138,3 +140,8 @@ shape = SubResource("WorldBoundaryShape3D_fdjtx")
 
 [node name="admin" parent="." unique_id=1095139935 instance=ExtResource("16_2cqfq")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.668347, -0.706, 0)
+
+[node name="ui_order" parent="." unique_id=588159274 instance=ExtResource("17_yaehf")]
+
+[node name="plate" parent="." unique_id=422206219 instance=ExtResource("18_074og")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 3.007967, 1.1703095, 7.3242683)

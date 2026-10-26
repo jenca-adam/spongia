@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c7y6h6gj1rpxi" path="res://chest_M_Chest_Reinforcment_albedo.jpg" id="1_trlyu"]
 [ext_resource type="Script" uid="uid://b5j6r8xxij5uy" path="res://chest.gd" id="1_v4ow6"]
+[ext_resource type="Material" uid="uid://dowsjik5yvsox" path="res://droppable.tres" id="2_q6g14"]
 [ext_resource type="Texture2D" uid="uid://dhqipntg38oom" path="res://M_Chest_Reinforcment_AO.jpg" id="2_x6u83"]
 [ext_resource type="Texture2D" uid="uid://casogp1ajf8wa" path="res://chest_M_Chest_Reinforcment_normal.png" id="2_x7mpe"]
 [ext_resource type="Texture2D" uid="uid://bsjq6t165qib" path="res://chest_M_Chest_Wood_albedo.jpg" id="3_bv3sb"]
@@ -120,8 +121,13 @@ random_pitch = 1.4142135
 streams_count = 1
 stream_0/stream = ExtResource("11_oh7c0")
 
-[node name="chest" type="Node3D" unique_id=2013447582]
+[node name="chest" type="RigidBody3D" unique_id=308713967]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+collision_layer = 0
+collision_mask = 0
+sleeping = true
+can_sleep = false
+freeze = true
 script = ExtResource("1_v4ow6")
 
 [node name="Armature" type="Node3D" parent="." unique_id=1923063134]
@@ -144,6 +150,7 @@ bones/1/rotation = Quaternion(0.7071069, -8.4293674e-08, 8.429369e-08, 0.7071066
 bones/1/scale = Vector3(1, 1, 1)
 
 [node name="SM_Chest" type="MeshInstance3D" parent="Armature/Skeleton3D" unique_id=516375903]
+material_overlay = ExtResource("2_q6g14")
 mesh = SubResource("ArrayMesh_3cabk")
 skin = SubResource("Skin_8nj6j")
 skeleton = NodePath("..")
@@ -160,5 +167,7 @@ shape = SubResource("BoxShape3D_0ox0n")
 
 [node name="creak" type="AudioStreamPlayer3D" parent="." unique_id=1154338311]
 stream = SubResource("AudioStreamRandomizer_v4ow6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=211955963]
 
 [connection signal="input_event" from="click" to="." method="_on_click_input_event"]

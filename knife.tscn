@@ -224,6 +224,7 @@ streams_count = 1
 stream_0/stream = ExtResource("6_d7nea")
 
 [node name="knife" type="RigidBody3D" unique_id=568865001]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 script = ExtResource("1_pfkap")
 
 [node name="offset" type="Node3D" parent="." unique_id=657483695]

@@ -75,3 +75,5 @@ func _input(event: InputEvent):
 func _ready():
 	switch_cam(START_CAM, START_CAM)
 	cur_cam = cams.find(START_CAM.name)
+	var b = Bestellung.from_customer(load("res://customers/hobbit/hobbit.tres"))
+	$ui_order.setup(b)

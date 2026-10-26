@@ -62,7 +62,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3lnx5")
 
 [node name="carrot" type="RigidBody3D" unique_id=860542599]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 collision_layer = 2048
 collision_mask = 2048
 axis_lock_angular_x = true

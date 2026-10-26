@@ -3,6 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://dcjrn2ya30cls" path="res://raw_pork.tscn" id="1_ort3e"]
 [ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_bjmlw"]
 [ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="3_0jlna"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="3_bjmlw"]
+
+[sub_resource type="Resource" id="Resource_knf71"]
+script = ExtResource("3_bjmlw")
+salty = 0.6
+meaty = 1.0
+healthy = 0.1
+filling = 0.7
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
 
 [sub_resource type="Texture2D" id="Texture2D_vivmo"]
 resource_local_to_scene = false
@@ -10,9 +19,10 @@ resource_name = ""
 script = ExtResource("3_0jlna")
 size = Vector2i(256, 256)
 scene = ExtResource("1_ort3e")
+scene_rotation = Vector3(1.5707964, 0, 0)
 camera_fov = 76.0
-camera_distance = 0.6
-camera_position = Vector3(0, 0, 0)
+camera_distance = 0.38
+camera_position = Vector3(-0.025, -0.015, 0)
 camera_rotation = Vector3(0, 0, 0)
 metadata/_custom_type_script = "uid://bt12obb4t0tm4"
 
@@ -23,3 +33,4 @@ desc = "John"
 category = "meat"
 scene = ExtResource("1_ort3e")
 thumbnail = SubResource("Texture2D_vivmo")
+taste_vector = SubResource("Resource_knf71")

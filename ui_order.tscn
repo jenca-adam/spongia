@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://cltc8qx5uvaoj"]
+
+[ext_resource type="Script" uid="uid://duixv1tilt07h" path="res://ui_order.gd" id="1_eiqw6"]
+[ext_resource type="Texture2D" uid="uid://vd04bfjydd5g" path="res://icon.svg" id="1_iqcad"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ox0n"]
+bg_color = Color(0, 0, 0, 0.5019608)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="ui_order" type="Control" unique_id=588159274]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_eiqw6")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1385652619]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=49586801]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ox0n")
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=317727150]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=3584807]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=140717343]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1541158238]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Order"
+uppercase = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1590513724]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2" unique_id=1556806942]
+layout_mode = 2
+
+[node name="image" type="TextureRect" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=162266288]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("1_iqcad")
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=1473240963]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer" unique_id=1377621808]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="RichTextLabel" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2145999882]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+text = "[b]Customer:[/b]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="customer_type" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1858806707]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Hobbit"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer" unique_id=2088423090]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="RichTextLabel" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1948691873]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+text = "[b]Name:[/b]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="customer_name" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=211107891]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Hobbit"
+
+[node name="MarginContainer4" type="MarginContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=766589262]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer4" unique_id=1974578295]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer2" unique_id=1940326519]
+layout_mode = 2
+size_flags_horizontal = 0
+bbcode_enabled = true
+text = "[b]Order:[/b]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="order_text" type="RichTextLabel" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer2" unique_id=1466216840]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "food food food f0-adodoidajoidsajdsoijdsaoijdsaoijdsaodsaijdsaoijdsaoijdsaoidsajoidsajoidsa"
+fit_content = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=536928588]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ok" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer3" unique_id=1136078341]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "OK"
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer3/ok" to="." method="_on_ok_pressed"]

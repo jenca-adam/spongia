@@ -8,7 +8,7 @@ var cut_axis = 0
 ## axis index
 # Z=0
 # X=1
-# Y=2
+# Y=2 (big no no disabledaojdoksaopsadk)
 const AXIS_VECS = [Vector3(0, 0, 1), Vector3(1, 0, 0), Vector3(0, 1, 0)]
 const AXIS_COMP = [2, 0, 1] 
 const PLANE_ORIENT = [PlaneMesh.FACE_Z, PlaneMesh.FACE_X, PlaneMesh.FACE_Y]
@@ -27,10 +27,30 @@ const PLANE_ORIENT = [PlaneMesh.FACE_Z, PlaneMesh.FACE_X, PlaneMesh.FACE_Y]
 @export var cut_material_z:Material
 @export var cut_material_x:Material
 @export var cut_material_y:Material
-
-var _cut_colls: Array = []
-var _cut_shapes: Array = []
+var volume
+var _cut_colls = []
+var _cut_shapes = []
+var cook_time= 0.0
+func get_mesh_volume(mesh: Mesh) -> float:
+	var volume = 0.0
+	for surface in range(mesh.get_surface_count()):
+		var arrays = mesh.surface_get_arrays(surface)
+		var vertices = arrays[Mesh.ARRAY_VERTEX]
+		var indices= arrays[Mesh.ARRAY_INDEX]
+		if not indices is PackedInt32Array or indices.is_empty():
+			### assume csg is not retarded (it lowk is but ukwim)
+			### couldn't find anything int he docs
+			for i in range(0, vertices.size(), 3):
+				volume += vertices[i].dot(vertices[i + 1].cross(vertices[i + 2])) / 6.0
+		else:
+			for i in range(0, indices.size(), 3):
+				var a = vertices[indices[i]]
+				var b = vertices[indices[i + 1]]
+				var c = vertices[indices[i + 2]]
+				volume += a.dot(b.cross(c)) / 6.0
+	return absf(volume)
 func _ready():
+	
 	containable=true
 	super._ready()
 	
@@ -48,9 +68,12 @@ func _ready():
 	model.material_overlay = droppable_mat.duplicate_deep()
 	frozen.connect(_on_frozen)
 	unfrozen.connect(_on_unfrozen)
+	volume=get_mesh_volume(model.mesh)*absf(scale.x*scale.z*scale.y*model.scale.x*model.scale.z*model.scale.y)*20.0 ### bulharska konstanta
+	print(name, " volume: ", volume)
 func _physics_process(delta):
 	super._physics_process(delta)
 	_update_cut_colliders() ### WORKAROUND: _notification doesn't seem to be called if the body's not asleep
+
 func _notification(what):
 	if what == NOTIFICATION_TRANSFORM_CHANGED:
 		_update_cut_colliders()

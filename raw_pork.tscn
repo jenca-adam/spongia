@@ -57,6 +57,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_22s2k")
 
 [node name="raw_pork" type="RigidBody3D" unique_id=1527629779]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
 script = ExtResource("1_602j4")
 cut_material_z = SubResource("StandardMaterial3D_44wkx")
 cut_material_x = SubResource("StandardMaterial3D_44wkx")

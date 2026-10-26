@@ -1,5 +1,5 @@
 class_name Obj
-extends RigidBody3D
+extends Hoverable
 signal grab
 signal ungrab
 var grabbed = false
@@ -10,7 +10,7 @@ var old_cm;
 var rot_lock=false;
 var can_drop=false;
 var drop_disabled = false;
-var hovered=false
+
 var in_container=false;
 var global_exclude=[]
 var enable_freeze_on_sleep=true
@@ -18,8 +18,7 @@ signal unfrozen
 signal frozen
 @export var hangs = false
 @export var thumb:Texture
-@onready var model:MeshInstance3D = get_node("offset/model")
-@onready var hover:CollisionObject3D = get_node("offset/hover")
+
 @onready var shape:CollisionShape3D = get_node("offset/hover/CollisionShape3D")
 @onready var offset:Vector3 = get_node("offset").position
 @onready var droppable_mat = load("res://droppable.tres")
@@ -53,7 +52,7 @@ func freeze_():
 	neutral_rotation=global_rotation
 
 func _ready():
-	
+	super._ready()
 	collision_layer=0
 	collision_mask = 0
 	collision_layer |= 1<<11
@@ -76,9 +75,7 @@ func _ready():
 	collision_shape.debug_color=Color(0,1,0,0.5)
 	grab.connect(_on_grab)
 	ungrab.connect(_on_ungrab)
-	hover.input_event.connect(_on_hover_input_event)
-	hover.mouse_entered.connect(_on_hover_mouse_entered)
-	hover.mouse_exited.connect(_on_hover_mouse_exited)
+	
 	aabb=model.transform*model.get_aabb()
 	physics_material_override = phys_mat
 	sleeping_state_changed.connect(_on_sleeping_state_changed)
@@ -89,24 +86,6 @@ func _ready():
 	freeze_()
 func neutralize_rotation():
 	pass
-func set_hover_outline():
-	model.material_overlay.set_shader_parameter("outline_width",1.0 if hovered else 0.0)
-func _on_hover_mouse_entered() -> void:
-	if rotating:
-		hovered=true
-	if drop_disabled:
-		return
-	
-	hovered = true
-	set_hover_outline()
-
-func _on_hover_mouse_exited() -> void:
-	if rotating:
-		hovered=false
-	if drop_disabled:
-		return
-	hovered=false
-	set_hover_outline()
 
 func _on_grab() -> void:
 	grabbed = true

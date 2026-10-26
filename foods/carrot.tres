@@ -3,6 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://b8rmrnto84kws" path="res://carrot.tscn" id="1_6en85"]
 [ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_kykui"]
 [ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="3_im3lu"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="3_kykui"]
+
+[sub_resource type="Resource" id="Resource_72tx0"]
+script = ExtResource("3_kykui")
+sweet = 0.7
+sour = 0.4
+salty = 0.1
+healthy = 1.0
+filling = 0.3
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
 
 [sub_resource type="Texture2D" id="Texture2D_vivmo"]
 resource_local_to_scene = false
@@ -10,8 +20,9 @@ resource_name = ""
 script = ExtResource("3_im3lu")
 size = Vector2i(256, 256)
 scene = ExtResource("1_6en85")
+scene_rotation = Vector3(1.5707964, 0, 0)
 camera_fov = 76.0
-camera_distance = 0.4
+camera_distance = 0.5
 camera_position = Vector3(0, 0, 0)
 camera_rotation = Vector3(0, 1.5707964, 1.5707964)
 metadata/_custom_type_script = "uid://bt12obb4t0tm4"
@@ -23,3 +34,4 @@ desc = "A long, orange, sweet vegetable"
 category = "vegetables"
 scene = ExtResource("1_6en85")
 thumbnail = SubResource("Texture2D_vivmo")
+taste_vector = SubResource("Resource_72tx0")

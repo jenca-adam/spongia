@@ -1,0 +1,149 @@
+[gd_resource type="Resource" script_class="Customer" format=3 uid="uid://2uvq65i7bmwl"]
+
+[ext_resource type="Script" uid="uid://cp601goyny8yk" path="res://json_loader.gd" id="1_3d02y"]
+[ext_resource type="Script" uid="uid://casyras0bryah" path="res://customer.gd" id="2_2j2by"]
+[ext_resource type="Script" uid="uid://23fgsnyaetea" path="res://comments.gd" id="2_yt8lv"]
+[ext_resource type="Texture2D" uid="uid://vd04bfjydd5g" path="res://icon.svg" id="3_rqi6m"]
+[ext_resource type="Script" uid="uid://dxpm23s7hgj3k" path="res://taste_profile.gd" id="5_rqi6m"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="6_qj7lu"]
+
+[sub_resource type="Resource" id="Resource_qj7lu"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/not_cooked.json"
+items = Array[String](["This is raw."])
+
+[sub_resource type="Resource" id="Resource_vk8p0"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/not_healthy.json"
+items = Array[String](["That almost gave me a heart attack."])
+
+[sub_resource type="Resource" id="Resource_we1jm"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/not_meaty.json"
+items = Array[String](["I like me some vegetables, don't get me wrong. But this is a little too much."])
+
+[sub_resource type="Resource" id="Resource_g8a0s"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/not_much.json"
+items = Array[String](["I'm not a little bird."])
+
+[sub_resource type="Resource" id="Resource_osuf4"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/not_salty.json"
+items = Array[String](["Did your mother not teach you to salt food!?", "It's a little bland, one must say."])
+
+[sub_resource type="Resource" id="Resource_8hbxa"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/not_sour.json"
+items = Array[String](["Could use a tad more tang, couldn't it?"])
+
+[sub_resource type="Resource" id="Resource_nc2xe"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/not_sweet.json"
+items = Array[String](["I'm craving some cake..."])
+
+[sub_resource type="Resource" id="Resource_mbdjb"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/not_textured.json"
+items = Array[String](["I still have teeth, you know."])
+
+[sub_resource type="Resource" id="Resource_14lha"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/too_cooked.json"
+items = Array[String](["Did you drop this into Mount Doom to cook it?", "I don't eat coals."])
+
+[sub_resource type="Resource" id="Resource_sybwo"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/too_healthy.json"
+items = Array[String](["Do I look like a rabbit to you?"])
+
+[sub_resource type="Resource" id="Resource_qt1hm"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/too_meaty.json"
+items = Array[String](["I'm no Green-Elf, but did you really have to use up a whole slaughter-house?"])
+
+[sub_resource type="Resource" id="Resource_03u56"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/too_much.json"
+items = Array[String](["Are you saying I look fat?"])
+
+[sub_resource type="Resource" id="Resource_dgr0p"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/too_salty.json"
+items = Array[String](["If I were a snail, I would've died.", "Have you perchance mistaken me for a donkey?"])
+
+[sub_resource type="Resource" id="Resource_tvyah"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/too_sour.json"
+items = Array[String]([" My tongue’s all curled up!"])
+
+[sub_resource type="Resource" id="Resource_phlva"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/too_sweet.json"
+items = Array[String](["My teeth hurt!"])
+
+[sub_resource type="Resource" id="Resource_qyu85"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/too_textured.json"
+items = Array[String](["Is my mouth that big?"])
+
+[sub_resource type="Resource" id="Resource_iqcad"]
+script = ExtResource("2_yt8lv")
+not_cooked = SubResource("Resource_qj7lu")
+not_healthy = SubResource("Resource_vk8p0")
+not_meaty = SubResource("Resource_we1jm")
+not_much = SubResource("Resource_g8a0s")
+not_salty = SubResource("Resource_osuf4")
+not_sour = SubResource("Resource_8hbxa")
+not_sweet = SubResource("Resource_nc2xe")
+not_textured = SubResource("Resource_mbdjb")
+too_cooked = SubResource("Resource_14lha")
+too_healthy = SubResource("Resource_sybwo")
+too_meaty = SubResource("Resource_qt1hm")
+too_much = SubResource("Resource_03u56")
+too_salty = SubResource("Resource_dgr0p")
+too_sour = SubResource("Resource_tvyah")
+too_sweet = SubResource("Resource_phlva")
+too_textured = SubResource("Resource_qyu85")
+dir_path = "res://customers/hobbit/comments"
+metadata/_custom_type_script = "uid://23fgsnyaetea"
+
+[sub_resource type="Resource" id="Resource_eiqw6"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/names.json"
+items = Array[String](["Adalbert Bolger", "Adaldrida Bolger", "Adalgar Bolger", "Adalgrim Took", "Adam Hornblower", "Adamanta Chubb", "Adelard Took", "Alfrida of the Yale", "Amaranth Brandybuck", "Amethyst Hornblower", "Andwise Roper", "Angelica Baggins", "Anson Roper", "Asphodel Brandybuck", "Balbo Baggins", "Bandobras Took", "Baravorn", "Basso Boffin", "Belba Baggins", "Bell Goodchild", "Belladonna Took", "Berilac Brandybuck", "Berylla Boffin", "Bilbo Baggins", "Bilbo Gardner", "Bingo Baggins", "Blanco Bracegirdle", "Bodo Proudfoot", "Bosco Boffin", "Bowman Cotton", "Bree-hobbits", "Bree-landers", "Briffo Boffin", "Bruno Bracegirdle", "Bucca of the Marish", "Bucklanders", "Buffo Boffin", "Mrs. Bunce", "Bungo Baggins", "Bill Butcher", "Camellia Sackville", "Caramella Chubb", "Carl (son of Cottar)", "Carl Cotton", "Celandine Brandybuck", "Chica Chubb", "Colombo Hornblower", "Cora Goodbody", "Cotman", "Cottar", "Daddy Twofoot", "Daisy Baggins", "Daisy Gamgee", "Daisy Gardner", "Déagol", "Diamond of Long Cleeve", "Dina Diggle", "Dinodas Brandybuck", "Doderic Brandybuck", "Dodinas Brandybuck", "Donnamira Took", "Dora Baggins", "Drogo Baggins", "Druda Burrows", "Dudo Baggins", "Eglantine Banks", "Elanor Gardner", "Elfstan Fairbairn", "Erling", "Ernil i Pheriannath", "Esmeralda Took", "Estella Bolger", "Everard Took", "Falco Chubb-Baggins", "Faramir Took I", "Farmer Cotton", "Farmer Hogg", "Farmer Maggot", "Fastolph Bolger", "Fastred of Greenholm", "Ferdibrand Took", "Ferdinand Took", "Ferumbras Took I", "Ferumbras Took II", "Ferumbras Took III", "Filibert Bolger", "Flambard Took", "Folco Boffin", "Folco Burrowes", "Fortinbras Took I", "Fortinbras Took II", "Fosco Baggins", "Fredegar Bolger", "Frodo Baggins", "Frodo Gardner", "Fíriel Fairbairn", "Gaffer Gamgee", "Gerda Boffin", "Gerontius Took", "Gilly Brownlock", "Goldilocks Gardner", "Gollum", "Gorbadoc Brandybuck", "Gorbulas Brandybuck", "Gorhendad Oldbuck", "Gormadoc Brandybuck", "Griffo Boffin", "Gruffo Boffin", "Gundabald Bolger", "Gundahad Bolger", "Gundahar Bolger", "Gundolpho Bolger", "Halfast Gamgee", "Halflings", "Halfred Gamgee", "Halfred Greenhand", "Halfred of Overhill", "Hamfast Gardner", "Hamfast of Gamwich", "Hamson Gamgee", "Hanna Goldworthy", "Harding of the Hill", "Harfoots", "Hending", "Heribald Bolger", "Herugar Bolger", "Hilda Bracegirdle", "Hildibrand Took", "Hildifons Took", "Hildigard Took", "Hildigrim Took", "Hob Gammidge", "Hob Hayward", "Hobbit-holes", "Hobson", "Holbytla", "Holdwine", "Holfast Gardner", "Holman Cotton", "Holman Greenhand", "Holman the greenhanded", "Hugo Boffin", "Hugo Bracegirdle", "Iago Grubb", "Ilberic Brandybuck", "Isembard Took", "Isembold Took", "Isengar Took", "Isengrim Took I", "Isengrim Took II", "Isengrim Took III", "Isumbras Took I", "Isumbras Took II", "Isumbras Took III", "Isumbras Took IV", "Ivy Goodenough", "Jago Boffin", "Jessamine Boffin", "Kalimac Brandagamba", "Lalia Clayhanger", "Lanorac Brandybuck", "Largo Baggins", "Laura Grubb", "Lavender Grubb", "Lily Baggins", "Lily Brown", "Linda Baggins", "Little Folk", "Lobelia Sackville-Baggins", "Longo Baggins", "Lotho Sackville-Baggins", "Madoc Brandybuck", "Malva Headstrong", "Marcho and Blanco", "Marigold Gamgee", "Marmadas Brandybuck", "Marmadoc Brandybuck", "Marroc Brandybuck", "May (hobbit)", "May Gamgee", "Melilot Brandybuck", "Menegilda Goold", "Mentha Brandybuck", "Meriadoc Brandybuck", "Merimac Brandybuck", "Merimas Brandybuck", "Merry Gardner", "Messrs Grubb, Grubb and Burrowes", "Milo Burrows", "Mimosa Bunce", "Minto Burrows", "Mirabella Took", "Moro Burrows", "Mosco Burrows", "Mr. Mugwort", "Mr. Underhill", "Mrs Maggot", "Mungo Baggins", "Myrtle Burrows"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_sqbd2"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/orders.json"
+items = Array[String](["Just give me whatever.", "What do you have?", "What would you recommend?", "You can't do a whole lot of gardening on an empty stomach!", "I'm honestly not that hungry, I'm just here to check this place out.", "How do you do?"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_5vacq"]
+script = ExtResource("6_qj7lu")
+sweet = 0.5
+sour = 0.5
+salty = 0.5
+meaty = 0.5
+healthy = 0.5
+filling = 0.5
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Resource" id="Resource_7bup1"]
+script = ExtResource("5_rqi6m")
+taste_vector = SubResource("Resource_5vacq")
+cook_time = 10.0
+amount = 1.0
+texture = 0.5
+metadata/_custom_type_script = "uid://dxpm23s7hgj3k"
+
+[resource]
+script = ExtResource("2_2j2by")
+name = &"Hobbit"
+image = ExtResource("3_rqi6m")
+orders = SubResource("Resource_sqbd2")
+names = SubResource("Resource_eiqw6")
+comments = SubResource("Resource_iqcad")
+taste_profile = SubResource("Resource_7bup1")
+metadata/_custom_type_script = "uid://casyras0bryah"

@@ -1,11 +1,17 @@
-extends Node3D
+extends Hoverable
 @onready
 var anim_player:AnimationPlayer = get_node("AnimationPlayer")
 @onready
 var creak:AudioStreamPlayer3D = get_node("creak")
 var opened=false
 func _ready():
+	
+	hover=$click
+	model=$Armature/Skeleton3D/SM_Chest
+	super._ready()
+	print($Armature/Skeleton3D/SM_Chest)
 	$/root/main/ui_chest.close.connect(_on_ui_chest_close)
+	
 func _on_click_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if event.is_action_released("interact") and not opened:
 		opened=true
