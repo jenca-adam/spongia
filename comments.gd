@@ -36,5 +36,6 @@ func load_dir():
 		if category in category_to_file:
 			var loadable = JSONLoadable.new()
 			loadable.json_path=category_to_file[category]
+			loadable.load_json()
 			set(category, loadable)
 			

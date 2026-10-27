@@ -10,8 +10,7 @@ extends Resource
 @export var items: Array[String] = []
 @export_tool_button("Reload", "Reload") var reload_action=load_json
 func load_json() -> void:
-	if not Engine.is_editor_hint():
-		return
+	#if not Engine.is_editor_hint():		return
 
 	if json_path.is_empty():
 		return

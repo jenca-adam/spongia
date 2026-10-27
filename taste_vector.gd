@@ -23,3 +23,14 @@ func weighted_add(other:TasteVector, weight:float)->void:
 func divide(den:float)->void:
 	for prop in PROPERTIES:
 		set(prop,get(prop)/den)
+func get_comment_scores(result:TasteVector)->Array:
+	var scores = []
+	for prop in PROPERTIES:
+		scores.append([result.get(prop)-get(prop), &"too_%s"%prop])
+		scores.append([get(prop)-result.get(prop), &"not_%s"%prop])
+	return scores
+func score(other:TasteVector)->float:
+	var result = 0.0
+	for prop in PROPERTIES:
+		result += abs(get(prop)-other.get(prop))
+	return result

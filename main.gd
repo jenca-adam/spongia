@@ -78,4 +78,3 @@ func _ready():
 	cur_cam = cams.find(START_CAM.name)
 	current_order = Bestellung.from_customer(load("res://customers/hobbit/hobbit.tres"))
 	$ui_order.setup(current_order)
-	$ui_result.setup_result(current_order, null)
