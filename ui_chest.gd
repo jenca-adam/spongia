@@ -4,6 +4,7 @@ var built = false
 var food_panels:Dictionary[Food, FoodPanel] = {}
 var category_panels:Dictionary[String, CategoryPanel]
 var category_lists:Dictionary[String, HFlowContainer]
+var food_resources:Dictionary[StringName, Food]
 signal close;
 signal recalc;
 func _ready():
@@ -13,7 +14,8 @@ func _ready():
 	for food in ResourceLoader.list_directory("foods"):
 		var resource:Food = load("foods/"+food)
 		print(food, resource)
-		if not resource:continue
+		if not (resource as Food) :continue
+		food_resources[food.split('.')[0]]=resource
 		if resource.category not in categories:
 			category_counts[resource.category]=0
 			categories.append(resource.category)

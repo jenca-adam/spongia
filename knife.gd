@@ -56,7 +56,8 @@ func _on_use() -> void:
 		position = Vector3.ZERO
 		global_rotation = neutral_rotation
 		_end_all_cutting()
-
+func _on_use_start()->void:
+	neutral_rotation=global_rotation
 func _on_unuse() -> void:
 	if cutting.size() > 0:
 		_end_all_cutting()

@@ -18,7 +18,7 @@ signal unfrozen
 signal frozen
 @export var hangs = false
 @export var thumb:Texture
-
+@export var duct_tape:Vector3
 @onready var shape:CollisionShape3D = get_node("offset/hover/CollisionShape3D")
 @onready var offset:Vector3 = get_node("offset").position
 @onready var droppable_mat = load("res://droppable.tres")
@@ -27,6 +27,7 @@ signal frozen
 @onready var phys_mat = load("res://rough_ph.tres")
 @export var rotatable = true
 @export var containable = false
+@export var presentable=false
 var aabb
 var rotating=false
 var tipped_on=-10000
@@ -69,7 +70,7 @@ func _ready():
 	model.material_overlay = droppable_mat.duplicate_deep()
 	shape.shape = model.mesh.create_trimesh_shape()
 	shape.transform = model.transform
-	collision_shape.shape = model.mesh.create_convex_shape(false, false)
+	collision_shape.shape = model.mesh.create_convex_shape()
 	collision_shape.global_transform = model.global_transform
 	
 	collision_shape.debug_color=Color(0,1,0,0.5)
@@ -94,13 +95,14 @@ func would_collide() -> bool:
 	var query := PhysicsShapeQueryParameters3D.new()
 	query.shape =collision_shape.shape
 
-	query.transform = model.global_transform
+	query.transform = collision_shape.global_transform#.translated(duct_tape)
 	query.collision_mask = 1
 	query.exclude = [shape.get_parent().get_rid(), get_rid()]+global_exclude
 	var space := get_world_3d().direct_space_state
 	var result=space.intersect_shape(query, 1)
 	if result:
 		print(result[0].collider.get_parent().get_parent())
+	
 	return result.size()>0
 func _physics_process(delta):
 	if grab_timeout == null:
@@ -111,10 +113,10 @@ func _physics_process(delta):
 	if freeze and not rot_lock:
 		global_rotation=Vector3(neutral_rotation.x, global_rotation.y, neutral_rotation.z)
 	if active:
-		var result = $/root/main.held_objs.racist(0b10|(0b100 if hangs else 0)|(1<<9 if containable else 0))
+		var result = $/root/main.held_objs.racist(0b10|(0b100 if hangs else 0)|(1<<9 if containable else 0)|(1<<15 if presentable else 0))
 		if result:
 			var pos = result["position"]
-			global_position=pos-Vector3(0,aabb.position.y,0)-offset;
+			global_position=pos-Vector3(0,aabb.position.y,0)-offset+duct_tape;
 			if would_collide():
 				model.material_overlay.next_pass.albedo_color=Color(1,0,0,0.4)
 				can_drop=false

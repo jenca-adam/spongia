@@ -9,6 +9,7 @@
 script = ExtResource("3_qgkpp")
 healthy = 0.4
 filling = 0.2
+spicy = 0.8
 metadata/_custom_type_script = "uid://dmor3qc07dgge"
 
 [sub_resource type="Texture2D" id="Texture2D_vivmo"]

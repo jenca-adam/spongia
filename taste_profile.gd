@@ -8,3 +8,5 @@ var cook_time:float;
 var amount:float;
 @export_range(0,1,0.01)
 var texture:float; #ratio of biggest ingredient to total volume
+func setup():
+	taste_vector = TasteVector.new()

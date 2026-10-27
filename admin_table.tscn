@@ -1,10 +1,12 @@
 [gd_scene format=4 uid="uid://bygx1ju56xt02"]
 
+[ext_resource type="Script" uid="uid://de7hvn0oqcbub" path="res://admin_table.gd" id="1_po8bi"]
 [ext_resource type="Texture2D" uid="uid://h5x3qnynu5qd" path="res://board_Poliigon_WoodVeneerOak_7760_BaseColor.jpg" id="1_tj5db"]
 [ext_resource type="Texture2D" uid="uid://bunxaoiopi14n" path="res://knife_Poliigon_PlasticMoldDryBlast_7495_BaseColor.jpg" id="2_dwa7e"]
 [ext_resource type="Texture2D" uid="uid://c7kxsdgh6wvfc" path="res://knife_Poliigon_PlasticMoldDryBlast_7495_Roughness.jpg" id="3_8pksl"]
 [ext_resource type="PhysicsMaterial" uid="uid://bvu6hxbdmykpn" path="res://rough_ph.tres" id="3_dwa7e"]
 [ext_resource type="PackedScene" uid="uid://bw642eouwv5pv" path="res://order.tscn" id="5_dwa7e"]
+[ext_resource type="PackedScene" uid="uid://dtt8dws062ivo" path="res://bell.tscn" id="6_8pksl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_po8bi"]
 resource_name = "Material.001"
@@ -94,7 +96,11 @@ shadow_mesh = SubResource("ArrayMesh_chiks")
 [sub_resource type="BoxShape3D" id="BoxShape3D_0ox0n"]
 size = Vector3(8.333527, 0.61083984, 5.739624)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8pksl"]
+size = Vector3(8.4835205, 0.80671406, 6)
+
 [node name="admin" type="Node3D" unique_id=1285984100]
+script = ExtResource("1_po8bi")
 
 [node name="Cube" type="MeshInstance3D" parent="." unique_id=739584394]
 transform = Transform3D(0.7055482, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -114,4 +120,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063308716, 3.1156235, -0.00
 shape = SubResource("BoxShape3D_0ox0n")
 
 [node name="order" parent="." unique_id=1084495085 instance=ExtResource("5_dwa7e")]
-transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, -1.9946215, 3.5459392, 1.3401861)
+transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, -1.9946215, 3.3990462, 1.3401861)
+
+[node name="bell" parent="." unique_id=529190766 instance=ExtResource("6_8pksl")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.544929, 2.9889438, 1.723461)
+
+[node name="done_check" type="Area3D" parent="." unique_id=554948147]
+collision_layer = 0
+collision_mask = 4194304
+input_ray_pickable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="done_check" unique_id=1290706658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00592041, 3.1033568, 0)
+shape = SubResource("BoxShape3D_8pksl")

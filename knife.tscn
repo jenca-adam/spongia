@@ -250,3 +250,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.025)
 
 [connection signal="unuse" from="." to="." method="_on_unuse"]
 [connection signal="use" from="." to="." method="_on_use"]
+[connection signal="use_start" from="." to="." method="_on_use_start"]

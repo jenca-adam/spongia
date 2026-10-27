@@ -11,6 +11,7 @@ salty = 0.6
 meaty = 1.0
 healthy = 0.1
 filling = 0.7
+spicy = 0.1
 metadata/_custom_type_script = "uid://dmor3qc07dgge"
 
 [sub_resource type="Texture2D" id="Texture2D_vivmo"]

@@ -2,6 +2,7 @@ class_name Tool
 extends Obj
 signal use
 signal unuse
+signal use_start
 @onready var anim:AnimationPlayer =get_node_or_null("anim")
 var using:=false
 
@@ -40,5 +41,6 @@ func _input(event):
 		model.material_overlay.set_shader_parameter("outline_color", Color(1,1,0))
 		model.material_overlay.set_shader_parameter("outline_width", 1.0)
 		model.material_overlay.next_pass.albedo_color=Color(1,1,0,0.2)
+		use_start.emit()
 	elif (event.is_action_released("cancel_tool_use") and using and grabbed):
 		_unuse()

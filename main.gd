@@ -7,6 +7,7 @@ var CAM_SWITCH_TIME = 1.0;
 @export
 var CAM_SWITCH_EASE = Tween.EASE_OUT
 var switching = 0
+var current_order:Bestellung
 @export var START_CAM:Camera3D
 @onready var held_objs = $cams/trans/held_objs
 @onready var admin_cam= $cams/admin_table
@@ -75,5 +76,6 @@ func _input(event: InputEvent):
 func _ready():
 	switch_cam(START_CAM, START_CAM)
 	cur_cam = cams.find(START_CAM.name)
-	var b = Bestellung.from_customer(load("res://customers/hobbit/hobbit.tres"))
-	$ui_order.setup(b)
+	current_order = Bestellung.from_customer(load("res://customers/hobbit/hobbit.tres"))
+	$ui_order.setup(current_order)
+	$ui_result.setup_result(current_order, null)

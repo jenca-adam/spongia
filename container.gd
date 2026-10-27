@@ -65,7 +65,7 @@ func _physics_process(delta):
 		internal_collider.collision_mask |= (1 << 10)
 	
 		for body in definitely_contents.get_overlapping_bodies():
-			if body is Obj and not body.active and body.containable and body not in bodies:
+			if not active and body is Obj and not body.active and not body.grabbed and body.containable and body not in bodies:
 				_on_body_entered(body as Obj)
 	var was_moving := moving
 	if global_position.is_equal_approx(_last_global_pos):
@@ -177,7 +177,8 @@ func _release_body(b: Obj) -> void:
 	b.container=null
 	if (b.grabbed):
 		for body in bodies:
-			body.unfreeze() #  mayhem?
+			if is_instance_valid(body):
+				body.unfreeze() #  mayhem?
 		return
 	_reparent_body.call_deferred(b, $/root/main, false)
 

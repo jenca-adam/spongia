@@ -27,6 +27,7 @@ const PLANE_ORIENT = [PlaneMesh.FACE_Z, PlaneMesh.FACE_X, PlaneMesh.FACE_Y]
 @export var cut_material_z:Material
 @export var cut_material_x:Material
 @export var cut_material_y:Material
+var type:StringName
 var volume
 var _cut_colls = []
 var _cut_shapes = []
@@ -50,7 +51,8 @@ func get_mesh_volume(mesh: Mesh) -> float:
 				volume += a.dot(b.cross(c)) / 6.0
 	return absf(volume)
 func _ready():
-	
+	if not type:
+		type=name
 	containable=true
 	super._ready()
 	
@@ -172,6 +174,8 @@ func cut(pos:Vector3):
 
 	var instance1 = duplicate()
 	var instance2 = duplicate()
+	instance1.type=type
+	instance2.type=type
 	_center_instance(instance1, meshes1[0])
 	_center_instance(instance2, meshes2[1])
 	add_sibling(instance1)
