@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bhggohk4u58fk" path="res://cuttable.gd" id="1_0eug2"]
 [ext_resource type="Texture2D" uid="uid://u1b2y8g38c4k" path="res://pear_0.jpg" id="1_jhvvf"]
 [ext_resource type="Texture2D" uid="uid://dqesf5sw6s1f6" path="res://textures/pear_cross.jpg" id="2_6xdhg"]
+[ext_resource type="Material" uid="uid://dowsjik5yvsox" path="res://droppable.tres" id="3_ccppr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cegan"]
 albedo_texture = ExtResource("2_6xdhg")
@@ -49,7 +50,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8xbvn")
 
 [node name="pear" type="RigidBody3D" unique_id=861352482]
-transform = Transform3D(0.75, 0, 0, 0, -3.278354e-08, 0.75, 0, -0.75, -3.278354e-08, 0, 0, 0)
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 script = ExtResource("1_0eug2")
 cut_material_z = SubResource("StandardMaterial3D_cegan")
 cut_material_x = SubResource("StandardMaterial3D_cegan")
@@ -59,6 +60,8 @@ metadata/_custom_type_script = "uid://bhggohk4u58fk"
 [node name="offset" type="Node3D" parent="." unique_id=1987340605]
 
 [node name="model" type="MeshInstance3D" parent="offset" unique_id=1120542261]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+material_overlay = ExtResource("3_ccppr")
 mesh = SubResource("ArrayMesh_juwsh")
 
 [node name="cut_x" type="StaticBody3D" parent="offset" unique_id=475165173]

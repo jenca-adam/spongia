@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://tqvp64krp7od" path="res://raw_chicken_0.png" id="1_ms8ui"]
 [ext_resource type="Texture2D" uid="uid://c814ipbr0uyfc" path="res://raw_chicken_1.png" id="2_jln8k"]
 [ext_resource type="Texture2D" uid="uid://d3a6f0emv0qtr" path="res://textures/chciken_cross.png" id="2_yfk5x"]
-[ext_resource type="Material" uid="uid://dhtoyxgk7k1jq" path="res://cuttable_x.tres" id="3_18s1t"]
+[ext_resource type="Material" uid="uid://dowsjik5yvsox" path="res://droppable.tres" id="3_18s1t"]
 [ext_resource type="Texture2D" uid="uid://bwhv2o71frxxj" path="res://raw_chicken_2.png" id="3_yfk5x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yfk5x"]
@@ -66,6 +66,7 @@ shadow_mesh = SubResource("ArrayMesh_xwmgq")
 
 [node name="raw_chicken" type="RigidBody3D" unique_id=2137032675]
 script = ExtResource("1_jln8k")
+cook_scale = 0.1
 cut_highlight_width = 0.1
 cut_material_z = SubResource("StandardMaterial3D_yfk5x")
 cut_material_x = SubResource("StandardMaterial3D_yfk5x")

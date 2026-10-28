@@ -70,6 +70,7 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 physics_material_override = ExtResource("1_drq1q")
 script = ExtResource("1_1c571")
+cook_scale = 30.0
 cut_material_z = ExtResource("2_kobi7")
 cut_material_x = SubResource("StandardMaterial3D_7ucno")
 cut_material_y = SubResource("StandardMaterial3D_7ucno")

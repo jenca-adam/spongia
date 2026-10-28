@@ -12,12 +12,13 @@ var cut_axis = 0
 const AXIS_VECS = [Vector3(0, 0, 1), Vector3(1, 0, 0), Vector3(0, 1, 0)]
 const AXIS_COMP = [2, 0, 1] 
 const PLANE_ORIENT = [PlaneMesh.FACE_Z, PlaneMesh.FACE_X, PlaneMesh.FACE_Y]
-
+@export var cook_scale = 1.0
 @export var cut_highlight_width = 0.005
 @export var CUT_WIDTH = 0.01
 @onready var cuttable_mat_z = load("res://cuttable_x.tres")
 @onready var cuttable_mat_x = load("res://cuttable_x.tres")
 @onready var cuttable_mat_y = load("res://cuttable_x.tres") ## all in one
+@onready var cooked_mat = load("res://cooked.tres")
 @onready var cut_coll_shape_z = $offset/cut_z/CollisionShape3D
 @onready var cut_coll_z = $offset/cut_z
 @onready var cut_coll_shape_x = $offset/cut_x/CollisionShape3D
@@ -27,6 +28,7 @@ const PLANE_ORIENT = [PlaneMesh.FACE_Z, PlaneMesh.FACE_X, PlaneMesh.FACE_Y]
 @export var cut_material_z:Material
 @export var cut_material_x:Material
 @export var cut_material_y:Material
+
 var type:StringName
 var volume
 var _cut_colls = []
@@ -68,6 +70,8 @@ func _ready():
 	_update_cut_colliders()
 
 	model.material_overlay = droppable_mat.duplicate_deep()
+	model.material_overlay.next_pass.next_pass = cooked_mat.duplicate_deep()
+
 	frozen.connect(_on_frozen)
 	unfrozen.connect(_on_unfrozen)
 	volume=get_mesh_volume(model.mesh)*absf(scale.x*scale.z*scale.y*model.scale.x*model.scale.z*model.scale.y)*20.0 ### bulharska konstanta
@@ -76,7 +80,10 @@ func _ready():
 func _physics_process(delta):
 	super._physics_process(delta)
 	_update_cut_colliders() ### WORKAROUND: _notification doesn't seem to be called if the body's not asleep
-
+func _process(delta):
+	model.material_overlay.next_pass.next_pass.set_shader_parameter("scale", cook_scale);
+	model.material_overlay.next_pass.next_pass.set_shader_parameter("alpha", 1.5*cook_time/30.0)
+	
 func _notification(what):
 	if what == NOTIFICATION_TRANSFORM_CHANGED:
 		_update_cut_colliders()
@@ -118,12 +125,14 @@ func _cut_material_for(axis:int) -> Material:
 func _cut_enable(axis):
 	cut_axis = axis
 	cut_enabled = true
+	var old_next_next_pass=model.material_overlay.next_pass.next_pass
 	model.material_overlay = _cut_materials()[axis].duplicate_deep()
-
+	model.material_overlay.next_pass.next_pass=old_next_next_pass
 func _cut_disable():
 	cut_enabled = false
+	var old_next_next_pass=model.material_overlay.next_pass.next_pass
 	model.material_overlay = droppable_mat.duplicate_deep()
-
+	model.material_overlay.next_pass.next_pass=old_next_next_pass
 func show_cut(pos:Vector3):
 	if not cut_enabled:
 		return
@@ -135,7 +144,6 @@ func show_cut(pos:Vector3):
 	var n_local:Vector3 = model.global_basis.transposed() * AXIS_VECS[cut_axis]
 	var len = n_local.length()
 	var d = n_local.dot(model.to_local(pos)) / len
-	print(d)
 	mat.set_shader_parameter("cut_normal", n_local.normalized())
 	mat.set_shader_parameter("cut_dist", d)
 	mat.set_shader_parameter("width", cut_highlight_width)
@@ -178,6 +186,8 @@ func cut(pos:Vector3):
 	var instance2 = duplicate()
 	instance1.type=type
 	instance2.type=type
+	instance1.cook_time = cook_time
+	instance2.cook_time=cook_time
 	_center_instance(instance1, meshes1[0])
 	_center_instance(instance2, meshes2[1])
 	add_sibling(instance1)

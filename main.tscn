@@ -116,7 +116,10 @@ autoplay = true
 parameters/looping = false
 
 [node name="bowl" parent="." unique_id=1110477166 instance=ExtResource("9_kek77")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5114355, 2.2850661, 6.990576)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5114355, 2.1952343, 6.990576)
+
+[node name="bowl2" parent="." unique_id=1278150284 instance=ExtResource("9_kek77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.019157, 2.1986449, 6.990576)
 
 [node name="pot" parent="." unique_id=879433023 instance=ExtResource("11_efxa6")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 3.1728363, 3.1624463, 7.7065916)
@@ -148,5 +151,8 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.668347, -0.706, 0)
 
 [node name="plate" parent="." unique_id=422206219 instance=ExtResource("18_074og")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 3.007967, 1.1703095, 7.3242683)
+
+[node name="plate2" parent="." unique_id=1347589447 instance=ExtResource("18_074og")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.4319277, 1.1703095, 7.3242683)
 
 [connection signal="close" from="ui_result" to="." method="_on_ui_result_close"]

@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://n1l5edmjf2rw"]
+
+[ext_resource type="Shader" uid="uid://ck4dklji5ex02" path="res://cooked.gdshader" id="1_vepdl"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_l2jes"]
+noise_type = 3
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_ccppr"]
+noise = SubResource("FastNoiseLite_l2jes")
+seamless = true
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_vepdl")
+shader_parameter/noise = SubResource("NoiseTexture3D_ccppr")
+shader_parameter/alpha = 0.0
+shader_parameter/scale = 1.0
+shader_parameter/alpha_cap = 0.95
+shader_parameter/color = Color(0.17915338, 0.117107324, 0, 1)

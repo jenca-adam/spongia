@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bhggohk4u58fk" path="res://cuttable.gd" id="1_wj2bn"]
 [ext_resource type="Texture2D" uid="uid://c1qfp5thrgqcs" path="res://red_bell_pepper_1.png" id="2_wj2bn"]
 [ext_resource type="Texture2D" uid="uid://cd8kepjuhwsqq" path="res://textures/red_pepper_cross.jpg" id="2_xao4i"]
+[ext_resource type="Material" uid="uid://n1l5edmjf2rw" path="res://cooked.tres" id="3_hqiuc"]
 [ext_resource type="Texture2D" uid="uid://b1c3xnev66kda" path="res://red_bell_pepper_2.jpg" id="3_xao4i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqiuc"]
@@ -72,6 +73,7 @@ shadow_mesh = SubResource("ArrayMesh_gih2x")
 [node name="red_pepper" type="RigidBody3D" unique_id=981881948]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 script = ExtResource("1_wj2bn")
+cook_scale = 10.0
 cut_material_z = SubResource("StandardMaterial3D_hqiuc")
 cut_material_x = SubResource("StandardMaterial3D_rc5ui")
 cut_material_y = SubResource("StandardMaterial3D_ec16j")
@@ -81,6 +83,7 @@ metadata/_custom_type_script = "uid://bhggohk4u58fk"
 
 [node name="model" type="MeshInstance3D" parent="offset" unique_id=129949793]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+material_overlay = ExtResource("3_hqiuc")
 mesh = SubResource("ArrayMesh_aasp4")
 
 [node name="cut_x" type="StaticBody3D" parent="offset" unique_id=88400879]

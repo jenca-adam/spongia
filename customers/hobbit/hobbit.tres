@@ -145,7 +145,7 @@ metadata/_custom_type_script = "uid://dmor3qc07dgge"
 [sub_resource type="Resource" id="Resource_7bup1"]
 script = ExtResource("5_rqi6m")
 taste_vector = SubResource("Resource_5vacq")
-cook_time = 10.0
+cook_time = 15.0
 amount = 0.5
 texture = 0.1
 metadata/_custom_type_script = "uid://dxpm23s7hgj3k"
