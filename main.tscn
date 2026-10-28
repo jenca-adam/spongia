@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dwpja8dndgxi0" path="res://hobbithouse.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://dh43d1cwqg3h4" path="res://main.gd" id="1_lquwl"]
-[ext_resource type="Texture2D" uid="uid://m2wwxs3pkq6g" path="res://158_green grass PBR texture_seamless.jpg" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://m2wwxs3pkq6g" path="res://textures/158_green grass PBR texture_seamless.jpg" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://b47lcdxl176ux" path="res://held_objs.tscn" id="2_4c57u"]
 [ext_resource type="PackedScene" uid="uid://cugldkvsjdxmt" path="res://table.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cf2km5r6talbf" path="res://shelf.tscn" id="4_1bvp3"]
@@ -142,9 +142,11 @@ shape = SubResource("WorldBoundaryShape3D_fdjtx")
 [node name="admin" parent="." unique_id=1095139935 instance=ExtResource("16_2cqfq")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.668347, -0.706, 0)
 
+[node name="ui_result" parent="." unique_id=1853153314 instance=ExtResource("19_cegan")]
+
 [node name="ui_order" parent="." unique_id=588159274 instance=ExtResource("17_yaehf")]
 
 [node name="plate" parent="." unique_id=422206219 instance=ExtResource("18_074og")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 3.007967, 1.1703095, 7.3242683)
 
-[node name="ui_result" parent="." unique_id=1853153314 instance=ExtResource("19_cegan")]
+[connection signal="close" from="ui_result" to="." method="_on_ui_result_close"]

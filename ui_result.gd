@@ -1,4 +1,5 @@
 extends UiOrder
+signal close
 func setup_result(bestellung:Bestellung, result_taste_profile:TasteProfile):
 	super.setup(bestellung)
 	var target_taste_profile = bestellung.customer.taste_profile
@@ -14,3 +15,6 @@ func setup_result(bestellung:Bestellung, result_taste_profile:TasteProfile):
 		comment_bb+=comment_text+'\n'
 	%comments.text="[ul]%s[/ul]"%comment_bb
 	%rating.text="%.2f"%(score*100.0)+"%"
+func _on_ok_pressed():
+	super._on_ok_pressed()
+	close.emit()

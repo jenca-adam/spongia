@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Food" format=3 uid="uid://ux3dhtf5ci6m"]
+
+[ext_resource type="PackedScene" uid="uid://hgfn5vvlgwia" path="res://mushroom.tscn" id="1_cmvg5"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_cmvg5"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="3_q8c5f"]
+[ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="4_vjhhv"]
+
+[sub_resource type="Resource" id="Resource_0jlna"]
+script = ExtResource("3_q8c5f")
+sweet = 0.2
+sour = 0.2
+salty = 0.6
+meaty = 0.1
+healthy = 0.6
+filling = 0.8
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Texture2D" id="Texture2D_vivmo"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("4_vjhhv")
+size = Vector2i(256, 256)
+scene = ExtResource("1_cmvg5")
+camera_fov = 76.0
+camera_distance = 0.3
+camera_position = Vector3(0, 0.08, 0)
+camera_rotation = Vector3(0, 0, 0)
+metadata/_custom_type_script = "uid://bt12obb4t0tm4"
+
+[resource]
+script = ExtResource("2_cmvg5")
+name = "Mystery Mushroom"
+desc = "It should be safe. No one has died... yet."
+category = "vegetables"
+scene = ExtResource("1_cmvg5")
+thumbnail = SubResource("Texture2D_vivmo")
+taste_vector = SubResource("Resource_0jlna")

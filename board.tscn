@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://iii5g0bsx0qy"]
 
-[ext_resource type="Texture2D" uid="uid://h5x3qnynu5qd" path="res://board_Poliigon_WoodVeneerOak_7760_BaseColor.jpg" id="1_8l818"]
+[ext_resource type="Texture2D" uid="uid://h5x3qnynu5qd" path="res://textures/board_Poliigon_WoodVeneerOak_7760_BaseColor.jpg" id="1_8l818"]
 [ext_resource type="Script" uid="uid://fgbfl4c3ehrf" path="res://container.gd" id="1_jqgjh"]
-[ext_resource type="Texture2D" uid="uid://ce7ery4rso2rn" path="res://board_Poliigon_WoodVeneerOak_7760_Roughness.jpg" id="2_jqgjh"]
-[ext_resource type="Texture2D" uid="uid://6hspixtqq5l2" path="res://board_Poliigon_WoodVeneerOak_7760_Normal.png" id="3_vf5bc"]
+[ext_resource type="Texture2D" uid="uid://ce7ery4rso2rn" path="res://textures/board_Poliigon_WoodVeneerOak_7760_Roughness.jpg" id="2_jqgjh"]
+[ext_resource type="Texture2D" uid="uid://6hspixtqq5l2" path="res://textures/board_Poliigon_WoodVeneerOak_7760_Normal.png" id="3_vf5bc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_podu6"]
 resource_name = "Material"

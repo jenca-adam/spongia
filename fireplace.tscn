@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dx2m42jeibym6"]
 
-[ext_resource type="Texture2D" uid="uid://5n56io6c8ts8" path="res://fireplace_table_67_wrought iron metal texture-seamless.jpg" id="1_3f88f"]
-[ext_resource type="Texture2D" uid="uid://b2r7euwk7bc17" path="res://fireplace_129_old wall brick texture-seamless.jpg" id="2_2e3fw"]
+[ext_resource type="Texture2D" uid="uid://5n56io6c8ts8" path="res://textures/fireplace_table_67_wrought iron metal texture-seamless.jpg" id="1_3f88f"]
+[ext_resource type="Texture2D" uid="uid://b2r7euwk7bc17" path="res://textures/fireplace_129_old wall brick texture-seamless.jpg" id="2_2e3fw"]
 [ext_resource type="Texture2D" uid="uid://b362hddle1soa" path="res://fire-spritesheet.png" id="3_2e3fw"]
 [ext_resource type="Script" uid="uid://goor7ld05umh" path="res://fire.gd" id="4_36lha"]
 [ext_resource type="AudioStream" uid="uid://jk5ks65t7ryp" path="res://sound/fire.wav" id="6_7l1op"]

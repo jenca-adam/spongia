@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://dcjrn2ya30cls"]
 
 [ext_resource type="Script" uid="uid://bhggohk4u58fk" path="res://cuttable.gd" id="1_602j4"]
-[ext_resource type="Texture2D" uid="uid://buf1wml3605ui" path="res://raw_pork_Material_46_baseColor.jpg" id="1_v1tkh"]
-[ext_resource type="Texture2D" uid="uid://dxiq6awwpas2t" path="res://raw_pork_Material_46_metallicRoughness_metal-Material_46_metallicRoughness_rough.png" id="2_602j4"]
-[ext_resource type="Texture2D" uid="uid://2i06qldumgq6" path="res://pork_cross.png" id="2_knf71"]
-[ext_resource type="Texture2D" uid="uid://j344850rut2v" path="res://raw_pork_Material_46_normal.jpg" id="3_knf71"]
+[ext_resource type="Texture2D" uid="uid://buf1wml3605ui" path="res://textures/raw_pork_Material_46_baseColor.jpg" id="1_v1tkh"]
+[ext_resource type="Texture2D" uid="uid://dxiq6awwpas2t" path="res://textures/raw_pork_Material_46_metallicRoughness_metal-Material_46_metallicRoughness_rough.png" id="2_602j4"]
+[ext_resource type="Texture2D" uid="uid://2i06qldumgq6" path="res://textures/pork_cross.png" id="2_knf71"]
+[ext_resource type="Texture2D" uid="uid://j344850rut2v" path="res://textures/raw_pork_Material_46_normal.jpg" id="3_knf71"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44wkx"]
 albedo_texture = ExtResource("2_knf71")

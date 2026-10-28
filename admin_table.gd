@@ -4,6 +4,7 @@ func get_food_items() -> Array[Cuttable]:
 	var containers := get_food_containers()
 	var food_items: Array[Cuttable] = []
 	for container in containers:
+		container.freed_clear()
 		food_items.append_array(container.bodies)
 	return food_items
 
@@ -21,6 +22,7 @@ func get_taste_profile() -> TasteProfile:
 		total_volume+=item.volume
 		cum_cook_time+=item.cook_time*item.volume
 		max_volume = max(max_volume, item.volume)
+		### dirty hack incoming!!!
 		cum_vector.weighted_add($/root/main/ui_chest.food_resources[item.type].taste_vector, item.volume)
 	if total_volume>0:
 		cum_vector.divide(total_volume)
@@ -38,3 +40,8 @@ func get_food_containers() -> Array[ObjContainer]:
 			continue
 		containers.append(container)
 	return containers
+
+func clear():
+	var items=get_food_items()
+	for item in items:
+		item.queue_free()

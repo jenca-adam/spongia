@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://ca2qd327o4unc"]
 
 [ext_resource type="Script" uid="uid://fgbfl4c3ehrf" path="res://container.gd" id="1_6yfex"]
-[ext_resource type="Texture2D" uid="uid://drb1d5an18ujy" path="res://bowl_clay.jpg" id="2_6yfex"]
+[ext_resource type="Texture2D" uid="uid://drb1d5an18ujy" path="res://textures/bowl_clay.jpg" id="2_6yfex"]
 [ext_resource type="Material" uid="uid://dowsjik5yvsox" path="res://droppable.tres" id="2_f4wr4"]
-[ext_resource type="Texture2D" uid="uid://cjviws2tjcill" path="res://bowl_clay-normal.jpg" id="3_f4wr4"]
+[ext_resource type="Texture2D" uid="uid://cjviws2tjcill" path="res://textures/bowl_clay-normal.jpg" id="3_f4wr4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uuv68"]
 resource_name = "Material.001"

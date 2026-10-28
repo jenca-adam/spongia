@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Food" format=3 uid="uid://dmgl3hkrf13wl"]
+
+[ext_resource type="PackedScene" uid="uid://d12db8tqrc772" path="res://pear.tscn" id="1_drq54"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_8tgdm"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="3_xga3u"]
+[ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="4_hjb67"]
+
+[sub_resource type="Resource" id="Resource_m0ffb"]
+script = ExtResource("3_xga3u")
+sweet = 0.7
+sour = 0.5
+healthy = 0.7
+filling = 0.2
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Texture2D" id="Texture2D_6l5bd"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("4_hjb67")
+size = Vector2i(256, 256)
+scene = ExtResource("1_drq54")
+camera_fov = 76.0
+camera_distance = 0.3
+metadata/_custom_type_script = "uid://bt12obb4t0tm4"
+
+[resource]
+script = ExtResource("2_8tgdm")
+name = "Pear"
+desc = "The apple's less famous cousin"
+category = "fruits"
+scene = ExtResource("1_drq54")
+thumbnail = SubResource("Texture2D_6l5bd")
+taste_vector = SubResource("Resource_m0ffb")

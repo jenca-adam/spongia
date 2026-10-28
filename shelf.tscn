@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cf2km5r6talbf"]
 
-[ext_resource type="Texture2D" uid="uid://cju2i126bmesj" path="res://shelf_hobbithouse_94_cracked paint wood PBR texture-seamless.jpg" id="1_0edba"]
+[ext_resource type="Texture2D" uid="uid://cju2i126bmesj" path="res://textures/shelf_hobbithouse_94_cracked paint wood PBR texture-seamless.jpg" id="1_0edba"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vpvkn"]
 resource_name = "Material.001"

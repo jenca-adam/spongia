@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://0sgn0wdcmned"]
 
 [ext_resource type="Script" uid="uid://c7654dnxq5ult" path="res://knife.gd" id="1_pfkap"]
-[ext_resource type="Texture2D" uid="uid://dfbh1e4uasfq8" path="res://knife_5_polished stainless steel metal texture-seamless.jpg" id="1_qjenl"]
-[ext_resource type="Texture2D" uid="uid://bunxaoiopi14n" path="res://knife_Poliigon_PlasticMoldDryBlast_7495_BaseColor.jpg" id="2_pfkap"]
-[ext_resource type="Texture2D" uid="uid://c7kxsdgh6wvfc" path="res://knife_Poliigon_PlasticMoldDryBlast_7495_Roughness.jpg" id="3_d7nea"]
-[ext_resource type="Texture2D" uid="uid://rp3lt4i8i0kc" path="res://knife_Poliigon_PlasticMoldDryBlast_7495_Normal.png" id="4_42cco"]
+[ext_resource type="Texture2D" uid="uid://dfbh1e4uasfq8" path="res://textures/knife_5_polished stainless steel metal texture-seamless.jpg" id="1_qjenl"]
+[ext_resource type="Texture2D" uid="uid://bunxaoiopi14n" path="res://textures/knife_Poliigon_PlasticMoldDryBlast_7495_BaseColor.jpg" id="2_pfkap"]
+[ext_resource type="Texture2D" uid="uid://c7kxsdgh6wvfc" path="res://textures/knife_Poliigon_PlasticMoldDryBlast_7495_Roughness.jpg" id="3_d7nea"]
+[ext_resource type="Texture2D" uid="uid://rp3lt4i8i0kc" path="res://textures/knife_Poliigon_PlasticMoldDryBlast_7495_Normal.png" id="4_42cco"]
 [ext_resource type="AudioStream" uid="uid://ei78luovyfvf" path="res://sound/knock.wav" id="6_d7nea"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s64ad"]

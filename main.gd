@@ -78,3 +78,9 @@ func _ready():
 	cur_cam = cams.find(START_CAM.name)
 	current_order = Bestellung.from_customer(load("res://customers/hobbit/hobbit.tres"))
 	$ui_order.setup(current_order)
+
+
+func _on_ui_result_close() -> void:
+	$admin.clear()
+	current_order= Bestellung.from_customer(load("res://customers/hobbit/hobbit.tres"))
+	$ui_order.setup(current_order)

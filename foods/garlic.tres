@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Food" format=3 uid="uid://b1n0cxnws36x0"]
+
+[ext_resource type="PackedScene" uid="uid://d06jfq4l1rukb" path="res://garlic.tscn" id="1_dapl7"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_dapl7"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="3_0a7ap"]
+[ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="4_fwmuq"]
+
+[sub_resource type="Resource" id="Resource_mxuls"]
+script = ExtResource("3_0a7ap")
+healthy = 0.2
+filling = 0.2
+spicy = 1.0
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Texture2D" id="Texture2D_vivmo"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("4_fwmuq")
+size = Vector2i(256, 256)
+scene = ExtResource("1_dapl7")
+camera_fov = 76.0
+camera_distance = 0.3
+camera_position = Vector3(0, 0.14, 0)
+camera_rotation = Vector3(0, 0, 0)
+metadata/_custom_type_script = "uid://bt12obb4t0tm4"
+
+[resource]
+script = ExtResource("2_dapl7")
+name = "Garlic"
+desc = "Don't use too much!"
+category = "vegetables"
+scene = ExtResource("1_dapl7")
+thumbnail = SubResource("Texture2D_vivmo")
+taste_vector = SubResource("Resource_mxuls")

@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cugldkvsjdxmt"]
 
-[ext_resource type="Texture2D" uid="uid://im1yxn334yx5" path="res://table_hobbithouse_94_cracked paint wood PBR texture-seamless.jpg" id="1_v5i0k"]
-[ext_resource type="Texture2D" uid="uid://druccjjgo1shc" path="res://table_67_wrought iron metal texture-seamless.jpg" id="2_kl0hw"]
+[ext_resource type="Texture2D" uid="uid://im1yxn334yx5" path="res://textures/table_hobbithouse_94_cracked paint wood PBR texture-seamless.jpg" id="1_v5i0k"]
+[ext_resource type="Texture2D" uid="uid://druccjjgo1shc" path="res://textures/table_67_wrought iron metal texture-seamless.jpg" id="2_kl0hw"]
 [ext_resource type="PhysicsMaterial" uid="uid://bvu6hxbdmykpn" path="res://rough_ph.tres" id="3_kl0hw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4yal2"]

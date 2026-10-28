@@ -40,7 +40,7 @@ func _ready():
 
 func _generate_top_plane_shape()->BoxShape3D:
 	var box_shape = BoxShape3D.new()
-	box_shape.size = aabb.size*0.5
+	box_shape.size = aabb.size*0.9
 	box_shape.size.y = 0.2
 	return box_shape
 func _generate_top_plane_position()->Vector3:
@@ -235,6 +235,7 @@ func _tip_reset_after_timeout():
 	var timer = get_tree().create_timer(0.5)
 	timer.timeout.connect(_tip_reset)
 func _tip():
+	freed_clear()
 	for body in bodies.duplicate():
 		if not is_instance_valid(body):
 			continue
@@ -266,3 +267,10 @@ func _input(event:InputEvent):
 
 func _on_unuse():
 	_on_cancelled(67)
+
+func freed_clear():
+	var new_bodies:Array[Obj] = []
+	for body in bodies:
+		if is_instance_valid(body):
+			new_bodies.append(body)
+	bodies=new_bodies

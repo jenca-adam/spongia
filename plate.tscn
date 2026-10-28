@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://6l7tklcbmtpv"]
 
-[ext_resource type="Texture2D" uid="uid://bk3psxfqwqpyr" path="res://plate_Poliigon_CeramicPotteryGlazed_10861_BaseColor.jpg" id="1_g4jty"]
+[ext_resource type="Texture2D" uid="uid://bk3psxfqwqpyr" path="res://textures/plate_Poliigon_CeramicPotteryGlazed_10861_BaseColor.jpg" id="1_g4jty"]
 [ext_resource type="Script" uid="uid://fgbfl4c3ehrf" path="res://container.gd" id="1_jcf13"]
-[ext_resource type="Texture2D" uid="uid://bljuo7qlw0jwj" path="res://plate_Poliigon_CeramicPotteryGlazed_10861_Roughness.jpg" id="2_jcf13"]
-[ext_resource type="Texture2D" uid="uid://dbob1hg5st4e0" path="res://plate_Poliigon_CeramicPotteryGlazed_10861_Normal.png" id="3_ffgcv"]
+[ext_resource type="Texture2D" uid="uid://bljuo7qlw0jwj" path="res://textures/plate_Poliigon_CeramicPotteryGlazed_10861_Roughness.jpg" id="2_jcf13"]
+[ext_resource type="Texture2D" uid="uid://dbob1hg5st4e0" path="res://textures/plate_Poliigon_CeramicPotteryGlazed_10861_Normal.png" id="3_ffgcv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2wvc"]
 resource_name = "Material.001"

@@ -6,7 +6,7 @@
 [ext_resource type="Shader" uid="uid://b825v5nagc5lj" path="res://hover_order.gdshader" id="2_mko7j"]
 [ext_resource type="Texture2D" uid="uid://fy4waf4c5sle" path="res://old-paper-bl/old-paper_normal-ogl.png" id="3_mko7j"]
 [ext_resource type="Texture2D" uid="uid://bla3p3twq26in" path="res://old-paper-bl/old-paper_roughness.png" id="4_1eelx"]
-[ext_resource type="Texture2D" uid="uid://v0g7t46qamgg" path="res://order-decal.png" id="5_7a65q"]
+[ext_resource type="Texture2D" uid="uid://v0g7t46qamgg" path="res://textures/order-decal.png" id="5_7a65q"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_k4d4t"]
 noise_type = 3

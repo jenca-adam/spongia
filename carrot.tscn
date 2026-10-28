@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bhggohk4u58fk" path="res://cuttable.gd" id="1_1c571"]
 [ext_resource type="PhysicsMaterial" uid="uid://bvu6hxbdmykpn" path="res://rough_ph.tres" id="1_drq1q"]
-[ext_resource type="Texture2D" uid="uid://ce3ccue6neio5" path="res://carrot_Albedo.jpg" id="1_xyubp"]
+[ext_resource type="Texture2D" uid="uid://ce3ccue6neio5" path="res://textures/carrot_Albedo.jpg" id="1_xyubp"]
 [ext_resource type="Texture2D" uid="uid://qxt4wmdle6ng" path="res://carrot_Roughness.jpg" id="2_7ucno"]
-[ext_resource type="Material" uid="uid://b6k8kxtiags05" path="res://carrot_cross.tres" id="2_kobi7"]
-[ext_resource type="Texture2D" uid="uid://c0aix27a4gv3j" path="res://carrot_Normal.jpg" id="3_1c571"]
-[ext_resource type="Texture2D" uid="uid://cahftspml70b8" path="res://carrot_cross2.jpg" id="3_kobi7"]
+[ext_resource type="Material" uid="uid://b6k8kxtiags05" path="res://textures/carrot_cross.tres" id="2_kobi7"]
+[ext_resource type="Texture2D" uid="uid://c0aix27a4gv3j" path="res://textures/carrot_Normal.jpg" id="3_1c571"]
+[ext_resource type="Texture2D" uid="uid://cahftspml70b8" path="res://textures/carrot_cross2.jpg" id="3_kobi7"]
 [ext_resource type="Material" uid="uid://dhtoyxgk7k1jq" path="res://cuttable_x.tres" id="5_mgx1p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ucno"]

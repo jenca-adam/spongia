@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://dvbjaurrdb7wa"]
 
 [ext_resource type="Script" uid="uid://bhggohk4u58fk" path="res://cuttable.gd" id="1_54n37"]
-[ext_resource type="Texture2D" uid="uid://c43nw1r7kuyh7" path="res://onion_Image_0.png" id="1_ctl4l"]
-[ext_resource type="Texture2D" uid="uid://didtqq1mnig74" path="res://onion_Image_0_2.png" id="2_54n37"]
-[ext_resource type="Texture2D" uid="uid://de61gkbtw86jt" path="res://onion_cross.jpg" id="2_exj4b"]
-[ext_resource type="Texture2D" uid="uid://btx2n8u5h46mg" path="res://onion_Image_1.png" id="3_wpmb3"]
+[ext_resource type="Texture2D" uid="uid://c43nw1r7kuyh7" path="res://textures/onion_Image_0.png" id="1_ctl4l"]
+[ext_resource type="Texture2D" uid="uid://didtqq1mnig74" path="res://textures/onion_Image_0_2.png" id="2_54n37"]
+[ext_resource type="Texture2D" uid="uid://de61gkbtw86jt" path="res://textures/onion_cross.jpg" id="2_exj4b"]
+[ext_resource type="Texture2D" uid="uid://btx2n8u5h46mg" path="res://textures/onion_Image_1.png" id="3_wpmb3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpmb3"]
 albedo_texture = ExtResource("2_exj4b")

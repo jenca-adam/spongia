@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Food" format=3 uid="uid://dqf3u5lu87hev"]
+
+[ext_resource type="PackedScene" uid="uid://xns250b47i24" path="res://red_pepper.tscn" id="1_osnrg"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_nxppc"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="3_80aar"]
+[ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="4_br8br"]
+
+[sub_resource type="Resource" id="Resource_mxuls"]
+script = ExtResource("3_80aar")
+sweet = 0.6
+sour = 0.3
+healthy = 0.7
+filling = 0.2
+spicy = 0.1
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Texture2D" id="Texture2D_vivmo"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("4_br8br")
+size = Vector2i(256, 256)
+scene = ExtResource("1_osnrg")
+scene_rotation = Vector3(0, 2.3823745, 0)
+camera_fov = 76.0
+camera_distance = 0.3
+camera_position = Vector3(0, 0.12, 0)
+camera_rotation = Vector3(0, 0, 0)
+metadata/_custom_type_script = "uid://bt12obb4t0tm4"
+
+[resource]
+script = ExtResource("2_nxppc")
+name = "Bell Pepper"
+desc = "A mysterious vegetable from a far-off land..."
+category = "vegetables"
+scene = ExtResource("1_osnrg")
+thumbnail = SubResource("Texture2D_vivmo")
+taste_vector = SubResource("Resource_mxuls")

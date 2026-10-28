@@ -3,7 +3,7 @@
 [ext_resource type="Shader" uid="uid://0ip2ium0ai1l" path="res://occluder.gdshader" id="1_0x0id"]
 [ext_resource type="Script" uid="uid://bjh7gp0lceegt" path="res://pot.gd" id="1_8vpk7"]
 [ext_resource type="Script" uid="uid://itufa8qov4d2" path="res://occluder.gd" id="3_8vpk7"]
-[ext_resource type="Texture2D" uid="uid://druccjjgo1shc" path="res://table_67_wrought iron metal texture-seamless.jpg" id="4_e5jjy"]
+[ext_resource type="Texture2D" uid="uid://druccjjgo1shc" path="res://textures/table_67_wrought iron metal texture-seamless.jpg" id="4_e5jjy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ax0nw"]
 render_priority = 0
@@ -101,7 +101,6 @@ size = Vector3(1.4998372, 0.79999995, 1.4998372)
 [node name="pot" type="RigidBody3D" unique_id=2048917052]
 script = ExtResource("1_8vpk7")
 hangs = true
-duct_tape = Vector3(0, -0.08, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1807326457]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)

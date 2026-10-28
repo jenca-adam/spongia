@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://bygx1ju56xt02"]
 
 [ext_resource type="Script" uid="uid://de7hvn0oqcbub" path="res://admin_table.gd" id="1_po8bi"]
-[ext_resource type="Texture2D" uid="uid://h5x3qnynu5qd" path="res://board_Poliigon_WoodVeneerOak_7760_BaseColor.jpg" id="1_tj5db"]
-[ext_resource type="Texture2D" uid="uid://bunxaoiopi14n" path="res://knife_Poliigon_PlasticMoldDryBlast_7495_BaseColor.jpg" id="2_dwa7e"]
-[ext_resource type="Texture2D" uid="uid://c7kxsdgh6wvfc" path="res://knife_Poliigon_PlasticMoldDryBlast_7495_Roughness.jpg" id="3_8pksl"]
+[ext_resource type="Texture2D" uid="uid://h5x3qnynu5qd" path="res://textures/board_Poliigon_WoodVeneerOak_7760_BaseColor.jpg" id="1_tj5db"]
+[ext_resource type="Texture2D" uid="uid://bunxaoiopi14n" path="res://textures/knife_Poliigon_PlasticMoldDryBlast_7495_BaseColor.jpg" id="2_dwa7e"]
+[ext_resource type="Texture2D" uid="uid://c7kxsdgh6wvfc" path="res://textures/knife_Poliigon_PlasticMoldDryBlast_7495_Roughness.jpg" id="3_8pksl"]
 [ext_resource type="PhysicsMaterial" uid="uid://bvu6hxbdmykpn" path="res://rough_ph.tres" id="3_dwa7e"]
 [ext_resource type="PackedScene" uid="uid://bw642eouwv5pv" path="res://order.tscn" id="5_dwa7e"]
 [ext_resource type="PackedScene" uid="uid://dtt8dws062ivo" path="res://bell.tscn" id="6_8pksl"]

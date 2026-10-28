@@ -1,0 +1,33 @@
+[gd_resource type="Theme" format=3 uid="uid://ook3gn0uv81v"]
+
+[ext_resource type="Texture2D" uid="uid://d2rfu8l80g5a6" path="res://textures/parchment.jpg" id="1_kqddg"]
+[ext_resource type="FontFile" uid="uid://boe7ytapn8jk3" path="res://fonts/nautilus-pompilius.regular.otf" id="2_ygd1g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sb26r"]
+texture = ExtResource("1_kqddg")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygd1g"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mj166"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5kfdx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ygd1g"]
+texture = ExtResource("1_kqddg")
+
+[resource]
+default_font = ExtResource("2_ygd1g")
+default_font_size = 22
+/styles/ui_panel = SubResource("StyleBoxTexture_sb26r")
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0.2303147, 0.23031497, 0.23031548, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_ygd1g")
+Button/styles/normal = SubResource("StyleBoxEmpty_mj166")
+Button/styles/pressed = SubResource("StyleBoxEmpty_5kfdx")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_ygd1g")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)

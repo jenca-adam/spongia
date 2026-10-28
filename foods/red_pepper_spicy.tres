@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Food" format=3 uid="uid://bga1ewu7fon5n"]
+
+[ext_resource type="PackedScene" uid="uid://biskbr0usd7w" path="res://red_pepper_spicy.tscn" id="1_q4oot"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_q6a1o"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="3_11kq8"]
+[ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="4_hgqp2"]
+
+[sub_resource type="Resource" id="Resource_mxuls"]
+script = ExtResource("3_11kq8")
+sweet = 0.1
+healthy = 0.2
+filling = 0.2
+spicy = 1.0
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Texture2D" id="Texture2D_vivmo"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("4_hgqp2")
+size = Vector2i(256, 256)
+scene = ExtResource("1_q4oot")
+camera_fov = 76.0
+camera_distance = 0.3
+camera_position = Vector3(0, 0, 0)
+camera_rotation = Vector3(0, 0, 0)
+metadata/_custom_type_script = "uid://bt12obb4t0tm4"
+
+[resource]
+script = ExtResource("2_q6a1o")
+name = "Spicy Pepper"
+desc = "Definitely don't use too much!!"
+category = "vegetables"
+scene = ExtResource("1_q4oot")
+thumbnail = SubResource("Texture2D_vivmo")
+taste_vector = SubResource("Resource_mxuls")

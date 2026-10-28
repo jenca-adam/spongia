@@ -76,8 +76,9 @@ func _ready():
 	collision_shape.debug_color=Color(0,1,0,0.5)
 	grab.connect(_on_grab)
 	ungrab.connect(_on_ungrab)
-	
-	aabb=model.transform*model.get_aabb()
+	var trans:Transform3D = model.global_transform
+	trans.origin=Vector3.ZERO
+	aabb=trans*model.get_aabb()
 	physics_material_override = phys_mat
 	sleeping_state_changed.connect(_on_sleeping_state_changed)
 	max_contacts_reported=10
@@ -91,13 +92,14 @@ func neutralize_rotation():
 func _on_grab() -> void:
 	grabbed = true
 	model.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-func would_collide() -> bool:
+func would_collide(exclude) -> bool:
 	var query := PhysicsShapeQueryParameters3D.new()
 	query.shape =collision_shape.shape
 
 	query.transform = collision_shape.global_transform#.translated(duct_tape)
 	query.collision_mask = 1
-	query.exclude = [shape.get_parent().get_rid(), get_rid()]+global_exclude
+	query.exclude = [shape.get_parent().get_rid(), get_rid()]+global_exclude+exclude
+	
 	var space := get_world_3d().direct_space_state
 	var result=space.intersect_shape(query, 1)
 	if result:
@@ -116,8 +118,11 @@ func _physics_process(delta):
 		var result = $/root/main.held_objs.racist(0b10|(0b100 if hangs else 0)|(1<<9 if containable else 0)|(1<<15 if presentable else 0))
 		if result:
 			var pos = result["position"]
+			var exclude=[]
+			if (result["collider"].name=="top_plane"):
+				exclude=[result["collider"].get_parent().get_node("hover").get_rid()]
 			global_position=pos-Vector3(0,aabb.position.y,0)-offset+duct_tape;
-			if would_collide():
+			if would_collide(exclude):
 				model.material_overlay.next_pass.albedo_color=Color(1,0,0,0.4)
 				can_drop=false
 			else:

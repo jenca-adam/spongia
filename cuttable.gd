@@ -72,6 +72,7 @@ func _ready():
 	unfrozen.connect(_on_unfrozen)
 	volume=get_mesh_volume(model.mesh)*absf(scale.x*scale.z*scale.y*model.scale.x*model.scale.z*model.scale.y)*20.0 ### bulharska konstanta
 	print(name, " volume: ", volume)
+	var mesh := model.mesh as Mesh
 func _physics_process(delta):
 	super._physics_process(delta)
 	_update_cut_colliders() ### WORKAROUND: _notification doesn't seem to be called if the body's not asleep
@@ -134,6 +135,7 @@ func show_cut(pos:Vector3):
 	var n_local:Vector3 = model.global_basis.transposed() * AXIS_VECS[cut_axis]
 	var len = n_local.length()
 	var d = n_local.dot(model.to_local(pos)) / len
+	print(d)
 	mat.set_shader_parameter("cut_normal", n_local.normalized())
 	mat.set_shader_parameter("cut_dist", d)
 	mat.set_shader_parameter("width", cut_highlight_width)
