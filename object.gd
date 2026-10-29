@@ -36,6 +36,7 @@ var query_shape := BoxShape3D.new()
 var rotating_origin:Vector2
 var rotating_base:Vector3
 var grab_timeout:Timer
+var swap:Vector3
 var container:ObjContainer
 signal release(what:Obj)
 signal cancel(what:Obj)
@@ -96,9 +97,9 @@ func _on_grab() -> void:
 	model.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 func would_collide(exclude) -> bool:
 	var query := PhysicsShapeQueryParameters3D.new()
-	query.shape =collision_shape.shape
-
-	query.transform = collision_shape.global_transform#.translated(duct_tape)
+	query.shape =collision_shape.shape;
+	
+	query.transform = collision_shape.global_transform;
 	query.collision_mask = 1
 	query.exclude = [shape.get_parent().get_rid(), get_rid()]+global_exclude+exclude
 	
@@ -123,7 +124,7 @@ func _physics_process(delta):
 			var exclude=[]
 			if (result["collider"].name=="top_plane"):
 				exclude=[result["collider"].get_parent().get_node("hover").get_rid()]
-			global_position=pos-Vector3(0,aabb.position.y,0)-offset+duct_tape;
+			global_position=pos-Vector3(0,aabb.position.y,0)+duct_tape;
 			if would_collide(exclude):
 				model.material_overlay.next_pass.albedo_color=Color(1,0,0,0.4)
 				can_drop=false

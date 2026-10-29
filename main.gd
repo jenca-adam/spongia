@@ -1,7 +1,7 @@
 class_name Main
 extends Node3D
 const cams = ["prep_table","chest", "fire", "shelf"];
-
+var customers:Array[Customer]
 var cur_cam = 0;
 @export
 var CAM_SWITCH_TIME = 1.0;
@@ -9,6 +9,7 @@ var CAM_SWITCH_TIME = 1.0;
 var CAM_SWITCH_EASE = Tween.EASE_OUT
 var switching = 0
 var current_order:Bestellung
+var served=1
 @export var START_CAM:Camera3D
 @onready var held_objs = $cams/trans/held_objs
 @onready var admin_cam= $cams/admin_table
@@ -82,11 +83,15 @@ func _input(event: InputEvent):
 		tutorial.set_variable(&"cam_%d"%(cams.find(cams[cur_cam])), 1)
 	if event.is_action_released("DEBUG"):
 		print(held_objs.active_item)
+func next_customer():
+	var customer = customers.slice(0,served).pick_random()
+	current_order = Bestellung.from_customer(customer)
+	$ui_order.setup(current_order)
 func _ready():
 	switch_cam(START_CAM, START_CAM)
 	cur_cam = cams.find(START_CAM.name)
-	current_order = Bestellung.from_customer(load("res://customers/elf/elf.tres"))
-	$ui_order.setup(current_order)
+	customers = [ load("res://customers/hobbit/hobbit.tres"), load("res://customers/elf/elf.tres"), load("res://customers/horse/horse.tres")]
+	next_customer()
 	tutorial = Tutorial.new()
 	tutorial.setup(self)
 	tutorial.enabled=tutorial_enable
@@ -95,5 +100,5 @@ func _ready():
 
 func _on_ui_result_close() -> void:
 	$admin.clear()
-	current_order= Bestellung.from_customer(load("res://customers/elf/elf.tres"))
-	$ui_order.setup(current_order)
+	served+=1
+	next_customer()

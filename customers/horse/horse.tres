@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="Horse" format=3 uid="uid://c522y3wj3a1ya"]
+
+[ext_resource type="Texture2D" uid="uid://nufklr31hgr4" path="res://customers/horse/face.jpg" id="1_43uvc"]
+[ext_resource type="Script" uid="uid://jty57q8gobss" path="res://customers/horse/horse.gd" id="1_nt1ln"]
+[ext_resource type="Script" uid="uid://23fgsnyaetea" path="res://comments.gd" id="2_6u13g"]
+[ext_resource type="Script" uid="uid://cp601goyny8yk" path="res://json_loader.gd" id="2_w1n6y"]
+[ext_resource type="Script" uid="uid://dxpm23s7hgj3k" path="res://taste_profile.gd" id="5_y03xd"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="6_t0kji"]
+
+[sub_resource type="Resource" id="Resource_b4u26"]
+script = ExtResource("2_w1n6y")
+json_path = "res://customers/horse/neigh.json"
+items = Array[String](["*neighs*", "*snorts*", "*whinnies*"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_ryguw"]
+script = ExtResource("2_6u13g")
+extras = Dictionary[String, ExtResource("2_w1n6y")]({
+"neigh": SubResource("Resource_b4u26")
+})
+metadata/_custom_type_script = "uid://23fgsnyaetea"
+
+[sub_resource type="Resource" id="Resource_getpj"]
+script = ExtResource("2_w1n6y")
+json_path = "res://customers/horse/names.json"
+items = Array[String](["Arod", "Arroch", "Asfaloth", "Ashere", "Bill the Pony", "Bumpkin", "Fatty Lumpkin", "Felaróf", "Firefoot", "Hasufel", "Lightfoot", "Mearas", "Nahar", "Rochallor", "Rohald", "Roheryn", "Shadowfax", "Sharp-ears", "Snowmane", "Strider", "Stybba", "Swish-tail", "White-socks", "Windfola", "Wise-nose"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_dcilc"]
+script = ExtResource("2_w1n6y")
+json_path = "res://customers/horse/neigh.json"
+items = Array[String](["*neighs*", "*snorts*", "*whinnies*"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_0odxb"]
+script = ExtResource("6_t0kji")
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Resource" id="Resource_1u8w0"]
+script = ExtResource("5_y03xd")
+taste_vector = SubResource("Resource_0odxb")
+metadata/_custom_type_script = "uid://dxpm23s7hgj3k"
+
+[resource]
+script = ExtResource("1_nt1ln")
+min_carrot_amount = 0.2
+name = &"Horse"
+image = ExtResource("1_43uvc")
+orders = SubResource("Resource_dcilc")
+names = SubResource("Resource_getpj")
+comments = SubResource("Resource_ryguw")
+taste_profile = SubResource("Resource_1u8w0")
+metadata/_custom_type_script = "uid://jty57q8gobss"

@@ -162,6 +162,5 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.4319277, 1.1703095, 7
 [node name="ui_tutorial" parent="." unique_id=1443564730 instance=ExtResource("20_82xsv")]
 
 [node name="intro" parent="." unique_id=1904465255 instance=ExtResource("21_getpj")]
-play = false
 
 [connection signal="close" from="ui_result" to="." method="_on_ui_result_close"]

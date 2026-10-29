@@ -13,85 +13,95 @@ items = Array[String](["I do enjoy my food natural, but this is quite low-effort
 
 [sub_resource type="Resource" id="Resource_cu83l"]
 script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/not_filling.json"
+items = Array[String](["Not a particularly meaningful meal, in my humble opinion."])
+
+[sub_resource type="Resource" id="Resource_fdmle"]
+script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/not_healthy.json"
 items = Array[String](["Your kin never think of good health! Aye, that is the secret behind your short-livedness!"])
 
-[sub_resource type="Resource" id="Resource_fdmle"]
+[sub_resource type="Resource" id="Resource_a6vyh"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/not_meaty.json"
 items = Array[String]([""])
 
-[sub_resource type="Resource" id="Resource_a6vyh"]
+[sub_resource type="Resource" id="Resource_qobxh"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/not_much.json"
 items = Array[String](["I'm not one to eat great amounts, but I must admit, your dedication to asceticism surpasses even mine!"])
 
-[sub_resource type="Resource" id="Resource_qobxh"]
+[sub_resource type="Resource" id="Resource_0tj53"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/not_salty.json"
 items = Array[String](["Missing a bit of the white gold of the sea!"])
 
-[sub_resource type="Resource" id="Resource_0tj53"]
+[sub_resource type="Resource" id="Resource_wkjxy"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/not_sour.json"
 items = Array[String](["Quite boring, disappointingly."])
 
-[sub_resource type="Resource" id="Resource_wkjxy"]
+[sub_resource type="Resource" id="Resource_35fdf"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/not_spicy.json"
 items = Array[String]([""])
 
-[sub_resource type="Resource" id="Resource_35fdf"]
+[sub_resource type="Resource" id="Resource_3mh4m"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/not_sweet.json"
 items = Array[String](["You're not one to appreciate the little joys of life."])
 
-[sub_resource type="Resource" id="Resource_3mh4m"]
+[sub_resource type="Resource" id="Resource_grkpk"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/not_textured.json"
 items = Array[String](["Much too mushy! Reminds me of what we feed our elders."])
 
-[sub_resource type="Resource" id="Resource_grkpk"]
+[sub_resource type="Resource" id="Resource_xkvvx"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/too_cooked.json"
 items = Array[String](["I've always been against cooking food. If Mother Nature had meant us to do it, she would have made it come pre-cooked, wouldn't she?"])
 
-[sub_resource type="Resource" id="Resource_xkvvx"]
+[sub_resource type="Resource" id="Resource_mh33d"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/too_filling.json"
+items = Array[String](["This feels like a rock in my stomach."])
+
+[sub_resource type="Resource" id="Resource_1io5n"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/too_healthy.json"
 items = Array[String](["impossible"])
 
-[sub_resource type="Resource" id="Resource_mh33d"]
+[sub_resource type="Resource" id="Resource_ulqqb"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/too_meaty.json"
 items = Array[String](["How DARE you waste the lives of these innocent creatures for such lowly passions?! Shame!"])
 
-[sub_resource type="Resource" id="Resource_1io5n"]
+[sub_resource type="Resource" id="Resource_vfpha"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/too_much.json"
 items = Array[String](["I can't eat all this."])
 
-[sub_resource type="Resource" id="Resource_ulqqb"]
+[sub_resource type="Resource" id="Resource_5otf5"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/too_salty.json"
 items = Array[String](["Use salt with moderation, friend"])
 
-[sub_resource type="Resource" id="Resource_vfpha"]
+[sub_resource type="Resource" id="Resource_d1r1i"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/too_sour.json"
 items = Array[String](["'Tis too much akin to an unripe apple."])
 
-[sub_resource type="Resource" id="Resource_5otf5"]
+[sub_resource type="Resource" id="Resource_dt3yl"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/too_spicy.json"
 items = Array[String](["I'm too old for thrill-seeking."])
 
-[sub_resource type="Resource" id="Resource_d1r1i"]
+[sub_resource type="Resource" id="Resource_pqor5"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/too_sweet.json"
 items = Array[String]([""])
 
-[sub_resource type="Resource" id="Resource_dt3yl"]
+[sub_resource type="Resource" id="Resource_iaajr"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/too_textured.json"
 items = Array[String](["I wonder why it comes in one piece? Must be a novelty."])
@@ -99,23 +109,25 @@ items = Array[String](["I wonder why it comes in one piece? Must be a novelty."]
 [sub_resource type="Resource" id="Resource_ryguw"]
 script = ExtResource("2_sd2k7")
 not_cooked = SubResource("Resource_dx54d")
-not_healthy = SubResource("Resource_cu83l")
-not_meaty = SubResource("Resource_fdmle")
-not_much = SubResource("Resource_a6vyh")
-not_salty = SubResource("Resource_qobxh")
-not_sour = SubResource("Resource_0tj53")
-not_sweet = SubResource("Resource_35fdf")
-not_textured = SubResource("Resource_3mh4m")
-not_spicy = SubResource("Resource_wkjxy")
-too_cooked = SubResource("Resource_grkpk")
-too_healthy = SubResource("Resource_xkvvx")
-too_meaty = SubResource("Resource_mh33d")
-too_much = SubResource("Resource_1io5n")
-too_salty = SubResource("Resource_ulqqb")
-too_sour = SubResource("Resource_vfpha")
-too_sweet = SubResource("Resource_d1r1i")
-too_textured = SubResource("Resource_dt3yl")
-too_spicy = SubResource("Resource_5otf5")
+not_healthy = SubResource("Resource_fdmle")
+not_meaty = SubResource("Resource_a6vyh")
+not_much = SubResource("Resource_qobxh")
+not_salty = SubResource("Resource_0tj53")
+not_sour = SubResource("Resource_wkjxy")
+not_sweet = SubResource("Resource_3mh4m")
+not_textured = SubResource("Resource_grkpk")
+not_spicy = SubResource("Resource_35fdf")
+not_filling = SubResource("Resource_cu83l")
+too_cooked = SubResource("Resource_xkvvx")
+too_healthy = SubResource("Resource_1io5n")
+too_meaty = SubResource("Resource_ulqqb")
+too_much = SubResource("Resource_vfpha")
+too_salty = SubResource("Resource_5otf5")
+too_sour = SubResource("Resource_d1r1i")
+too_sweet = SubResource("Resource_pqor5")
+too_textured = SubResource("Resource_iaajr")
+too_spicy = SubResource("Resource_dt3yl")
+too_filling = SubResource("Resource_mh33d")
 dir_path = "res://customers/elf/comments"
 metadata/_custom_type_script = "uid://23fgsnyaetea"
 
@@ -140,7 +152,7 @@ sweet = 0.8
 sour = 0.5
 salty = 0.35
 healthy = 1.0
-filling = 0.5
+filling = 0.7
 spicy = 0.1
 metadata/_custom_type_script = "uid://dmor3qc07dgge"
 

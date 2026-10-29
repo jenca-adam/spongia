@@ -147,16 +147,29 @@ func show_cut(pos:Vector3):
 	mat.set_shader_parameter("cut_normal", n_local.normalized())
 	mat.set_shader_parameter("cut_dist", d)
 	mat.set_shader_parameter("width", cut_highlight_width)
+	
+func recenter_mesh(mesh: ArrayMesh) -> Vector3:
+	var center := mesh.get_aabb().get_center()
+	var surfaces: Array = []
+	for s in mesh.get_surface_count():
+		surfaces.append({
+			"arrays": mesh.surface_get_arrays(s),
+			"type": mesh.surface_get_primitive_type(s),
+			"material": mesh.surface_get_material(s),
+		})
 
-func _center_instance(instance: Node3D, mesh: Mesh) -> void:
-	var offset: Node3D = instance.get_node("offset")
-	var model: MeshInstance3D = instance.get_node("offset/model")
-	model.mesh = mesh
-	var local_aabb: AABB = offset.transform * model.transform * model.get_aabb()
-	var center: Vector3 = local_aabb.get_center()
-	center.y=0
-	offset.position -= center
-	instance.position += instance.transform.basis * center
+	mesh.clear_surfaces()
+
+	for surf in surfaces:
+		var arrays: Array = surf.arrays
+		var verts: PackedVector3Array = arrays[Mesh.ARRAY_VERTEX]
+		for i in verts.size():
+			verts[i] -= center
+		arrays[Mesh.ARRAY_VERTEX] = verts
+		mesh.add_surface_from_arrays(surf.type, arrays)
+		mesh.surface_set_material(mesh.get_surface_count() - 1, surf.material)
+
+	return center
 
 func _make_cut_plane(world_pos:Vector3) -> MeshInstance3D:
 	var inst = MeshInstance3D.new()
@@ -165,7 +178,13 @@ func _make_cut_plane(world_pos:Vector3) -> MeshInstance3D:
 	inst.mesh = plane
 	inst.transform = model.global_transform.affine_inverse() * Transform3D(Basis.IDENTITY, world_pos)
 	return inst
-
+func _center_instance(instance:Cuttable, mesh:ArrayMesh):
+	var model = instance.get_node("offset/model")
+	var center = recenter_mesh(mesh)*model.scale
+	print(center)
+	model.mesh = mesh
+	instance.translate_object_local(center)
+	
 func cut(pos:Vector3):
 	if not cut_enabled:
 		return false
@@ -181,7 +200,6 @@ func cut(pos:Vector3):
 	var meshes1 = MeshTools.MeshDestruction.slice_mesh(plane1, model.mesh, mat)
 	var plane2 = _make_cut_plane(pos + dir * CUT_WIDTH / 2)
 	var meshes2 = MeshTools.MeshDestruction.slice_mesh(plane2, meshes1[1], mat)
-
 	var instance1 = duplicate()
 	var instance2 = duplicate()
 	instance1.type=type

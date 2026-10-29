@@ -22,6 +22,7 @@ extends Resource
 @export var too_textured:JSONLoadable
 @export var too_spicy:JSONLoadable
 @export var too_filling:JSONLoadable
+@export var extras:Dictionary[String, JSONLoadable]
 @export_dir var dir_path: String:
 	set(value):
 		dir_path = value
@@ -42,3 +43,8 @@ func load_dir():
 			loadable.load_json()
 			set(category, loadable)
 			
+func get_cat_list(cat):
+	var got = get(cat)
+	if got:
+		return got
+	return extras.get(cat)

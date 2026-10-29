@@ -21,7 +21,7 @@ size = Vector2i(256, 256)
 scene = ExtResource("1_q4oot")
 camera_fov = 76.0
 camera_distance = 0.3
-camera_position = Vector3(0, 0, 0)
+camera_position = Vector3(-0.04, 0, 0)
 camera_rotation = Vector3(0, 0, 0)
 metadata/_custom_type_script = "uid://bt12obb4t0tm4"
 
