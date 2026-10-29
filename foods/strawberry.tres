@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Food" format=3 uid="uid://dpm66uoa4opl0"]
+
+[ext_resource type="PackedScene" uid="uid://yt57bq0esdpu" path="res://strawberry.tscn" id="1_3pvdh"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_bk1um"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="3_m1hk8"]
+[ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="4_8b4bc"]
+
+[sub_resource type="Resource" id="Resource_m0ffb"]
+script = ExtResource("3_m1hk8")
+sweet = 0.7
+sour = 0.5
+healthy = 0.7
+filling = 0.2
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Texture2D" id="Texture2D_6l5bd"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("4_8b4bc")
+size = Vector2i(256, 256)
+scene = ExtResource("1_3pvdh")
+camera_fov = 76.0
+camera_distance = 0.1
+camera_position = Vector3(0, 0.02, 0)
+camera_rotation = Vector3(0, 0, 0)
+metadata/_custom_type_script = "uid://bt12obb4t0tm4"
+
+[resource]
+script = ExtResource("2_bk1um")
+name = "Strawberry"
+desc = "Only the sweetest ones."
+category = "fruits"
+scene = ExtResource("1_3pvdh")
+thumbnail = SubResource("Texture2D_6l5bd")
+taste_vector = SubResource("Resource_m0ffb")

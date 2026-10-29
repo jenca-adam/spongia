@@ -85,7 +85,7 @@ func _input(event: InputEvent):
 func _ready():
 	switch_cam(START_CAM, START_CAM)
 	cur_cam = cams.find(START_CAM.name)
-	current_order = Bestellung.from_customer(load("res://customers/hobbit/hobbit.tres"))
+	current_order = Bestellung.from_customer(load("res://customers/elf/elf.tres"))
 	$ui_order.setup(current_order)
 	tutorial = Tutorial.new()
 	tutorial.setup(self)
@@ -95,5 +95,5 @@ func _ready():
 
 func _on_ui_result_close() -> void:
 	$admin.clear()
-	current_order= Bestellung.from_customer(load("res://customers/hobbit/hobbit.tres"))
+	current_order= Bestellung.from_customer(load("res://customers/elf/elf.tres"))
 	$ui_order.setup(current_order)

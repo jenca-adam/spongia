@@ -230,7 +230,7 @@ func _on_use():
 	var gpos = pos#+rotation_axis*aabb.size.x
 	var steepest = min(abs(rotation_angle), PI/2)
 	var big = aabb.size.dot(rotation_axis)*sin(steepest)
-	miny = pos.y+big
+	miny = pos.y+big/2
 	maxy = pos.y+big*3
 	gpos.y=global_position.y
 	global_position=gpos

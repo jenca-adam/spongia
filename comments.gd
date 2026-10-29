@@ -10,6 +10,8 @@ extends Resource
 @export var not_sweet:JSONLoadable
 @export var not_textured:JSONLoadable
 @export var not_spicy:JSONLoadable
+@export var not_filling:JSONLoadable
+
 @export var too_cooked:JSONLoadable
 @export var too_healthy:JSONLoadable
 @export var too_meaty:JSONLoadable
@@ -19,11 +21,12 @@ extends Resource
 @export var too_sweet:JSONLoadable
 @export var too_textured:JSONLoadable
 @export var too_spicy:JSONLoadable
+@export var too_filling:JSONLoadable
 @export_dir var dir_path: String:
 	set(value):
 		dir_path = value
 		load_dir()
-const CATEGORIES=["not_cooked", "not_healthy", "not_meaty", "not_much", "not_salty", "not_sour", "not_sweet", "not_textured", "not_spicy", "too_cooked", "too_healthy", "too_meaty", "too_much", "too_salty", "too_sour", "too_sweet", "too_textured", "too_spicy"]
+const CATEGORIES=["not_cooked", "not_healthy", "not_meaty", "not_much", "not_salty", "not_sour", "not_sweet", "not_textured", "not_spicy", "not_filling", "too_cooked", "too_healthy", "too_meaty", "too_much", "too_salty", "too_sour", "too_sweet", "too_textured", "too_spicy", "too_filling"]
 @export_tool_button("Reload", "Reload") 
 var reload_action=load_dir
 func load_dir():

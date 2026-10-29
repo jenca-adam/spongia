@@ -11,8 +11,8 @@ func _ready():
 	var category_counts = {}
 	var categories = []
 	var category_panel_scene = load("res://category_panel.tscn")
-	for food in ResourceLoader.list_directory("foods"):
-		var resource:Food = load("foods/"+food)
+	for food in ResourceLoader.list_directory("res://foods"):
+		var resource:Food = load("res://foods/"+food)
 		print(food, resource)
 		if not (resource as Food) :continue
 		food_resources[food.split('.')[0]]=resource

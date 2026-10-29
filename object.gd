@@ -72,7 +72,7 @@ func _ready():
 	
 	shape.shape = model.mesh.create_trimesh_shape()
 	shape.transform = model.transform
-	collision_shape.shape = model.mesh.create_convex_shape()
+	collision_shape.shape = model.mesh.create_convex_shape(false, false)
 	collision_shape.global_transform = model.global_transform
 	
 	collision_shape.debug_color=Color(0,1,0,0.5)

@@ -140,6 +140,7 @@ salty = 0.5
 meaty = 0.5
 healthy = 0.5
 filling = 0.5
+spicy = 0.5
 metadata/_custom_type_script = "uid://dmor3qc07dgge"
 
 [sub_resource type="Resource" id="Resource_7bup1"]
