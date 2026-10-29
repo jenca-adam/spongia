@@ -5,7 +5,7 @@ extends Resource
 @export var desc:String
 @export var category:String
 @export var scene:PackedScene
-@export var thumbnail:Texture
+@export var thumbnail:SceneTexture
 @export var taste_vector:TasteVector
 func _init():
 	name=""

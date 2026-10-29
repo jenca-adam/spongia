@@ -21,6 +21,7 @@ signal frozen
 @export var duct_tape:Vector3
 @onready var shape:CollisionShape3D = get_node("offset/hover/CollisionShape3D")
 @onready var offset:Vector3 = get_node("offset").position
+@onready var offset_ = get_node("offset")
 @onready var droppable_mat = load("res://droppable.tres")
 @onready var neutral_rotation = global_rotation
 @onready var collision_shape:CollisionShape3D= $CollisionShape3D
@@ -28,7 +29,7 @@ signal frozen
 @export var rotatable = true
 @export var containable = false
 @export var presentable=false
-var aabb
+var aabb:AABB
 var rotating=false
 var tipped_on=-10000
 var query_shape := BoxShape3D.new()
@@ -68,6 +69,7 @@ func _ready():
 	original_parent=get_parent()
 	query_shape.size =model.get_aabb().size
 	model.material_overlay = droppable_mat.duplicate_deep()
+	
 	shape.shape = model.mesh.create_trimesh_shape()
 	shape.transform = model.transform
 	collision_shape.shape = model.mesh.create_convex_shape()
@@ -76,9 +78,9 @@ func _ready():
 	collision_shape.debug_color=Color(0,1,0,0.5)
 	grab.connect(_on_grab)
 	ungrab.connect(_on_ungrab)
-	var trans:Transform3D = model.global_transform
-	trans.origin=Vector3.ZERO
-	aabb=trans*model.get_aabb()
+	var trans = Transform3D( Basis.from_euler(rotation).scaled(scale), Vector3.ZERO)
+	aabb=trans*model.transform*offset_.transform*model.get_aabb()
+	
 	physics_material_override = phys_mat
 	sleeping_state_changed.connect(_on_sleeping_state_changed)
 	max_contacts_reported=10
@@ -134,7 +136,8 @@ func _physics_process(delta):
 			model.material_overlay.next_pass.albedo_color=Color(1,0,0,0.4)
 			position=Vector3.ZERO
 func _on_hover_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
-	
+	if grab_timeout == null:
+		grab_timeout = $/root/main.held_objs.grab_timeout
 	if (event.is_action_released("interact") and not drop_disabled):
 		if in_container:
 			var bodies = find_parent("bodies")

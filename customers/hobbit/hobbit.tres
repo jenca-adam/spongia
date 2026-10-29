@@ -25,7 +25,7 @@ items = Array[String](["I like me some vegetables, don't get me wrong. But this 
 [sub_resource type="Resource" id="Resource_g8a0s"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/not_much.json"
-items = Array[String](["I'm not a little bird."])
+items = Array[String](["I'm not a little bird.", "Are you trying to scam me??"])
 
 [sub_resource type="Resource" id="Resource_osuf4"]
 script = ExtResource("1_3d02y")

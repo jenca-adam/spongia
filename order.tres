@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://ook3gn0uv81v"]
 
 [ext_resource type="Texture2D" uid="uid://d2rfu8l80g5a6" path="res://textures/parchment.jpg" id="1_kqddg"]
-[ext_resource type="FontFile" uid="uid://boe7ytapn8jk3" path="res://fonts/nautilus-pompilius.regular.otf" id="2_ygd1g"]
+[ext_resource type="FontFile" uid="uid://cwmejvdrtydip" path="res://fonts/morris-roman/MorrisRoman-Black.ttf" id="2_ygd1g"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sb26r"]
 texture = ExtResource("1_kqddg")

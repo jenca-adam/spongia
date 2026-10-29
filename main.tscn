@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://6l7tklcbmtpv" path="res://plate.tscn" id="18_074og"]
 [ext_resource type="PackedScene" uid="uid://bbvlyjfooijld" path="res://ui_result.tscn" id="19_cegan"]
 [ext_resource type="PackedScene" uid="uid://cdbl80hkm1io6" path="res://ui_tutorial.tscn" id="20_82xsv"]
+[ext_resource type="PackedScene" uid="uid://bxfcte8f8jgy7" path="res://intro.tscn" id="21_getpj"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_3p65x"]
 rayleigh_color = Color(0.1292, 0.32197994, 0.68, 1)
@@ -159,5 +160,7 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 3.007967, 1.1703095, 7.
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.4319277, 1.1703095, 7.3242683)
 
 [node name="ui_tutorial" parent="." unique_id=1443564730 instance=ExtResource("20_82xsv")]
+
+[node name="intro" parent="." unique_id=1904465255 instance=ExtResource("21_getpj")]
 
 [connection signal="close" from="ui_result" to="." method="_on_ui_result_close"]

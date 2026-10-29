@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c2ai28750tf67"]
+
+[ext_resource type="Shader" uid="uid://crpk32vmrcyeb" path="res://addons/material_textures/examples/example_shader.gdshader" id="1_q7257"]
+
+[resource]
+shader = ExtResource("1_q7257")
+shader_parameter/third_channel = 0.0

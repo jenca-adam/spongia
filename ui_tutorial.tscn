@@ -45,7 +45,7 @@ layout_mode = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="1/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=190698449]
 layout_mode = 2
 bbcode_enabled = true
-text = "Hi! Welcome to the game! Use the [color=\"yellow\"]A[/color] and [color=\"yellow\"]D[/color] keys to switch cameras. Have a look around!"
+text = "Hi! Welcome to the [color=\"green\"]One Cook[/color]! Use the [color=\"yellow\"]A[/color] and [color=\"yellow\"]D[/color] keys to switch cameras. Have a look around!"
 fit_content = true
 autowrap_mode = 0
 
@@ -482,7 +482,7 @@ layout_mode = 2
 bbcode_enabled = true
 text = "Put the [color=\"cyan\"]pot[/color] on the table, then place the [color=\"orange\"]pieces[/color] in the pot.
 You can place them one by one, 
-grab the [color=\"cyan\"]board[/color]. While you are holding the [color=\"cyan\"]board[/color] and
+or grab the [color=\"cyan\"]board[/color]. While you are holding the [color=\"cyan\"]board[/color] and
 your cursor is placed over it, press [color=\"yellow\"]E[/color] and click to [color=\"yellow\"]tip[/color] the board and make
 its contents fall off. You can do this with other containers too.
 This makes spilling something a lot more likely, so be careful!"

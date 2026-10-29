@@ -14,6 +14,7 @@ func _ready():
 	ui_chest.recalc.connect(_on_ui_chest_recalc)
 static func from_food(food:Food, tree:SceneTree)->FoodPanel:
 	var panel = load("res://food_item.tscn").instantiate()
+	food.thumbnail.bake()
 	panel.food_desc = food.desc
 	panel.food_name = food.name
 	panel.thumb = food.thumbnail

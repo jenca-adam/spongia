@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://da70vy506b0x4"]
+
+[ext_resource type="Shader" uid="uid://dsbbvswlbj38b" path="res://addons/material_textures/examples/cubemap_sky.gdshader" id="1_5st7g"]
+[ext_resource type="Cubemap" uid="uid://8sgh5p3ybylb" path="res://addons/material_textures/examples/material_cubemap.tres" id="2_8krcm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m3fia"]
+shader = ExtResource("1_5st7g")
+shader_parameter/source_panorama = ExtResource("2_8krcm")
+shader_parameter/exposure = 1.0
+
+[sub_resource type="Sky" id="Sky_e00r4"]
+sky_material = SubResource("ShaderMaterial_m3fia")
+
+[sub_resource type="Environment" id="Environment_1qkpw"]
+background_mode = 2
+sky = SubResource("Sky_e00r4")
+
+[node name="Node3D" type="Node3D" unique_id=48362007]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=328641330]
+environment = SubResource("Environment_1qkpw")

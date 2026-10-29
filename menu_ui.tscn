@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://1ekq8ligl153"]
+
+[ext_resource type="Theme" uid="uid://btiq5bi6kd1wr" path="res://menu_theme.tres" id="1_jhml7"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0ox0n"]
+
+[node name="menu_ui" type="Control" unique_id=661933234]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jhml7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1601009418]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="padding" type="Control" parent="HBoxContainer" unique_id=296659737]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/padding" unique_id=913486292]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("ViewportTexture_0ox0n")
+
+[node name="content" type="Control" parent="HBoxContainer" unique_id=1822575195]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/content" unique_id=1748396508]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
