@@ -21,6 +21,7 @@ func _on_click_input_event(camera: Node, event: InputEvent, event_position: Vect
 		$/root/main/ui_chest.show()
 		$/root/main/ui_chest.recalc.emit()
 func _on_ui_chest_close():
+	$/root/main.tutorial.set_variable("seen_chest",1)
 	if opened:
 		opened=false
 		creak.play()

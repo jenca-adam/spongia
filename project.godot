@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="spongia"
-run/main_scene="res://main.tscn"
+run/main_scene="uid://be2co7l2qne48"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -165,4 +165,5 @@ admin_cam_disable={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 anti_aliasing/quality/screen_space_aa=1

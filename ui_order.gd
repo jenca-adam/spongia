@@ -14,4 +14,7 @@ func recalculate_corners():
 	%panel.material.set_shader_parameter("height", height_coeff)
 
 func _on_ok_pressed() -> void:
+	if name=="ui_order":
+		## not inherited
+		$/root/main.tutorial.set_variable(&"seen_order",1)
 	hide()

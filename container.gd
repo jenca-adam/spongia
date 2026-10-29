@@ -24,6 +24,7 @@ var deltay = 0
 var miny
 var maxy
 var tipping
+var done_check
 func _ready():
 	super._ready()
 	rotatable=true
@@ -37,6 +38,9 @@ func _ready():
 	_last_global_pos = global_position
 	use.connect(_on_use)
 	unuse.connect(_on_unuse)
+	done_check = get_node_or_null("done_check")
+
+
 
 func _generate_top_plane_shape()->BoxShape3D:
 	var box_shape = BoxShape3D.new()
@@ -83,6 +87,11 @@ func _physics_process(delta):
 		global_position.y+=delta*deltay*VERTICAL_MOVEMENT_SPEED
 		if miny and maxy:
 			global_position.y=clampf(global_position.y, miny, maxy)
+	if done_check:
+		var d = done_check as Area3D
+		for area in d.get_overlapping_areas():
+			if area.get_parent().name=="admin":
+				$/root/main.tutorial.set_variable(&"container_placed",1)
 func is_full():
 	var colliders = contents.get_overlapping_bodies()
 	for collider in colliders:
@@ -118,6 +127,10 @@ func _on_body_entered(b: Obj) -> void:
 	if not b.frozen.is_connected(cb):
 		b.frozen.connect(cb)
 	_reparent_body.call_deferred(b, $bodies, true)
+	if can_cut_contents:
+		$/root/main.tutorial.set_variable(&"item_on_board",1)
+	if name=="pot":
+		$/root/main.tutorial.set_variable(&"item_in_pot",1)
 func _on_contents_body_entered(body: Node3D) -> void:
 	var b = body as Obj
 	

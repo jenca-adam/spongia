@@ -17,4 +17,5 @@ func setup_result(bestellung:Bestellung, result_taste_profile:TasteProfile):
 	%rating.text="%.2f"%(score*100.0)+"%"
 func _on_ok_pressed():
 	super._on_ok_pressed()
+	$/root/main.tutorial.set_variable(&"meal_submitted", 1)
 	close.emit()

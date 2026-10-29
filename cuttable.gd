@@ -188,6 +188,8 @@ func cut(pos:Vector3):
 	instance2.type=type
 	instance1.cook_time = cook_time
 	instance2.cook_time=cook_time
+	instance1.cook_scale = cook_scale
+	instance2.cook_scale = cook_scale
 	_center_instance(instance1, meshes1[0])
 	_center_instance(instance2, meshes2[1])
 	add_sibling(instance1)

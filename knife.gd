@@ -2,14 +2,16 @@ extends Tool
 
 var cutting: Array[Cuttable] = []
 var cut_axis = 0
-
+func _ready():
+	super._ready()
+	grab.connect(_knife_grabbed)
 func get_cutting() -> Array:
 	var results = $/root/main.held_objs.megaracist(0b10000 << cut_axis)
 	var hits: Array = []
 	for result in results:
 		var cuttable = result["collider"].get_parent().get_parent() as Cuttable
 		
-		if cuttable == null or(cuttable.in_container and not cuttable.container.can_cut_contents):#or not cuttable.freeze:
+		if cuttable == null or(cuttable.in_container and not cuttable.container.can_cut_contents) or cuttable.grabbed or cuttable.active:#or not cuttable.freeze:
 			continue
 		
 		hits.append([cuttable, result["position"]])
@@ -86,5 +88,8 @@ func _input(event):
 			if is_instance_valid(collider) and collider.cut(hits[0][1]):
 				did_cut = true
 		if did_cut:
+			$/root/main.tutorial.set_variable(&"item_cut",1)
 			anim.play("cut")
 			$audio.play()
+func _knife_grabbed():
+	$/root/main.tutorial.set_variable(&"knife_grabbed",1)

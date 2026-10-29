@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://be2co7l2qne48"]
+
+[ext_resource type="Theme" uid="uid://43mp4k25ramx" path="res://splash.tres" id="1_b04ml"]
+[ext_resource type="Script" uid="uid://wdwbr7t1vlaw" path="res://splash.gd" id="2_13jq6"]
+[ext_resource type="AudioStream" uid="uid://c2j0qbxj7qmhq" path="res://sound/typekey.wav" id="3_xoh7v"]
+
+[sub_resource type="Environment" id="Environment_0ox0n"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_strength = 2.0
+glow_mix = 0.01
+glow_bloom = 1.0
+glow_blend_mode = 4
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_v7d2s"]
+random_pitch = 1.4142135
+streams_count = 1
+stream_0/stream = ExtResource("3_xoh7v")
+
+[node name="splash" type="Control" unique_id=1611319750]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_b04ml")
+script = ExtResource("2_13jq6")
+step = 0.1
+offset = 0.5
+
+[node name="bg" type="ColorRect" parent="." unique_id=646354451]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.16862746, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=253553261]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="text" type="HBoxContainer" parent="CenterContainer" unique_id=1184883405]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="g" type="Label" parent="CenterContainer/text" unique_id=2005918701]
+visible = false
+layout_mode = 2
+text = "g"
+
+[node name="i" type="Label" parent="CenterContainer/text" unique_id=1687712349]
+visible = false
+layout_mode = 2
+text = "i"
+
+[node name="g2" type="Label" parent="CenterContainer/text" unique_id=1066392721]
+visible = false
+layout_mode = 2
+text = "g"
+
+[node name="g3" type="Label" parent="CenterContainer/text" unique_id=567182652]
+visible = false
+layout_mode = 2
+text = "g"
+
+[node name="g4" type="Label" parent="CenterContainer/text" unique_id=2106389201]
+visible = false
+layout_mode = 2
+text = "l"
+
+[node name="g5" type="Label" parent="CenterContainer/text" unique_id=831351877]
+visible = false
+layout_mode = 2
+text = "e"
+
+[node name="g6" type="Label" parent="CenterContainer/text" unique_id=1831960397]
+visible = false
+layout_mode = 2
+text = "r"
+
+[node name="g7" type="Label" parent="CenterContainer/text" unique_id=1229125821]
+visible = false
+layout_mode = 2
+text = "."
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1564642619]
+environment = SubResource("Environment_0ox0n")
+
+[node name="type" type="AudioStreamPlayer2D" parent="." unique_id=574375772]
+stream = SubResource("AudioStreamRandomizer_v7d2s")
+volume_db = -7.0
+max_polyphony = 10

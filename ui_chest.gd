@@ -44,6 +44,7 @@ func switch_category(category):
 	category_lists[category].show()
 func _on_close_pressed() -> void:
 	hide()
+	
 	close.emit()
 
 func _input(event: InputEvent) -> void:

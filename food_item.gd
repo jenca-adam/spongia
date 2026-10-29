@@ -36,6 +36,6 @@ func _on_grab_pressed() -> void:
 		return 
 	var scene:Obj = food.scene.instantiate()
 	$/root/main/chest.add_child(scene)
-	
+	$/root/main.tutorial.set_variable("grabbed_chest_item",1)
 	held_objs.grab_item(scene)
 	ui_chest.recalc.emit()

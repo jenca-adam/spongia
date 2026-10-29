@@ -1,0 +1,810 @@
+[gd_scene format=3 uid="uid://cdbl80hkm1io6"]
+
+[ext_resource type="Theme" uid="uid://wi81rk5bi76t" path="res://tutorial_theme.tres" id="1_u653q"]
+[ext_resource type="Script" uid="uid://cv5ewoyp08vho" path="res://ui_tutorial.gd" id="1_ullr8"]
+
+[node name="ui_tutorial" type="Control" unique_id=1443564730]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_u653q")
+script = ExtResource("1_ullr8")
+
+[node name="1" type="Control" parent="." unique_id=969655554]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="1" unique_id=929835882]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="1/CenterContainer" unique_id=72893224]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="1/CenterContainer/PanelContainer" unique_id=1164534231]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="1/CenterContainer/PanelContainer/MarginContainer" unique_id=1659731053]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="1/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=190698449]
+layout_mode = 2
+bbcode_enabled = true
+text = "Hi! Welcome to the game! Use the [color=\"yellow\"]A[/color] and [color=\"yellow\"]D[/color] keys to switch cameras. Have a look around!"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="1/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=2052693963]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="1/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1981042389]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="1/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=2133564031]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="1/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1353517242]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="2" type="Control" parent="." unique_id=1591354747]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="2" unique_id=885543161]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="2/CenterContainer" unique_id=375423190]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="2/CenterContainer/PanelContainer" unique_id=473082740]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="2/CenterContainer/PanelContainer/MarginContainer" unique_id=1624626185]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="2/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1817663830]
+layout_mode = 2
+bbcode_enabled = true
+text = "Press the [color=\"yellow\"]S[/color] key to switch to the [color=\"green\"]order table[/color]."
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="2/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=940878744]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="2/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2016289238]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="2/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1414437570]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="2/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=748952244]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="3" type="Control" parent="." unique_id=1405872022]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="3" unique_id=765628452]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="3/CenterContainer" unique_id=1320055573]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="3/CenterContainer/PanelContainer" unique_id=1517900024]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="3/CenterContainer/PanelContainer/MarginContainer" unique_id=1183393580]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="3/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=743065953]
+layout_mode = 2
+bbcode_enabled = true
+text = "[color=\"yellow\"]Click[/color] on the [color=\"green\"]order[/color] to view it."
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="3/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1271626697]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="3/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1756022594]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="3/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1593455757]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="3/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=420323724]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="4" type="Control" parent="." unique_id=1237098260]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="4" unique_id=792759193]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="4/CenterContainer" unique_id=288203396]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="4/CenterContainer/PanelContainer" unique_id=665090814]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="4/CenterContainer/PanelContainer/MarginContainer" unique_id=304238623]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="4/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1550202451]
+layout_mode = 2
+bbcode_enabled = true
+text = "Press the [color=\"yellow\"]W[/color] key to go back. Switch to the [color=\"green\"]chest camera[/color]."
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="4/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1022792221]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="4/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1062507242]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="4/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=160898979]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="4/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1457674975]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="5" type="Control" parent="." unique_id=1842729135]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="5" unique_id=94352989]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="5/CenterContainer" unique_id=275610311]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="5/CenterContainer/PanelContainer" unique_id=366869066]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="5/CenterContainer/PanelContainer/MarginContainer" unique_id=1276653718]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="5/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=2144187548]
+layout_mode = 2
+bbcode_enabled = true
+text = "Click on the [color=\"cyan\"]chest[/color]. Pick out an [color=\"orange\"]ingredient[/color] you'd like to serve."
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="5/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=611029501]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="5/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=990658772]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="5/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=130433767]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="5/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1839424877]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="6" type="Control" parent="." unique_id=353661221]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="6" unique_id=1224826480]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="6/CenterContainer" unique_id=514971096]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="6/CenterContainer/PanelContainer" unique_id=513923726]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="6/CenterContainer/PanelContainer/MarginContainer" unique_id=1020039108]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="6/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1424057009]
+layout_mode = 2
+bbcode_enabled = true
+text = "Switch to the [color=\"green\"]prep table[/color].
+Click on the [color=\"orange\"]ingredient[/color] to place it on the [color=\"cyan\"]cutting board[/color] (once it turns [color=\"green\"]green[/color], you can click to place it.)
+Click on the [color=\"cyan\"]knife[/color] to grab it."
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="6/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=20939097]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="6/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=992246352]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="6/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=327137308]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="6/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=977287697]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="7" type="Control" parent="." unique_id=302690912]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="7" unique_id=1481179625]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="7/CenterContainer" unique_id=1880773774]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="7/CenterContainer/PanelContainer" unique_id=1627450313]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="7/CenterContainer/PanelContainer/MarginContainer" unique_id=1851713970]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="7/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=2035344145]
+layout_mode = 2
+bbcode_enabled = true
+text = "Press the [color=\"yellow\"]E[/color] key while your cursor is over the [color=\"cyan\"]knife[/color] to use it.
+While the [color=\"cyan\"]knife[/color] is being used, move your cursor over the [color=\"orange\"]ingredient.[/color]
+If a [color=\"yellow\"]yellow line[/color] is showing on its surface, click to cut.
+Press [color=\"yellow\"]Z[/color] or [color=\"yellow\"]X[/color] to change the cut axis.
+Don't worry if the [color=\"orange\"]ingredient [/color]rolls away."
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="7/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=679107694]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="7/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1505780900]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="7/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=302591322]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="7/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=2127706133]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="8" type="Control" parent="." unique_id=1512482393]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="8" unique_id=910102648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_right = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="8/CenterContainer" unique_id=914463425]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="8/CenterContainer/PanelContainer" unique_id=1169376847]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="8/CenterContainer/PanelContainer/MarginContainer" unique_id=1156309449]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="8/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1337195899]
+layout_mode = 2
+bbcode_enabled = true
+text = "Go to the [color=\"green\"]shelf[/color] and grab a [color=\"cyan\"]pot[/color].
+Then go back to the [color=\"green\"]prep table[/color]."
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="8/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=700109923]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="8/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1246722557]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="8/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=380195305]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="8/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1272982543]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="9" type="Control" parent="." unique_id=22907975]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="9" unique_id=2067725258]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_right = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="9/CenterContainer" unique_id=298817916]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="9/CenterContainer/PanelContainer" unique_id=1404604414]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="9/CenterContainer/PanelContainer/MarginContainer" unique_id=1848340762]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="9/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1609580738]
+layout_mode = 2
+bbcode_enabled = true
+text = "Put the [color=\"cyan\"]pot[/color] on the table, then place the [color=\"orange\"]pieces[/color] in the pot.
+You can place them one by one, 
+grab the [color=\"cyan\"]board[/color]. While you are holding the [color=\"cyan\"]board[/color] and
+your cursor is placed over it, press [color=\"yellow\"]E[/color] and click to [color=\"yellow\"]tip[/color] the board and make
+its contents fall off. You can do this with other containers too.
+This makes spilling something a lot more likely, so be careful!"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="9/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=724990502]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="9/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1129106409]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="9/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1879191512]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="9/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=207916773]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="10" type="Control" parent="." unique_id=22205976]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="10" unique_id=861881476]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_right = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="10/CenterContainer" unique_id=603188000]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="10/CenterContainer/PanelContainer" unique_id=1689274498]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="10/CenterContainer/PanelContainer/MarginContainer" unique_id=2024970257]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="10/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=656729789]
+layout_mode = 2
+bbcode_enabled = true
+text = "Grab the [color=\"cyan\"]pot[/color] and place it over the [color=\"green\"]fireplace[/color]."
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="10/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1080389312]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="10/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=358316600]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="10/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=298328891]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="10/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=800236465]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="11" type="Control" parent="." unique_id=316068993]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="11" unique_id=1647372757]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_right = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="11/CenterContainer" unique_id=365262015]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="11/CenterContainer/PanelContainer" unique_id=333058102]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="11/CenterContainer/PanelContainer/MarginContainer" unique_id=2133344323]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="11/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=207476443]
+layout_mode = 2
+bbcode_enabled = true
+text = "Wait for the [color=\"orange\"]food[/color] to [color=\"yellow\"]cook[/color] and take it out.
+[b][font_size=20][color=\"red\"]Be careful not to burn it!!![/color][/font_size][/b]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="11/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=524778821]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="11/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=109664023]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="11/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=48656776]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="11/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1461781486]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="12" type="Control" parent="." unique_id=1369255922]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="12" unique_id=139455587]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_right = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="12/CenterContainer" unique_id=639501379]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="12/CenterContainer/PanelContainer" unique_id=481831957]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="12/CenterContainer/PanelContainer/MarginContainer" unique_id=958973301]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="12/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=494379781]
+layout_mode = 2
+bbcode_enabled = true
+text = "Go to the [color=\"green\"]shelf[/color] and grab a plate or bowl. Place it on the [color=\"green\"]order table[/color]."
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="12/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1804309411]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="12/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1603527411]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="12/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=604992119]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="12/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1113175446]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="13" type="Control" parent="." unique_id=1511678899]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="13" unique_id=2044933786]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_right = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="13/CenterContainer" unique_id=2018641828]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="13/CenterContainer/PanelContainer" unique_id=885695458]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="13/CenterContainer/PanelContainer/MarginContainer" unique_id=2048345966]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="13/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1984283238]
+layout_mode = 2
+bbcode_enabled = true
+text = "Place the [color=\"orange\"]food[/color] in the [color=\"cyan\"]bowl/plate[/color] and click on the [color=\"cyan\"]bell[/color] to submit the [color=\"orange\"]meal[/color]!"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="13/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1128729499]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="13/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=861760652]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ok" type="Button" parent="13/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=530723481]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="skip" type="Button" parent="13/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1372061801]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP TUTORIAL"
+
+[node name="14" type="Control" parent="." unique_id=87123795]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="14" unique_id=2075269370]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_right = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="14/CenterContainer" unique_id=1028069797]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme = ExtResource("1_u653q")
+
+[node name="MarginContainer" type="MarginContainer" parent="14/CenterContainer/PanelContainer" unique_id=1876156326]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="14/CenterContainer/PanelContainer/MarginContainer" unique_id=1228699401]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="14/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=611778334]
+layout_mode = 2
+bbcode_enabled = true
+text = "That concludes the [color=\"magenta\"]tutorial[/color]!
+Your next [color=\"cyan\"]order[/color] is on the table.
+Try to figure out what each type of [color=\"royal_blue\"]customer[/color] likes!.
+[color=\"green\"]H[/color][color=\"yellow\"]a[/color][color=\"lightblue\"]v[/color][color=\"red\"]e [/color][color=\"pink\"]f[/color][color=\"violet\"]u[/color][color=\"orange\"]n[/color][color=\"cyan\"]![/color]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="14/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=2081652137]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="14/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2139583011]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="skip" type="Button" parent="14/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1652645119]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[connection signal="pressed" from="1/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="1/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="2/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="2/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="3/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="3/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="4/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="4/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="5/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="5/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="6/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="6/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="7/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="7/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="8/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="8/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="9/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="9/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="10/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="10/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="11/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="11/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="12/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="12/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="13/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ok" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="13/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="14/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/skip" to="." method="_on_skip_pressed"]
