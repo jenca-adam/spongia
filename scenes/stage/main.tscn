@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://m2wwxs3pkq6g" path="res://resources/textures/158_green grass PBR texture_seamless.jpg" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://b47lcdxl176ux" path="res://scenes/stage/held_objs.tscn" id="2_4c57u"]
 [ext_resource type="PackedScene" uid="uid://cugldkvsjdxmt" path="res://scenes/items/table.tscn" id="3_h2yge"]
+[ext_resource type="Resource" uid="uid://r6j87b8y1t50" path="res://customers/dwarf/dwarf.tres" id="3_i6r6c"]
 [ext_resource type="Resource" uid="uid://sb8xujv0m2fo" path="res://customers/elf/elf.tres" id="3_lswn8"]
 [ext_resource type="Resource" uid="uid://cvi53dpbd6va6" path="res://customers/gollum/gollum.tres" id="3_pklfo"]
 [ext_resource type="PackedScene" uid="uid://cf2km5r6talbf" path="res://scenes/items/shelf.tscn" id="4_1bvp3"]
@@ -57,7 +58,7 @@ plane = Plane(0, 1, 0, 1.96)
 
 [node name="main" type="Node3D" unique_id=20799515 node_paths=PackedStringArray("START_CAM")]
 script = ExtResource("1_lquwl")
-customers = Array[ExtResource("2_0odxb")]([ExtResource("3_pklfo"), ExtResource("4_a6jrf"), ExtResource("3_lswn8"), ExtResource("5_xuqvo")])
+customers = Array[ExtResource("2_0odxb")]([ExtResource("3_i6r6c"), ExtResource("3_pklfo"), ExtResource("4_a6jrf"), ExtResource("3_lswn8"), ExtResource("5_xuqvo")])
 CAM_SWITCH_TIME = 0.5
 START_CAM = NodePath("cams/prep_table")
 tutorial_enable = true

@@ -163,7 +163,6 @@ _data = {
 
 [node name="salt_shaker" type="RigidBody3D" unique_id=961887793]
 script = ExtResource("1_beqcu")
-y_offset = 1.5
 metadata/_custom_type_script = "uid://djopdrysdxqof"
 
 [node name="particles" type="GPUParticles3D" parent="." unique_id=1580908947]

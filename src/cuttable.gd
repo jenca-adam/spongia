@@ -39,23 +39,8 @@ var added_salt=0.0
 func add_salt(amount):
 	added_salt+=amount
 func get_mesh_volume(mesh: Mesh) -> float:
-	var volume = 0.0
-	for surface in range(mesh.get_surface_count()):
-		var arrays = mesh.surface_get_arrays(surface)
-		var vertices = arrays[Mesh.ARRAY_VERTEX]
-		var indices= arrays[Mesh.ARRAY_INDEX]
-		if not indices is PackedInt32Array or indices.is_empty():
-			### assume csg is not retarded (it lowk is but ukwim)
-			### couldn't find anything int he docs
-			for i in range(0, vertices.size(), 3):
-				volume += vertices[i].dot(vertices[i + 1].cross(vertices[i + 2])) / 6.0
-		else:
-			for i in range(0, indices.size(), 3):
-				var a = vertices[indices[i]]
-				var b = vertices[indices[i + 1]]
-				var c = vertices[indices[i + 2]]
-				volume += a.dot(b.cross(c)) / 6.0
-	return absf(volume)
+	# use this since it doesn't have bugs
+	return MeshTools.Islands.calculate_mesh_volume(mesh)
 func _ready():
 	if not type:
 		type=name
@@ -81,7 +66,7 @@ func _ready():
 	if volume_override:
 		volume=volume_override
 	else:
-		volume=get_mesh_volume(model.mesh)*absf(scale.x*scale.z*scale.y*model.scale.x*model.scale.z*model.scale.y)*20.0 ### bulharska konstanta
+		volume=get_mesh_volume(model.mesh)*20.0 ### bulharska konstanta
 	print(name, " volume: ", volume)
 	var mesh := model.mesh as Mesh
 func _physics_process(delta):

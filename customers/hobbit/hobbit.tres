@@ -14,85 +14,95 @@ items = Array[String](["This is raw.", "Did you even cook this??"])
 
 [sub_resource type="Resource" id="Resource_vk8p0"]
 script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/not_filling.json"
+items = Array[String](["Not too much of a meal"])
+
+[sub_resource type="Resource" id="Resource_we1jm"]
+script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/not_healthy.json"
 items = Array[String](["That almost gave me a heart attack."])
 
-[sub_resource type="Resource" id="Resource_we1jm"]
+[sub_resource type="Resource" id="Resource_g8a0s"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/not_meaty.json"
 items = Array[String](["I like me some vegetables, don't get me wrong. But this is a little too much."])
 
-[sub_resource type="Resource" id="Resource_g8a0s"]
+[sub_resource type="Resource" id="Resource_osuf4"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/not_much.json"
 items = Array[String](["I'm not a little bird.", "Are you trying to scam me??"])
 
-[sub_resource type="Resource" id="Resource_osuf4"]
+[sub_resource type="Resource" id="Resource_8hbxa"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/not_salty.json"
 items = Array[String](["Did your mother not teach you to salt food!?", "It's a little bland, one must say."])
 
-[sub_resource type="Resource" id="Resource_8hbxa"]
+[sub_resource type="Resource" id="Resource_nc2xe"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/not_sour.json"
 items = Array[String](["Could use a tad more tang, couldn't it?"])
 
-[sub_resource type="Resource" id="Resource_nc2xe"]
+[sub_resource type="Resource" id="Resource_mbdjb"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/not_spicy.json"
 items = Array[String](["I like my food a little less boring.", "Do you not have the money for spices?"])
 
-[sub_resource type="Resource" id="Resource_mbdjb"]
+[sub_resource type="Resource" id="Resource_14lha"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/not_sweet.json"
 items = Array[String](["I'm craving some cake..."])
 
-[sub_resource type="Resource" id="Resource_14lha"]
+[sub_resource type="Resource" id="Resource_sybwo"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/not_textured.json"
 items = Array[String](["I still have teeth, you know."])
 
-[sub_resource type="Resource" id="Resource_sybwo"]
+[sub_resource type="Resource" id="Resource_qt1hm"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/too_cooked.json"
 items = Array[String](["Did you drop this into Mount Doom to cook it?", "I don't eat charcoal, sorry."])
 
-[sub_resource type="Resource" id="Resource_qt1hm"]
+[sub_resource type="Resource" id="Resource_03u56"]
+script = ExtResource("1_3d02y")
+json_path = "res://customers/hobbit/comments/too_filling.json"
+items = Array[String](["This feels like a rock in my stomach."])
+
+[sub_resource type="Resource" id="Resource_dgr0p"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/too_healthy.json"
 items = Array[String](["Do I look like a rabbit to you?"])
 
-[sub_resource type="Resource" id="Resource_03u56"]
+[sub_resource type="Resource" id="Resource_tvyah"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/too_meaty.json"
 items = Array[String](["I'm no Green-Elf, but did you really have to use up a whole slaughter-house?"])
 
-[sub_resource type="Resource" id="Resource_dgr0p"]
+[sub_resource type="Resource" id="Resource_phlva"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/too_much.json"
 items = Array[String](["Are you saying I look fat?"])
 
-[sub_resource type="Resource" id="Resource_tvyah"]
+[sub_resource type="Resource" id="Resource_qyu85"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/too_salty.json"
 items = Array[String](["If I were a snail, I would've died.", "Have you perchance mistaken me for a donkey?"])
 
-[sub_resource type="Resource" id="Resource_phlva"]
+[sub_resource type="Resource" id="Resource_op3dq"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/too_sour.json"
 items = Array[String]([" My tongue’s all curled up!"])
 
-[sub_resource type="Resource" id="Resource_qyu85"]
+[sub_resource type="Resource" id="Resource_4m52d"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/too_spicy.json"
 items = Array[String](["My tongue hurts."])
 
-[sub_resource type="Resource" id="Resource_op3dq"]
+[sub_resource type="Resource" id="Resource_q5v45"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/too_sweet.json"
 items = Array[String](["My teeth hurt!"])
 
-[sub_resource type="Resource" id="Resource_4m52d"]
+[sub_resource type="Resource" id="Resource_wkgys"]
 script = ExtResource("1_3d02y")
 json_path = "res://customers/hobbit/comments/too_textured.json"
 items = Array[String](["Have you never learnt to use a knife?"])
@@ -100,23 +110,25 @@ items = Array[String](["Have you never learnt to use a knife?"])
 [sub_resource type="Resource" id="Resource_jwial"]
 script = ExtResource("2_yt8lv")
 not_cooked = SubResource("Resource_qj7lu")
-not_healthy = SubResource("Resource_vk8p0")
-not_meaty = SubResource("Resource_we1jm")
-not_much = SubResource("Resource_g8a0s")
-not_salty = SubResource("Resource_osuf4")
-not_sour = SubResource("Resource_8hbxa")
-not_sweet = SubResource("Resource_mbdjb")
-not_textured = SubResource("Resource_14lha")
-not_spicy = SubResource("Resource_nc2xe")
-too_cooked = SubResource("Resource_sybwo")
-too_healthy = SubResource("Resource_qt1hm")
-too_meaty = SubResource("Resource_03u56")
-too_much = SubResource("Resource_dgr0p")
-too_salty = SubResource("Resource_tvyah")
-too_sour = SubResource("Resource_phlva")
-too_sweet = SubResource("Resource_op3dq")
-too_textured = SubResource("Resource_4m52d")
-too_spicy = SubResource("Resource_qyu85")
+not_healthy = SubResource("Resource_we1jm")
+not_meaty = SubResource("Resource_g8a0s")
+not_much = SubResource("Resource_osuf4")
+not_salty = SubResource("Resource_8hbxa")
+not_sour = SubResource("Resource_nc2xe")
+not_sweet = SubResource("Resource_14lha")
+not_textured = SubResource("Resource_sybwo")
+not_spicy = SubResource("Resource_mbdjb")
+not_filling = SubResource("Resource_vk8p0")
+too_cooked = SubResource("Resource_qt1hm")
+too_healthy = SubResource("Resource_dgr0p")
+too_meaty = SubResource("Resource_tvyah")
+too_much = SubResource("Resource_phlva")
+too_salty = SubResource("Resource_qyu85")
+too_sour = SubResource("Resource_op3dq")
+too_sweet = SubResource("Resource_q5v45")
+too_textured = SubResource("Resource_wkgys")
+too_spicy = SubResource("Resource_4m52d")
+too_filling = SubResource("Resource_03u56")
 dir_path = "res://customers/hobbit/comments"
 metadata/_custom_type_script = "uid://23fgsnyaetea"
 

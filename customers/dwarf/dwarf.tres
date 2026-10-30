@@ -1,0 +1,171 @@
+[gd_resource type="Resource" script_class="Customer" format=3 uid="uid://r6j87b8y1t50"]
+
+[ext_resource type="Script" uid="uid://cp601goyny8yk" path="res://src/json_loader.gd" id="1_eh34w"]
+[ext_resource type="Script" uid="uid://23fgsnyaetea" path="res://src/comments.gd" id="2_ccx2y"]
+[ext_resource type="Texture2D" uid="uid://lmqxghyq754a" path="res://customers/dwarf/face.jpg" id="3_v0gt2"]
+[ext_resource type="Script" uid="uid://casyras0bryah" path="res://src/customer.gd" id="4_p4iyg"]
+[ext_resource type="Script" uid="uid://dxpm23s7hgj3k" path="res://src/taste_profile.gd" id="5_2ai1t"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://src/taste_vector.gd" id="6_o257p"]
+
+[sub_resource type="Resource" id="Resource_v4448"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/not_cooked.json"
+items = Array[String](["You know of a thing called 'fire', don't you?"])
+
+[sub_resource type="Resource" id="Resource_ai5bx"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/not_filling.json"
+items = Array[String](["Why do you serve such nonsense?"])
+
+[sub_resource type="Resource" id="Resource_ldunm"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/not_healthy.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_dj4mh"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/not_meaty.json"
+items = Array[String](["It's not a proper meal if it doesn't have meat in it."])
+
+[sub_resource type="Resource" id="Resource_xu17s"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/not_much.json"
+items = Array[String](["What is this? Food for ants?"])
+
+[sub_resource type="Resource" id="Resource_4t0ha"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/not_salty.json"
+items = Array[String](["Don't skimp on the salt!", "My father spent his days mining salt, and you don't even use it!"])
+
+[sub_resource type="Resource" id="Resource_4bco7"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/not_sour.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_t2mfl"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/not_spicy.json"
+items = Array[String](["Where's all the spices?", "There's nothing to ignite the fighting spirit in this!"])
+
+[sub_resource type="Resource" id="Resource_ymao7"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/not_sweet.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_gdp0v"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/not_textured.json"
+items = Array[String](["You don't have to mash it, I'm not so drunk as to forget how to eat!"])
+
+[sub_resource type="Resource" id="Resource_sdwqf"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/too_cooked.json"
+items = Array[String](["Did you drop this into Mount Doom to cook it?", "I don't eat charcoal, sorry."])
+
+[sub_resource type="Resource" id="Resource_h81nl"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/too_filling.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_igcg3"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/too_healthy.json"
+items = Array[String](["Hobbits are a weak folk! Always just fruits and vegetables!"])
+
+[sub_resource type="Resource" id="Resource_q8lfp"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/too_meaty.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_um3qd"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/too_much.json"
+items = Array[String](["You might have noticed, I'm not exactly the biggest", "My appetite is not enough for this!"])
+
+[sub_resource type="Resource" id="Resource_j3iw2"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/too_salty.json"
+items = Array[String](["This reminds me of the sea. *vomits*"])
+
+[sub_resource type="Resource" id="Resource_0ej5q"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/too_sour.json"
+items = Array[String](["Could be a little less adventurous."])
+
+[sub_resource type="Resource" id="Resource_wn4o5"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/too_spicy.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_aawmr"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/too_sweet.json"
+items = Array[String](["What is this? Do you take me for a weak fool?"])
+
+[sub_resource type="Resource" id="Resource_avyue"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/comments/too_textured.json"
+items = Array[String](["I don't have the mouth of an orc."])
+
+[sub_resource type="Resource" id="Resource_jwial"]
+script = ExtResource("2_ccx2y")
+not_cooked = SubResource("Resource_v4448")
+not_healthy = SubResource("Resource_ldunm")
+not_meaty = SubResource("Resource_dj4mh")
+not_much = SubResource("Resource_xu17s")
+not_salty = SubResource("Resource_4t0ha")
+not_sour = SubResource("Resource_4bco7")
+not_sweet = SubResource("Resource_ymao7")
+not_textured = SubResource("Resource_gdp0v")
+not_spicy = SubResource("Resource_t2mfl")
+not_filling = SubResource("Resource_ai5bx")
+too_cooked = SubResource("Resource_sdwqf")
+too_healthy = SubResource("Resource_igcg3")
+too_meaty = SubResource("Resource_q8lfp")
+too_much = SubResource("Resource_um3qd")
+too_salty = SubResource("Resource_j3iw2")
+too_sour = SubResource("Resource_0ej5q")
+too_sweet = SubResource("Resource_aawmr")
+too_textured = SubResource("Resource_avyue")
+too_spicy = SubResource("Resource_wn4o5")
+too_filling = SubResource("Resource_h81nl")
+dir_path = "res://customers/dwarf/comments"
+metadata/_custom_type_script = "uid://23fgsnyaetea"
+
+[sub_resource type="Resource" id="Resource_eiqw6"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/names.json"
+items = Array[String](["Anar", "Azaghâl", "Balin", "Bifur", "Bodruith", "Bofur", "Bombur", "Borin", "Burin", "Dáin I", "Dáin Ironfoot", "Dís", "Dori", "Durin I", "Durin II", "Durin III", "Durin IV", "Durin V", "Durin VI", "Durin VII", "Dwalin", "Fangluin", "Farin", "Fíli", "Flói", "Frár", "Frerin", "Frór", "Fundin", "Gamil Zirak", "Gimli", "Glóin", "Gróin", "Grór", "Hannar", "Ibun", "Khîm", "Kíli", "Lockbearer", "Lofar", "Lóni", "Mîm", "Náin", "Náin I", "Náin II", "Náli", "Nar", "Narvi", "Naugladur", "Noegyth Nibin", "Nori", "Nár", "Óin", "Ori", "Telchar", "Thorin", "Thorin I", "Thorin Stonehelm", "Thráin I", "Thráin", "Thrór"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_sqbd2"]
+script = ExtResource("1_eh34w")
+json_path = "res://customers/dwarf/orders.json"
+items = Array[String](["One can't fight without eating! Feed me, hobbit, and I won't start any fights.", "At long last, I've reached civilisation! Beer and meat, here I come!"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_5vacq"]
+script = ExtResource("6_o257p")
+salty = 0.5
+meaty = 1.0
+filling = 1.0
+spicy = 0.7
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Resource" id="Resource_7bup1"]
+script = ExtResource("5_2ai1t")
+taste_vector = SubResource("Resource_5vacq")
+cook_time = 25.0
+amount = 2.0
+texture = 0.2
+metadata/_custom_type_script = "uid://dxpm23s7hgj3k"
+
+[resource]
+script = ExtResource("4_p4iyg")
+name = &"Dwarf"
+image = ExtResource("3_v0gt2")
+orders = SubResource("Resource_sqbd2")
+names = SubResource("Resource_eiqw6")
+comments = SubResource("Resource_jwial")
+taste_profile = SubResource("Resource_7bup1")
+metadata/_custom_type_script = "uid://casyras0bryah"
