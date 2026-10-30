@@ -172,4 +172,5 @@ libraries/ = SubResource("AnimationLibrary_f7ias")
 [node name="ring" type="AudioStreamPlayer3D" parent="." unique_id=1483239871]
 transform = Transform3D(2.5, 0, 0, 0, -1.0927848e-07, -2.5000002, 0, 2.5000002, -1.0927848e-07, 0, 0, 0)
 stream = ExtResource("3_sdcyc")
+bus = &"SFX"
 emission_angle_enabled = true

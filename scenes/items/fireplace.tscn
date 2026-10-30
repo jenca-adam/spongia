@@ -999,6 +999,7 @@ script = ExtResource("4_36lha")
 stream = ExtResource("6_7l1op")
 autoplay = true
 max_distance = 15.0
+bus = &"SFX"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=453688796]
 collision_layer = 4

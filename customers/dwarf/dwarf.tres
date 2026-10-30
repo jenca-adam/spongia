@@ -95,7 +95,7 @@ items = Array[String](["Could be a little less adventurous."])
 [sub_resource type="Resource" id="Resource_wn4o5"]
 script = ExtResource("1_eh34w")
 json_path = "res://customers/dwarf/comments/too_spicy.json"
-items = Array[String]([""])
+items = Array[String](["I'm not a dragon, I have no need to breathe fire."])
 
 [sub_resource type="Resource" id="Resource_aawmr"]
 script = ExtResource("1_eh34w")

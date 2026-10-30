@@ -17,7 +17,7 @@ func fade_out_node(node:Control):
 	target.a=0
 	get_tree().create_tween().tween_property(node, "self_modulate", target, fade_in_time)
 func _ready():
-	if not play:
+	if not play or Options.skip_intro:
 		hide()
 		return
 	var time=0.0

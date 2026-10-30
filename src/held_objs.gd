@@ -41,7 +41,9 @@ func drop_item(item:Obj):
 
 func _input(event):
 	if (event.is_action_released("hide_grabbed_items")):
-		items_visible=not items_visible
+		### DISABLED
+		return 
+		"""items_visible=not items_visible
 		var target_position
 		if items_visible:
 			target_position = neutral_position;
@@ -49,7 +51,7 @@ func _input(event):
 			target_position = neutral_position-Vector3(0,2,0);
 		var tween = get_tree().create_tween()
 		tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-		tween.tween_property(self, "position", target_position,0.2)
+		tween.tween_property(self, "position", target_position,0.2)"""
 func racist(mask=0b10, exclude=[]):
 	var space_state = get_world_3d().direct_space_state
 	var mouse_pos = get_viewport().get_mouse_position()

@@ -10,7 +10,6 @@ var CAM_SWITCH_EASE = Tween.EASE_OUT
 var switching = 0
 var current_order:Bestellung
 var served=1
-
 @export var START_CAM:Camera3D
 @onready var held_objs = $cams/trans/held_objs
 @onready var admin_cam= $cams/admin_table
@@ -94,10 +93,24 @@ func _ready():
 	next_customer()
 	tutorial = Tutorial.new()
 	tutorial.setup(self)
-	tutorial.enabled=tutorial_enable
+	tutorial.enabled=tutorial_enable and not Options.skip_tutorial
 	tutorial.set_variable(&"cam_%d"%cur_cam, 1)
-	
-
+	if not tutorial.enabled:
+		$ui_tutorial.hide()
+	var sfx_index = AudioServer.get_bus_index(&"SFX")
+	var music_index = AudioServer.get_bus_index(&"Music")
+	AudioServer.set_bus_volume_linear(sfx_index, Options.volume_sfx)
+	AudioServer.set_bus_volume_linear(music_index, Options.volume_music)
+	if Options.skip_intro:
+		$intro.hide()
+		$intro.play=false
+	if not Options.enable_shadows:
+		get_viewport().positional_shadow_atlas_size=0
+		$WorldEnvironment/DirectionalLight3D.shadow_enabled=false
+	if not Options.enable_bloom:
+		$WorldEnvironment.environment.glow_enabled=false
+	if not Options.enable_anti_alias:
+		get_viewport().screen_space_aa=Viewport.SCREEN_SPACE_AA_DISABLED
 func _on_ui_result_close() -> void:
 	$admin.clear()
 	served+=1

@@ -7,16 +7,16 @@
 [ext_resource type="Script" uid="uid://dxpm23s7hgj3k" path="res://src/taste_profile.gd" id="5_vtinh"]
 [ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://src/taste_vector.gd" id="6_eugwy"]
 
-[sub_resource type="Resource" id="Resource_h3hwu"]
-script = ExtResource("2_e6l6j")
-json_path = "res://customers/gollum/good.json"
-items = Array[String](["A little raw fishy, good, good.", "We will sleep well tonight, we will", "Ohh, we can feel it slippy slippy slipping down out throat."])
-metadata/_custom_type_script = "uid://cp601goyny8yk"
-
 [sub_resource type="Resource" id="Resource_pklfo"]
 script = ExtResource("2_e6l6j")
 json_path = "res://customers/gollum/ bad.json"
 items = Array[String](["You have deceived us!", "Bad hobbitses! They say one thing and do another! But we remember...", "No one cares about little Gollum... Pity, pity!"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_h3hwu"]
+script = ExtResource("2_e6l6j")
+json_path = "res://customers/gollum/good.json"
+items = Array[String](["A little raw fishy, good, good.", "We will sleep well tonight, we will", "Ohh, we can feel it slippy slippy slipping down out throat."])
 metadata/_custom_type_script = "uid://cp601goyny8yk"
 
 [sub_resource type="Resource" id="Resource_vtinh"]

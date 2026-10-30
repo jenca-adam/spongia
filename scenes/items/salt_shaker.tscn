@@ -185,6 +185,7 @@ mesh = SubResource("ArrayMesh_jr4c2")
 
 [node name="shake" type="AudioStreamPlayer3D" parent="." unique_id=476134416]
 stream = ExtResource("4_j2cxh")
+bus = &"SFX"
 
 [node name="shanim" type="AnimationPlayer" parent="." unique_id=240266774]
 libraries/ = SubResource("AnimationLibrary_07uxy")

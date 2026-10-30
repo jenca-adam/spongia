@@ -100,6 +100,7 @@ stream = ExtResource("2_6odjr")
 volume_db = -5.0
 autoplay = true
 max_distance = 15.0
+bus = &"SFX"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Cylinder" unique_id=152107169]
 transform = Transform3D(0.9523809, 0, 0, 0, 0.9146766, 0.26532254, 0, -0.26532254, 0.9146766, 0, 4.658785, 0)
