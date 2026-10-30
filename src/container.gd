@@ -7,11 +7,12 @@ var last_entered_tick = -1
 var last_exited_tick = -1
 var moving:bool=false
 var can_tip=false
+
 @export var can_cut_contents=false
 @export var VERTICAL_MOVEMENT_SPEED=1
 @export_range(-180, 180, 0.1, "radians_as_degrees") var rotation_angle: float = -PI
 @export var rotation_axis = Vector3(0,0,1)
-@onready var top_plane = $offset/top_plane
+@onready var top_plane:Area3D = $offset/top_plane
 @onready var top_plane_coll = $offset/top_plane/CollisionShape3D
 @onready var contents = $offset/contents
 @onready var contents_coll = $offset/contents/CollisionShape3D
@@ -31,6 +32,7 @@ func _ready():
 	if top_plane_coll.shape == null:
 		top_plane_coll.shape = _generate_top_plane_shape()
 	top_plane.position = _generate_top_plane_position()
+	top_plane.set_collision_layer_value(32, true)
 	_set_contents_collider()
 	internal_collider_coll.shape = shape.shape
 	internal_collider_coll.global_transform=shape.global_transform
@@ -287,3 +289,9 @@ func freed_clear():
 		if is_instance_valid(body):
 			new_bodies.append(body)
 	bodies=new_bodies
+
+func add_salt(amount):
+	freed_clear()
+	for body in bodies:
+		if body.has_method(&"add_salt"):
+			body.add_salt(amount)

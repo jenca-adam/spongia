@@ -620,7 +620,6 @@ size_flags_horizontal = 3
 text = "SKIP TUTORIAL"
 
 [node name="12" type="Control" parent="." unique_id=1369255922]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -652,7 +651,10 @@ layout_mode = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="12/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=494379781]
 layout_mode = 2
 bbcode_enabled = true
-text = "Go to the [color=\"green\"]shelf[/color] and grab a plate or bowl. Place it on the [color=\"green\"]order table[/color]."
+text = "Go to the [color=\"green\"]shelf[/color] and grab a plate or bowl. Place it on the [color=\"green\"]order table[/color].
+If you'd like to season the [color=\"orange\"]food[/color], just grab the [color=\"cyan\"]salt shaker[/color] from the
+[color=\"green\"]prep table[/color].  While [color=\"yellow\"]using[/color] it, [color=\"yellow\"]hold left click[/color] while hovering over a container
+to season everything in it."
 fit_content = true
 autowrap_mode = 0
 

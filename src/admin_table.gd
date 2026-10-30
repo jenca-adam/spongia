@@ -23,7 +23,7 @@ func get_taste_profile() -> TasteProfile:
 		cum_cook_time+=item.cook_time*item.volume
 		max_volume = max(max_volume, item.volume)
 		### dirty hack incoming!!!
-		cum_vector.weighted_add($/root/main/ui_chest.food_resources[item.type].taste_vector, item.volume)
+		cum_vector.weighted_add($/root/main/ui_chest.food_resources[item.type].taste_vector.salted(item.added_salt/item.volume), item.volume)
 	if total_volume>0:
 		cum_vector.divide(total_volume)
 		taste_profile.cook_time = min(120, cum_cook_time/total_volume) # clamp at 120 to make score calculation easier

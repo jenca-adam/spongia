@@ -34,6 +34,9 @@ var volume
 var _cut_colls = []
 var _cut_shapes = []
 var cook_time= 0.0
+var added_salt=0.0
+func add_salt(amount):
+	added_salt+=amount
 func get_mesh_volume(mesh: Mesh) -> float:
 	var volume = 0.0
 	for surface in range(mesh.get_surface_count()):

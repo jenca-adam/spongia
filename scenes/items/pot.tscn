@@ -139,7 +139,7 @@ shape = SubResource("ConcavePolygonShape3D_8vpk7")
 
 [node name="top_plane" type="Area3D" parent="offset" unique_id=1778490499]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69109404, 0)
-collision_layer = 512
+collision_layer = 2147484160
 collision_mask = 0
 input_ray_pickable = false
 
