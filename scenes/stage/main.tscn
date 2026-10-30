@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bbvlyjfooijld" path="res://scenes/ui/ui_result.tscn" id="19_cegan"]
 [ext_resource type="PackedScene" uid="uid://cdbl80hkm1io6" path="res://scenes/ui/ui_tutorial.tscn" id="20_82xsv"]
 [ext_resource type="PackedScene" uid="uid://bxfcte8f8jgy7" path="res://scenes/stage/intro.tscn" id="21_getpj"]
-[ext_resource type="PackedScene" uid="uid://dgl6mi0jvno63" path="res://scenes/stage/salt_shaker.tscn" id="26_h3hwu"]
+[ext_resource type="PackedScene" uid="uid://dgl6mi0jvno63" path="res://scenes/items/salt_shaker.tscn" id="26_h3hwu"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_3p65x"]
 rayleigh_color = Color(0.1292, 0.32197994, 0.68, 1)
