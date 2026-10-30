@@ -6,7 +6,7 @@ func score(other_taste_profile:TasteProfile, other_items:Array[Cuttable]):
 	var total_volume=0.0;
 	var carrot_volume=0.0;
 	for item in other_items:
-		if item.type=="carrot":
+		if item.type in ["carrot", "apple"]:
 			carrot_volume+=item.volume
 		total_volume+=item.volume
 	if total_volume==0.0:

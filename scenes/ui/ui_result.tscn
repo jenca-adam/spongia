@@ -1,0 +1,246 @@
+[gd_scene format=3 uid="uid://bbvlyjfooijld"]
+
+[ext_resource type="Theme" uid="uid://ook3gn0uv81v" path="res://resources/themes/order.tres" id="1_3c6jk"]
+[ext_resource type="Script" uid="uid://c3vq4i5og5llv" path="res://src/ui_result.gd" id="1_jwial"]
+[ext_resource type="Shader" uid="uid://dujsif34aci4n" path="res://shaders/round.gdshader" id="2_4ridy"]
+[ext_resource type="Texture2D" uid="uid://bsncc4lw0kyrk" path="res://customers/hobbit/face.jpg" id="4_3c6jk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7bup1"]
+shader = ExtResource("2_4ridy")
+shader_parameter/radius_scale = 0.1
+shader_parameter/rounded_corner_top_left = true
+shader_parameter/rounded_corner_top_right = true
+shader_parameter/rounded_corner_bottom_left = true
+shader_parameter/rounded_corner_bottom_right = true
+shader_parameter/width = 1.0
+shader_parameter/height = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ox0n"]
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="ui_result" type="Control" unique_id=1853153314]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3c6jk")
+script = ExtResource("1_jwial")
+
+[node name="TextureRect" type="Panel" parent="." unique_id=1991956944]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2077792996]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="panel" type="PanelContainer" parent="CenterContainer" unique_id=1538883058]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_7bup1")
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/panel" unique_id=748343550]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/panel/MarginContainer" unique_id=1414294275]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=101466129]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer" unique_id=417973640]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Order RESULT"
+uppercase = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=1336518212]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2" unique_id=1655796740]
+layout_mode = 2
+
+[node name="image" type="AspectRatioContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=1173288837]
+layout_mode = 2
+
+[node name="image" type="PanelContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/image" unique_id=1462572972]
+clip_children = 1
+clip_contents = true
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ox0n")
+
+[node name="image" type="TextureRect" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/image/image" unique_id=1089161817]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("4_3c6jk")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=226042247]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer" unique_id=2078716466]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="RichTextLabel" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=133977643]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+text = "[b]Customer:[/b]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="customer_type" type="Label" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=733324371]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Hobbit"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer" unique_id=2142386673]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="RichTextLabel" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=505532740]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+text = "[b]Name:[/b]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="customer_name" type="Label" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1388989433]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Hobbit"
+
+[node name="MarginContainer6" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=1387507594]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer6" unique_id=1465469062]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer2" unique_id=2097923490]
+layout_mode = 2
+size_flags_horizontal = 0
+bbcode_enabled = true
+text = "[b]Order:[/b]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="order_text" type="RichTextLabel" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer2" unique_id=788545832]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "food food food f0-adodoidajoidsajdsoijdsaoijdsaoijdsaodsaijdsaoijdsaoijdsaoidsajoidsajoidsa"
+fit_content = true
+
+[node name="MarginContainer4" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=1111684460]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer4" unique_id=683662568]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer2" unique_id=860441658]
+layout_mode = 2
+size_flags_horizontal = 0
+bbcode_enabled = true
+text = "[b]Comments:[/b]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="comments" type="RichTextLabel" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer2" unique_id=665169749]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[ul]
+[color=#faa]too hot[/color]
+too cold
+idk
+[/ul]"
+fit_content = true
+
+[node name="MarginContainer5" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=1930113468]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer5" unique_id=298942168]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer2" unique_id=1698649509]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "[b]Rating:[/b]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer2" unique_id=1362914454]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+
+[node name="rating" type="RichTextLabel" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer2/MarginContainer" unique_id=492687966]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[color=red]F (0%)[/color] "
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=1676385369]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ok" type="Button" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer3" unique_id=1147742964]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "OK"
+
+[connection signal="pressed" from="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer3/ok" to="." method="_on_ok_pressed"]

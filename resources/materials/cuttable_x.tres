@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dhtoyxgk7k1jq"]
+
+[ext_resource type="Shader" uid="uid://b3n6reqqxurib" path="res://shaders/cuttable_x.gdshader" id="1_mwmvy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ccppr"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[resource]
+render_priority = 0
+next_pass = SubResource("StandardMaterial3D_ccppr")
+shader = ExtResource("1_mwmvy")
+shader_parameter/cut_normal = Vector3(0, 0, 1)
+shader_parameter/cut_dist = 0.03
+shader_parameter/width = 0.0

@@ -1,0 +1,182 @@
+[gd_resource type="Resource" script_class="Elf" format=3 uid="uid://sb8xujv0m2fo"]
+
+[ext_resource type="Script" uid="uid://cp601goyny8yk" path="res://src/json_loader.gd" id="1_4xr2c"]
+[ext_resource type="Script" uid="uid://cwd1nfedmkdig" path="res://customers/elf/elf.gd" id="1_6h6nr"]
+[ext_resource type="Script" uid="uid://23fgsnyaetea" path="res://src/comments.gd" id="2_sd2k7"]
+[ext_resource type="Texture2D" uid="uid://l63j2v34ypdd" path="res://customers/elf/face.png" id="3_6q6f0"]
+[ext_resource type="Script" uid="uid://dxpm23s7hgj3k" path="res://src/taste_profile.gd" id="5_sfnef"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://src/taste_vector.gd" id="6_drjeh"]
+
+[sub_resource type="Resource" id="Resource_llo0o"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/lembas.json"
+items = Array[String](["Oh! I see you're a hobbit of culture!"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_8iiik"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/not_cooked.json"
+items = Array[String](["I do enjoy my food natural, but this is quite low-effort."])
+
+[sub_resource type="Resource" id="Resource_rwfny"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/not_filling.json"
+items = Array[String](["Not a particularly meaningful meal, in my humble opinion."])
+
+[sub_resource type="Resource" id="Resource_fngws"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/not_healthy.json"
+items = Array[String](["Your kin never think of good health! Aye, that is the secret behind your short-livedness!"])
+
+[sub_resource type="Resource" id="Resource_1r3u5"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/not_meaty.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_doncp"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/not_much.json"
+items = Array[String](["I'm not one to eat great amounts, but I must admit, your dedication to asceticism surpasses even mine!"])
+
+[sub_resource type="Resource" id="Resource_okfdk"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/not_salty.json"
+items = Array[String](["Missing a bit of the white gold of the sea!"])
+
+[sub_resource type="Resource" id="Resource_0c562"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/not_sour.json"
+items = Array[String](["Quite boring, disappointingly."])
+
+[sub_resource type="Resource" id="Resource_6qprb"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/not_spicy.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_d5lpd"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/not_sweet.json"
+items = Array[String](["You're not one to appreciate the little joys of life."])
+
+[sub_resource type="Resource" id="Resource_2mc4s"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/not_textured.json"
+items = Array[String](["Much too mushy! Reminds me of what we feed our elders."])
+
+[sub_resource type="Resource" id="Resource_h708j"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/too_cooked.json"
+items = Array[String](["I've always been against cooking food. If Mother Nature had meant us to do it, she would have made it come pre-cooked, wouldn't she?"])
+
+[sub_resource type="Resource" id="Resource_2ebi7"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/too_filling.json"
+items = Array[String](["This feels like a rock in my stomach."])
+
+[sub_resource type="Resource" id="Resource_deysi"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/too_healthy.json"
+items = Array[String](["impossible"])
+
+[sub_resource type="Resource" id="Resource_5vj85"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/too_meaty.json"
+items = Array[String](["How DARE you waste the lives of these innocent creatures for such lowly passions?! Shame!"])
+
+[sub_resource type="Resource" id="Resource_12reb"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/too_much.json"
+items = Array[String](["I can't eat all this."])
+
+[sub_resource type="Resource" id="Resource_n6bcb"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/too_salty.json"
+items = Array[String](["Use salt with moderation, friend"])
+
+[sub_resource type="Resource" id="Resource_x3ikl"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/too_sour.json"
+items = Array[String](["'Tis too much akin to an unripe apple."])
+
+[sub_resource type="Resource" id="Resource_7me5h"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/too_spicy.json"
+items = Array[String](["I'm too old for thrill-seeking."])
+
+[sub_resource type="Resource" id="Resource_wlkuw"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/too_sweet.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_qm17b"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/comments/too_textured.json"
+items = Array[String](["I wonder why it comes in one piece? Must be a novelty."])
+
+[sub_resource type="Resource" id="Resource_6q6f0"]
+script = ExtResource("2_sd2k7")
+not_cooked = SubResource("Resource_8iiik")
+not_healthy = SubResource("Resource_fngws")
+not_meaty = SubResource("Resource_1r3u5")
+not_much = SubResource("Resource_doncp")
+not_salty = SubResource("Resource_okfdk")
+not_sour = SubResource("Resource_0c562")
+not_sweet = SubResource("Resource_d5lpd")
+not_textured = SubResource("Resource_2mc4s")
+not_spicy = SubResource("Resource_6qprb")
+not_filling = SubResource("Resource_rwfny")
+too_cooked = SubResource("Resource_h708j")
+too_healthy = SubResource("Resource_deysi")
+too_meaty = SubResource("Resource_5vj85")
+too_much = SubResource("Resource_12reb")
+too_salty = SubResource("Resource_n6bcb")
+too_sour = SubResource("Resource_x3ikl")
+too_sweet = SubResource("Resource_wlkuw")
+too_textured = SubResource("Resource_qm17b")
+too_spicy = SubResource("Resource_7me5h")
+too_filling = SubResource("Resource_2ebi7")
+extras = Dictionary[String, ExtResource("1_4xr2c")]({
+"lembas": SubResource("Resource_llo0o")
+})
+dir_path = "res://customers/elf/comments"
+metadata/_custom_type_script = "uid://23fgsnyaetea"
+
+[sub_resource type="Resource" id="Resource_q45a7"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/names.json"
+items = Array[String](["Ailwing", "Airin", "Angol", "Auros", "Avlon", "Bansil", "Belaurin", "Belcha", "Belmoth", "Berin", "Bethos", "Bladorwen", "Bridhil", "Bridhon Miaugion", "Bronweg", "Carchaloth", "Carchamoth", "Celebron", "Celioth", "Cranthor", "Cuvonweg", "Daimord", "Daimort", "Dronúrin", "Duruchalmo", "Echos", "Eol", "Evromord", "Faidron", "Faiglindra", "Failivrin", "Felegron", "Felëor", "Finweg", "Flinding", "Fuior", "Fwyor", "Gamlos", "Gaurin", "Gilweth", "Gim", "Gim Githil", "Gim-githil", "Ginweg", "Ginwion", "Githiel", "Githil", "Githilma", "Githlim", "Githlon", "Glingol", "Glinthos", "Glirlos", "Glorund", "Glurim", "Goldriel", "Golfinweg", "Golosbrindi", "Golthadriel", "Gondothlim", "Gothmog", "Gothonwi", "Gumlin", "Gumniow", "Gurtholfin", "Gwalweg", "Gwedda", "Gwedda Durinthir", "Gwedheling", "Gwedhil", "Gwedhil Turlin", "Gwendeling", "Gwetha Durinthir", "Gwethil Turingwith", "Gwidhil", "Gwidhil Durinthir", "Gwidhil-i-Durinthi", "Gwilion", "Gwithil-i-Durinthi", "Halm na-dhuruthon", "Halm nadhuruthon", "Herwent", "Horwin", "Idhril", "Ilfrin", "Imb", "Imrim", "Imrin", "Inweg", "Inwithiel", "Iol", "Ior", "Isfin", "Ithlim", "Ithlin", "Ivon", "Losfan", "Lothlim", "Lúrin", "Magorn", "Magron", "Maidros", "Manweg", "Maron", "Mavwin", "Mechos", "Mechothli", "Meglin", "Miril-i-durwin", "Mornir", "Nauglafring", "Niothluimi", "Nos Duilin", "Nos Galdon", "Nos nan Alwen", "Oleg", "Óli", "Rodothlim", "Rúmhoth", "Salvor", "Sarothron", "Sithaloth", "Tarnin Austa", "Taruitharn", "Taruithron", "Tavros", "Telumaithar", "Telumaithor", "Thilim", "Thlim Doldrin", "Thlim Duilin", "Thlim Ecthel", "Thlim Gothodrum", "Thlim Ith Mindon", "Thlim Quing lion", "Thlim Salum", "Thlim Taul", "Thorndor", "Thornhoth", "Tiberth", "Tifil", "Tinfang", "Tinwelint", "To", "Tulchathron", "Tulcus", "Tur nan Églathon", "Turing", "Turingwith", "Turlith", "Turumart", "Ûmor", "Úrin", "Urwedhin", "Ûl"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_st55v"]
+script = ExtResource("1_4xr2c")
+json_path = "res://customers/elf/orders.json"
+items = Array[String](["The leaves whisper to me... but alas! my stomach is growling. Pray tell, what did Mother Nature engift you with?", "Like a breeze from the mountains, blowing since time immemorial, I have come to you from afar! Fill my innards with your good things!", "To eat is mere indulgence for one of my kind, and yet... I cannot say I don't enjoy a good meal.", "What of the forest that once stood where your inn is? It has been ages since I've last been here, nevertheless, it used to be a whole lot calmer around these parts.", "I can't pay you save with song and dance. I've wandered long and far to get here.", "Whenever I see my dear brothers and sisters of the forest being felled, I can't help but cry..."])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_b4u26"]
+script = ExtResource("6_drjeh")
+sweet = 0.8
+sour = 0.5
+salty = 0.35
+healthy = 1.0
+filling = 0.7
+spicy = 0.1
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Resource" id="Resource_t0kji"]
+script = ExtResource("5_sfnef")
+taste_vector = SubResource("Resource_b4u26")
+cook_time = 5.0
+amount = 0.4
+texture = 0.1
+metadata/_custom_type_script = "uid://dxpm23s7hgj3k"
+
+[resource]
+script = ExtResource("1_6h6nr")
+name = &"Elf"
+image = ExtResource("3_6q6f0")
+orders = SubResource("Resource_st55v")
+names = SubResource("Resource_q45a7")
+comments = SubResource("Resource_6q6f0")
+taste_profile = SubResource("Resource_t0kji")
+metadata/_custom_type_script = "uid://casyras0bryah"

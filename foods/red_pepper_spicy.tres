@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Food" format=3 uid="uid://bga1ewu7fon5n"]
 
-[ext_resource type="PackedScene" uid="uid://biskbr0usd7w" path="res://red_pepper_spicy.tscn" id="1_q4oot"]
-[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_q6a1o"]
-[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="3_11kq8"]
+[ext_resource type="PackedScene" uid="uid://biskbr0usd7w" path="res://scenes/food/red_pepper_spicy.tscn" id="1_q4oot"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://src/food_def.gd" id="2_q6a1o"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://src/taste_vector.gd" id="3_11kq8"]
 [ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="4_hgqp2"]
 
 [sub_resource type="Resource" id="Resource_mxuls"]

@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Customer" format=3 uid="uid://2uvq65i7bmwl"]
 
-[ext_resource type="Script" uid="uid://cp601goyny8yk" path="res://json_loader.gd" id="1_3d02y"]
-[ext_resource type="Script" uid="uid://casyras0bryah" path="res://customer.gd" id="2_2j2by"]
-[ext_resource type="Script" uid="uid://23fgsnyaetea" path="res://comments.gd" id="2_yt8lv"]
+[ext_resource type="Script" uid="uid://cp601goyny8yk" path="res://src/json_loader.gd" id="1_3d02y"]
+[ext_resource type="Script" uid="uid://casyras0bryah" path="res://src/customer.gd" id="2_2j2by"]
+[ext_resource type="Script" uid="uid://23fgsnyaetea" path="res://src/comments.gd" id="2_yt8lv"]
 [ext_resource type="Texture2D" uid="uid://bsncc4lw0kyrk" path="res://customers/hobbit/face.jpg" id="3_qj7lu"]
-[ext_resource type="Script" uid="uid://dxpm23s7hgj3k" path="res://taste_profile.gd" id="5_rqi6m"]
-[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="6_qj7lu"]
+[ext_resource type="Script" uid="uid://dxpm23s7hgj3k" path="res://src/taste_profile.gd" id="5_rqi6m"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://src/taste_vector.gd" id="6_qj7lu"]
 
 [sub_resource type="Resource" id="Resource_qj7lu"]
 script = ExtResource("1_3d02y")

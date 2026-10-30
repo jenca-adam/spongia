@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dowsjik5yvsox"]
+
+[ext_resource type="Shader" uid="uid://bybahn1jj8dwq" path="res://shaders/outline.gdshader" id="1_4hfhr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kobi7"]
+render_priority = -2
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[resource]
+render_priority = -128
+next_pass = SubResource("StandardMaterial3D_kobi7")
+shader = ExtResource("1_4hfhr")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 0.0

@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://cm10nbbwlwx23"]
+
+[ext_resource type="PackedScene" uid="uid://dwpja8dndgxi0" path="res://scenes/items/hobbithouse.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dh43d1cwqg3h4" path="res://src/main.gd" id="1_lquwl"]
+[ext_resource type="Script" uid="uid://casyras0bryah" path="res://src/customer.gd" id="2_0odxb"]
+[ext_resource type="Texture2D" uid="uid://m2wwxs3pkq6g" path="res://resources/textures/158_green grass PBR texture_seamless.jpg" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b47lcdxl176ux" path="res://scenes/stage/held_objs.tscn" id="2_4c57u"]
+[ext_resource type="PackedScene" uid="uid://cugldkvsjdxmt" path="res://scenes/items/table.tscn" id="3_h2yge"]
+[ext_resource type="Resource" uid="uid://sb8xujv0m2fo" path="res://resources/textures/elf.tres" id="3_lswn8"]
+[ext_resource type="PackedScene" uid="uid://cf2km5r6talbf" path="res://scenes/items/shelf.tscn" id="4_1bvp3"]
+[ext_resource type="Resource" uid="uid://2uvq65i7bmwl" path="res://customers/hobbit/hobbit.tres" id="4_a6jrf"]
+[ext_resource type="PackedScene" uid="uid://cscns1iq86e5i" path="res://scenes/items/chest.tscn" id="5_272bh"]
+[ext_resource type="Resource" uid="uid://c522y3wj3a1ya" path="res://customers/horse/horse.tres" id="5_xuqvo"]
+[ext_resource type="PackedScene" uid="uid://dx2m42jeibym6" path="res://scenes/items/fireplace.tscn" id="6_7mycd"]
+[ext_resource type="AudioStream" uid="uid://w80lt8fmqexc" path="res://sound/LSC3107 Ormandy Mahler 1 (ii).mp3" id="8_kek77"]
+[ext_resource type="PackedScene" uid="uid://ca2qd327o4unc" path="res://scenes/items/bowl.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://bgw2bg1o55wcm" path="res://scenes/items/pot.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://iii5g0bsx0qy" path="res://scenes/items/board.tscn" id="13_w48qg"]
+[ext_resource type="PackedScene" uid="uid://0sgn0wdcmned" path="res://scenes/items/knife.tscn" id="13_ycdy4"]
+[ext_resource type="PhysicsMaterial" uid="uid://bvu6hxbdmykpn" path="res://resources/materials/rough_ph.tres" id="15_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://o20xbya0jn82" path="res://scenes/ui/ui_chest.tscn" id="15_vivmo"]
+[ext_resource type="PackedScene" uid="uid://bygx1ju56xt02" path="res://scenes/items/admin_table.tscn" id="16_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://cltc8qx5uvaoj" path="res://scenes/ui/ui_order.tscn" id="17_yaehf"]
+[ext_resource type="PackedScene" uid="uid://6l7tklcbmtpv" path="res://scenes/items/plate.tscn" id="18_074og"]
+[ext_resource type="PackedScene" uid="uid://bbvlyjfooijld" path="res://scenes/ui/ui_result.tscn" id="19_cegan"]
+[ext_resource type="PackedScene" uid="uid://cdbl80hkm1io6" path="res://scenes/ui/ui_tutorial.tscn" id="20_82xsv"]
+[ext_resource type="PackedScene" uid="uid://bxfcte8f8jgy7" path="res://scenes/stage/intro.tscn" id="21_getpj"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_3p65x"]
+rayleigh_color = Color(0.1292, 0.32197994, 0.68, 1)
+energy_multiplier = 3.88
+
+[sub_resource type="Sky" id="Sky_fdjtx"]
+sky_material = SubResource("PhysicalSkyMaterial_3p65x")
+
+[sub_resource type="Environment" id="Environment_0ox0n"]
+background_mode = 2
+sky = SubResource("Sky_fdjtx")
+ambient_light_source = 3
+reflected_light_source = 1
+ssil_intensity = 16.0
+glow_enabled = true
+glow_strength = 0.95
+glow_bloom = 1.0
+glow_blend_mode = 0
+volumetric_fog_emission = Color(0.8862616, 0.88626146, 0.8862615, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_texture = ExtResource("2_0xm2m")
+uv1_scale = Vector3(10, 10, 10)
+uv2_scale = Vector3(1.355, 1.355, 1.355)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_fdjtx"]
+plane = Plane(0, 1, 0, 1.96)
+
+[node name="main" type="Node3D" unique_id=20799515 node_paths=PackedStringArray("START_CAM")]
+script = ExtResource("1_lquwl")
+customers = Array[ExtResource("2_0odxb")]([ExtResource("3_lswn8"), ExtResource("4_a6jrf"), ExtResource("5_xuqvo")])
+CAM_SWITCH_TIME = 0.5
+START_CAM = NodePath("cams/prep_table")
+tutorial_enable = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1535926618]
+environment = SubResource("Environment_0ox0n")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment" unique_id=391440642]
+transform = Transform3D(0.5203396, 0.25819457, -0.8139915, 0.36652243, 0.7934107, 0.48596385, 0.7713028, -0.55121225, 0.3182087, -10.664469, 3.1062121, 0)
+light_color = Color(1, 0.92156863, 0.8, 1)
+light_indirect_energy = 16.0
+shadow_enabled = true
+
+[node name="cams" type="Node3D" parent="." unique_id=1259729573]
+
+[node name="prep_table" type="Camera3D" parent="cams" unique_id=329381897]
+transform = Transform3D(-2.1289956e-08, -0.8733698, 0.48705778, -3.8176193e-08, 0.48705778, 0.8733698, -1, -7.1054274e-15, -4.3711374e-08, -1.742235, 4.469628, 0)
+current = true
+fov = 54.5
+
+[node name="admin_table" type="Camera3D" parent="cams" unique_id=1559819762]
+transform = Transform3D(-1, 8.742278e-08, -4.371139e-08, -4.371139e-08, 1.9106855e-15, 1, 8.742278e-08, 1, 1.9106855e-15, 4.668347, 3.661569, 0)
+current = true
+
+[node name="shelf" type="Camera3D" parent="cams" unique_id=210918336]
+transform = Transform3D(-1, -4.9531764e-08, 1.4264059e-07, 0, 0.9446659, 0.32803404, -1.509958e-07, 0.32803404, -0.9446659, 3.391763, 3.65271, 3.5994873)
+
+[node name="fire" type="Camera3D" parent="cams" unique_id=1271590873]
+transform = Transform3D(1.192488e-08, 0.64144963, -0.7671651, 0, 0.7671651, 0.64144963, 0.99999994, -7.64921e-09, 9.148352e-09, 8.634125, 2.5744019, -0.16608715)
+fov = 45.0
+
+[node name="chest" type="Camera3D" parent="cams" unique_id=699639304]
+transform = Transform3D(1, -7.127174e-07, 1.0312357e-06, 0, 0.82264555, 0.5685546, -1.2535602e-06, -0.5685546, 0.82264555, 4.2072196, 3.895298, -1.3699303)
+fov = 45.0
+
+[node name="trans" type="Camera3D" parent="cams" unique_id=82423611]
+
+[node name="held_objs" parent="cams/trans" unique_id=1656386798 instance=ExtResource("2_4c57u")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.48504627, -1.4093244)
+
+[node name="touch_grass" type="CSGBox3D" parent="." unique_id=388024183]
+transform = Transform3D(0.9999887, 0.0047551654, 0, -0.0047551654, 0.9999887, 0, 0, 0, 1, 2.3073425, -1.1481757, -3.2976913)
+size = Vector3(94.50311, 0.25927734, 79.16356)
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="hobbithouse" parent="." unique_id=824726559 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8168335, 0, -4.3711498e-05)
+
+[node name="table" parent="." unique_id=1285984100 instance=ExtResource("3_h2yge")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -3.592, -0.672, 0)
+
+[node name="chest" parent="." unique_id=2013447582 instance=ExtResource("5_272bh")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.3723574, -0.93578506, -7.3014665)
+
+[node name="shelf" parent="." unique_id=1590615951 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(-1.1, 0, 1.6609539e-07, 0, 1.1, 0, -1.6609539e-07, 0, -1.1, 3.6200047, 1.9057863, 7.4205685)
+
+[node name="fireplace" parent="." unique_id=2096928325 instance=ExtResource("6_7mycd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.205579, -0.31651175, -0.11219901)
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=1521184248]
+stream = ExtResource("8_kek77")
+volume_db = -10.0
+autoplay = true
+parameters/looping = false
+
+[node name="bowl" parent="." unique_id=1110477166 instance=ExtResource("9_kek77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5114355, 2.1952343, 6.990576)
+
+[node name="bowl2" parent="." unique_id=1278150284 instance=ExtResource("9_kek77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.019157, 2.1986449, 6.990576)
+
+[node name="pot" parent="." unique_id=879433023 instance=ExtResource("11_efxa6")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 3.1728363, 3.1486871, 7.5765758)
+freeze = true
+
+[node name="knife" parent="." unique_id=32254624 instance=ExtResource("13_ycdy4")]
+transform = Transform3D(-3.278354e-08, 0, -0.75, 0, 0.75, 0, 0.75, 0, -3.278354e-08, -3.948669, 1.0124959, 1.7246819)
+
+[node name="board" parent="." unique_id=1614343060 instance=ExtResource("13_w48qg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.8039126, 1.0002805, -0.8191948)
+
+[node name="ui_chest" parent="." unique_id=1664958176 instance=ExtResource("15_vivmo")]
+
+[node name="ground" type="StaticBody3D" parent="." unique_id=649103032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2945147, -3.3074496, -4.680645)
+collision_layer = 6144
+collision_mask = 2048
+physics_material_override = ExtResource("15_2cqfq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground" unique_id=565248134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50487256, 0)
+shape = SubResource("WorldBoundaryShape3D_fdjtx")
+
+[node name="admin" parent="." unique_id=1095139935 instance=ExtResource("16_2cqfq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.668347, -0.706, 0)
+
+[node name="ui_result" parent="." unique_id=1853153314 instance=ExtResource("19_cegan")]
+
+[node name="ui_order" parent="." unique_id=588159274 instance=ExtResource("17_yaehf")]
+
+[node name="plate" parent="." unique_id=422206219 instance=ExtResource("18_074og")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 3.007967, 1.1703095, 7.3242683)
+
+[node name="plate2" parent="." unique_id=1347589447 instance=ExtResource("18_074og")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.4319277, 1.1703095, 7.3242683)
+
+[node name="ui_tutorial" parent="." unique_id=1443564730 instance=ExtResource("20_82xsv")]
+
+[node name="intro" parent="." unique_id=1904465255 instance=ExtResource("21_getpj")]
+
+[connection signal="close" from="ui_result" to="." method="_on_ui_result_close"]

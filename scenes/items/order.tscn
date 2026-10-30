@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bw642eouwv5pv"]
+
+[ext_resource type="Script" uid="uid://f6aamblbqpxa" path="res://src/order.gd" id="1_0al22"]
+[ext_resource type="Shader" uid="uid://b825v5nagc5lj" path="res://shaders/hover_order.gdshader" id="2_dgkr4"]
+[ext_resource type="Shader" uid="uid://cjjmv3b22dr5o" path="res://shaders/crumple.gdshader" id="3_vreh4"]
+[ext_resource type="Texture2D" uid="uid://bjtnruy3kk5gk" path="res://resources/textures/old-paper_albedo.jpg" id="4_q8uer"]
+[ext_resource type="Texture2D" uid="uid://ckgbj1vcjjs6x" path="res://resources/textures/old-paper_roughness.jpg" id="5_fuaji"]
+[ext_resource type="Texture2D" uid="uid://v0g7t46qamgg" path="res://resources/textures/order-decal.png" id="6_odr8h"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_k4d4t"]
+noise_type = 3
+frequency = 0.0035
+domain_warp_enabled = true
+domain_warp_type = 2
+domain_warp_frequency = 0.02
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8jx6t"]
+noise = SubResource("FastNoiseLite_k4d4t")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4hfhr"]
+render_priority = 0
+shader = ExtResource("2_dgkr4")
+shader_parameter/noise = SubResource("NoiseTexture2D_8jx6t")
+shader_parameter/outline_width = 0.01
+shader_parameter/height_scale = 0.04
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6qcec"]
+render_priority = 0
+shader = ExtResource("3_vreh4")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_q8uer")
+shader_parameter/albedo_texture_size = Vector2i(2048, 2048)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/texture_roughness = ExtResource("5_fuaji")
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/normal_scale = 1.0
+shader_parameter/ao_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/ao_light_affect = 0.0
+shader_parameter/threshold = 0.01
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/height_scale = 0.04
+shader_parameter/noise = SubResource("NoiseTexture2D_8jx6t")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0ox0n"]
+material = SubResource("ShaderMaterial_6qcec")
+size = Vector2(0.42, 0.6)
+subdivide_width = 100
+subdivide_depth = 100
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ox0n"]
+size = Vector3(0.41415405, 0.07019043, 0.5953369)
+
+[node name="order" type="RigidBody3D" unique_id=106199598]
+freeze = true
+script = ExtResource("1_0al22")
+
+[node name="offset" type="Node3D" parent="." unique_id=1210249801]
+
+[node name="model" type="MeshInstance3D" parent="offset" unique_id=38929716]
+material_overlay = SubResource("ShaderMaterial_4hfhr")
+mesh = SubResource("PlaneMesh_0ox0n")
+
+[node name="hover" type="StaticBody3D" parent="offset" unique_id=135899723]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="offset/hover" unique_id=923796787]
+shape = SubResource("BoxShape3D_0ox0n")
+
+[node name="Decal" type="Decal" parent="." unique_id=1152104128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0026855469, 0)
+size = Vector3(0.42, 0.06689453, 0.6)
+texture_albedo = ExtResource("6_odr8h")

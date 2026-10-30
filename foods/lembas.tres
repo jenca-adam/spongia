@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Food" format=3 uid="uid://dkumh32hd5223"]
 
-[ext_resource type="PackedScene" uid="uid://bqgm83gsrg0c8" path="res://lembas.tscn" id="1_tkjp1"]
-[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://food_def.gd" id="2_p204o"]
-[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://taste_vector.gd" id="3_rihc0"]
+[ext_resource type="PackedScene" uid="uid://bqgm83gsrg0c8" path="res://scenes/food/lembas.tscn" id="1_tkjp1"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://src/food_def.gd" id="2_p204o"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://src/taste_vector.gd" id="3_rihc0"]
 [ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="4_xanjm"]
 
 [sub_resource type="Resource" id="Resource_0jlna"]
@@ -22,7 +22,7 @@ size = Vector2i(256, 256)
 scene = ExtResource("1_tkjp1")
 scene_rotation = Vector3(1.5707964, 0, 0)
 camera_fov = 76.0
-camera_distance = 0.3
+camera_distance = 0.4
 camera_position = Vector3(0, -0.06, 0)
 camera_rotation = Vector3(0.46251225, 0, 0)
 metadata/_custom_type_script = "uid://bt12obb4t0tm4"
@@ -31,7 +31,7 @@ metadata/_custom_type_script = "uid://bt12obb4t0tm4"
 script = ExtResource("2_p204o")
 name = "Lembas"
 desc = "Extremely filling bread"
-category = "vegetables"
+category = "other"
 scene = ExtResource("1_tkjp1")
 thumbnail = SubResource("Texture2D_vivmo")
 taste_vector = SubResource("Resource_0jlna")
