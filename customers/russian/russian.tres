@@ -1,0 +1,168 @@
+[gd_resource type="Resource" script_class="Customer" format=3 uid="uid://dq4nvhknwkcsc"]
+
+[ext_resource type="Texture2D" uid="uid://3kqg7d8t3x1d" path="res://customers/russian/face.png" id="1_2145l"]
+[ext_resource type="Script" uid="uid://cp601goyny8yk" path="res://src/json_loader.gd" id="2_l8e0r"]
+[ext_resource type="Script" uid="uid://23fgsnyaetea" path="res://src/comments.gd" id="2_qegdx"]
+[ext_resource type="Script" uid="uid://casyras0bryah" path="res://src/customer.gd" id="2_s0bp0"]
+[ext_resource type="Script" uid="uid://dxpm23s7hgj3k" path="res://src/taste_profile.gd" id="5_1q43s"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://src/taste_vector.gd" id="6_yslop"]
+
+[sub_resource type="Resource" id="Resource_ub88e"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/not_cooked.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_sdv1a"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/not_filling.json"
+items = Array[String](["I'm afraid I'm still hungry! I'm going to have to eat you."])
+
+[sub_resource type="Resource" id="Resource_4eck4"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/not_healthy.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_vtvmn"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/not_meaty.json"
+items = Array[String](["Where's the meat? I want to taste the flesh of living beings!"])
+
+[sub_resource type="Resource" id="Resource_y77y4"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/not_much.json"
+items = Array[String](["Is this all you've got? That's not enough. It's time for second dinner!"])
+
+[sub_resource type="Resource" id="Resource_mhgqg"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/not_salty.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_4lr1t"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/not_sour.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_ycge3"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/not_spicy.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_6u6qf"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/not_sweet.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_dr0fq"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/not_textured.json"
+items = Array[String](["How dare you deprive me of the pleasure of tearing flesh apart with my teeth!"])
+
+[sub_resource type="Resource" id="Resource_b3v4h"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/too_cooked.json"
+items = Array[String](["Arrrgh! You've completely ruined it! The texture is all wrong!"])
+
+[sub_resource type="Resource" id="Resource_i676t"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/too_filling.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_mj23h"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/too_healthy.json"
+items = Array[String](["Fruits and vegetables are for the prey!"])
+
+[sub_resource type="Resource" id="Resource_520r4"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/too_meaty.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_rfsev"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/too_much.json"
+items = Array[String]([""])
+
+[sub_resource type="Resource" id="Resource_vgu6o"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/too_salty.json"
+items = Array[String](["You've absolutely ruined the taste of flesh by putting some weird white stuff on it!"])
+
+[sub_resource type="Resource" id="Resource_g4iqw"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/too_sour.json"
+items = Array[String](["What is this?! Are you trying to poison me?"])
+
+[sub_resource type="Resource" id="Resource_uah2d"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/too_spicy.json"
+items = Array[String](["ARRRGH! I can't stand this pain!"])
+
+[sub_resource type="Resource" id="Resource_xanif"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/too_sweet.json"
+items = Array[String](["Are you trying to win me over? Sugar won't work on me!"])
+
+[sub_resource type="Resource" id="Resource_eac2l"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/comments/too_textured.json"
+items = Array[String](["Are you trying to make me choke to death?!"])
+
+[sub_resource type="Resource" id="Resource_uyv2j"]
+script = ExtResource("2_qegdx")
+not_cooked = SubResource("Resource_ub88e")
+not_healthy = SubResource("Resource_4eck4")
+not_meaty = SubResource("Resource_vtvmn")
+not_much = SubResource("Resource_y77y4")
+not_salty = SubResource("Resource_mhgqg")
+not_sour = SubResource("Resource_4lr1t")
+not_sweet = SubResource("Resource_6u6qf")
+not_textured = SubResource("Resource_dr0fq")
+not_spicy = SubResource("Resource_ycge3")
+not_filling = SubResource("Resource_sdv1a")
+too_cooked = SubResource("Resource_b3v4h")
+too_healthy = SubResource("Resource_mj23h")
+too_meaty = SubResource("Resource_520r4")
+too_much = SubResource("Resource_rfsev")
+too_salty = SubResource("Resource_vgu6o")
+too_sour = SubResource("Resource_g4iqw")
+too_sweet = SubResource("Resource_xanif")
+too_textured = SubResource("Resource_eac2l")
+too_spicy = SubResource("Resource_uah2d")
+too_filling = SubResource("Resource_i676t")
+dir_path = "res://customers/russian/comments"
+metadata/_custom_type_script = "uid://23fgsnyaetea"
+
+[sub_resource type="Resource" id="Resource_ndyaf"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/names.json"
+items = Array[String](["Azog", "Balcmeg", "Black Uruk", "Boldog", "Bolg", "Durthang", "Glamhoth", "Goblin-man", "Goblin", "Golfimbul", "Gorgol", "Great Goblin", "Grishnákh", "Half-orc", "Hobgoblin", "Lagduf", "Lug", "Muzgash", "Naglur-Danlo", "Othrod", "Radbug", "Shagram", "Slave-driver", "Snaga", "Ufthak", "Igor"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_i6r6c"]
+script = ExtResource("2_l8e0r")
+json_path = "res://customers/russian/orders.json"
+items = Array[String](["Give me all your food, or I'll have you for dinner!", "Oh, a little Hobbit? I eat your heads like strawberries!", "Do you want me to set the inn on fire? If you don't, you'd better give me everything for free!", "Oh, so your father got killed by us? Looks like we missed a spot!", "If you serve me right now, you get a quick death. If you don't, I'll have my fun with you."])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_lqbou"]
+script = ExtResource("6_yslop")
+meaty = 1.0
+filling = 1.0
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Resource" id="Resource_ii2vb"]
+script = ExtResource("5_1q43s")
+taste_vector = SubResource("Resource_lqbou")
+amount = 4.0
+texture = 0.3
+metadata/_custom_type_script = "uid://dxpm23s7hgj3k"
+
+[resource]
+script = ExtResource("2_s0bp0")
+name = &"Orc"
+image = ExtResource("1_2145l")
+orders = SubResource("Resource_i6r6c")
+names = SubResource("Resource_ndyaf")
+comments = SubResource("Resource_uyv2j")
+taste_profile = SubResource("Resource_ii2vb")
+metadata/_custom_type_script = "uid://casyras0bryah"
