@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Food" format=3 uid="uid://d2njr24o6vc04"]
+
+[ext_resource type="PackedScene" uid="uid://bkuejwqw8utrl" path="res://scenes/food/fish.tscn" id="1_vrsjo"]
+[ext_resource type="Script" uid="uid://cnuu2i204u1de" path="res://src/food_def.gd" id="2_yift5"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://src/taste_vector.gd" id="3_l1jts"]
+[ext_resource type="Script" uid="uid://bt12obb4t0tm4" path="res://addons/scene_texture/SceneTexture.gd" id="4_dcfjm"]
+
+[sub_resource type="Resource" id="Resource_knf71"]
+script = ExtResource("3_l1jts")
+salty = 0.7
+meaty = 1.0
+healthy = 0.4
+filling = 0.5
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Texture2D" id="Texture2D_vivmo"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("4_dcfjm")
+size = Vector2i(256, 256)
+scene = ExtResource("1_vrsjo")
+scene_rotation = Vector3(1.5707964, 0, 0)
+camera_fov = 76.0
+camera_distance = 0.5
+camera_position = Vector3(0, 0, 0)
+camera_rotation = Vector3(0, 0, 3.1415927)
+metadata/_custom_type_script = "uid://bt12obb4t0tm4"
+
+[resource]
+script = ExtResource("2_yift5")
+name = "Fish"
+desc = "Was alive 10 minutes ago"
+category = "meat"
+scene = ExtResource("1_vrsjo")
+thumbnail = SubResource("Texture2D_vivmo")
+taste_vector = SubResource("Resource_knf71")

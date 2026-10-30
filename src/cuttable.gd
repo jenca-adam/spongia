@@ -28,13 +28,14 @@ const PLANE_ORIENT = [PlaneMesh.FACE_Z, PlaneMesh.FACE_X, PlaneMesh.FACE_Y]
 @export var cut_material_z:Material
 @export var cut_material_x:Material
 @export var cut_material_y:Material
-
+@export var volume_override:float
 var type:StringName
 var volume
 var _cut_colls = []
 var _cut_shapes = []
 var cook_time= 0.0
 var added_salt=0.0
+
 func add_salt(amount):
 	added_salt+=amount
 func get_mesh_volume(mesh: Mesh) -> float:
@@ -77,7 +78,10 @@ func _ready():
 
 	frozen.connect(_on_frozen)
 	unfrozen.connect(_on_unfrozen)
-	volume=get_mesh_volume(model.mesh)*absf(scale.x*scale.z*scale.y*model.scale.x*model.scale.z*model.scale.y)*20.0 ### bulharska konstanta
+	if volume_override:
+		volume=volume_override
+	else:
+		volume=get_mesh_volume(model.mesh)*absf(scale.x*scale.z*scale.y*model.scale.x*model.scale.z*model.scale.y)*20.0 ### bulharska konstanta
 	print(name, " volume: ", volume)
 	var mesh := model.mesh as Mesh
 func _physics_process(delta):
@@ -211,6 +215,11 @@ func cut(pos:Vector3):
 	instance2.cook_time=cook_time
 	instance1.cook_scale = cook_scale
 	instance2.cook_scale = cook_scale
+	if volume_override:
+		# approximate
+		var pos_normalized = (pos[c]-r.x)/(r.y-r.x)
+		instance1.volume_override = volume_override*pos_normalized
+		instance2.volume_override = volume_override*(1-pos_normalized)
 	_center_instance(instance1, meshes1[0])
 	_center_instance(instance2, meshes2[1])
 	add_sibling(instance1)

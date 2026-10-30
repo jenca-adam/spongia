@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b47lcdxl176ux" path="res://scenes/stage/held_objs.tscn" id="2_4c57u"]
 [ext_resource type="PackedScene" uid="uid://cugldkvsjdxmt" path="res://scenes/items/table.tscn" id="3_h2yge"]
 [ext_resource type="Resource" uid="uid://sb8xujv0m2fo" path="res://customers/elf/elf.tres" id="3_lswn8"]
+[ext_resource type="Resource" uid="uid://cvi53dpbd6va6" path="res://customers/gollum/gollum.tres" id="3_pklfo"]
 [ext_resource type="PackedScene" uid="uid://cf2km5r6talbf" path="res://scenes/items/shelf.tscn" id="4_1bvp3"]
 [ext_resource type="Resource" uid="uid://2uvq65i7bmwl" path="res://customers/hobbit/hobbit.tres" id="4_a6jrf"]
 [ext_resource type="PackedScene" uid="uid://cscns1iq86e5i" path="res://scenes/items/chest.tscn" id="5_272bh"]
@@ -56,7 +57,7 @@ plane = Plane(0, 1, 0, 1.96)
 
 [node name="main" type="Node3D" unique_id=20799515 node_paths=PackedStringArray("START_CAM")]
 script = ExtResource("1_lquwl")
-customers = Array[ExtResource("2_0odxb")]([ExtResource("4_a6jrf"), ExtResource("3_lswn8"), ExtResource("5_xuqvo")])
+customers = Array[ExtResource("2_0odxb")]([ExtResource("3_pklfo"), ExtResource("4_a6jrf"), ExtResource("3_lswn8"), ExtResource("5_xuqvo")])
 CAM_SWITCH_TIME = 0.5
 START_CAM = NodePath("cams/prep_table")
 tutorial_enable = true
@@ -168,6 +169,7 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.4319277, 1.1703095, 7
 [node name="ui_tutorial" parent="." unique_id=1443564730 instance=ExtResource("20_82xsv")]
 
 [node name="intro" parent="." unique_id=1904465255 instance=ExtResource("21_getpj")]
+play = false
 
 [node name="salt_shaker" parent="." unique_id=499555533 instance=ExtResource("26_h3hwu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0566173, 1.3470322, -2.474979)

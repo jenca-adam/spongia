@@ -620,6 +620,7 @@ size_flags_horizontal = 3
 text = "SKIP TUTORIAL"
 
 [node name="12" type="Control" parent="." unique_id=1369255922]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
