@@ -29,6 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://cdbl80hkm1io6" path="res://scenes/ui/ui_tutorial.tscn" id="20_82xsv"]
 [ext_resource type="PackedScene" uid="uid://bxfcte8f8jgy7" path="res://scenes/stage/intro.tscn" id="21_getpj"]
 [ext_resource type="PackedScene" uid="uid://dgl6mi0jvno63" path="res://scenes/items/salt_shaker.tscn" id="26_h3hwu"]
+[ext_resource type="PackedScene" uid="uid://3mefly0yrgem" path="res://scenes/items/stats_paper.tscn" id="30_uyv2j"]
+[ext_resource type="PackedScene" uid="uid://bnabklagri7ae" path="res://scenes/ui/ui_stats.tscn" id="31_ii2vb"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_3p65x"]
 rayleigh_color = Color(0.1292, 0.32197994, 0.68, 1)
@@ -92,8 +94,7 @@ transform = Transform3D(1.192488e-08, 0.64144963, -0.7671651, 0, 0.7671651, 0.64
 fov = 45.0
 
 [node name="chest" type="Camera3D" parent="cams" unique_id=699639304]
-transform = Transform3D(1, -7.127174e-07, 1.0312357e-06, 0, 0.82264555, 0.5685546, -1.2535602e-06, -0.5685546, 0.82264555, 4.2072196, 3.895298, -1.3699303)
-fov = 45.0
+transform = Transform3D(1, 0, 0, 0, 0.94551855, 0.32556817, 0, -0.32556817, 0.94551855, 4.405276, 2.1652217, -4.3477926)
 
 [node name="trans" type="Camera3D" parent="cams" unique_id=82423611]
 
@@ -172,10 +173,17 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.4319277, 1.1703095, 7
 [node name="ui_tutorial" parent="." unique_id=1443564730 instance=ExtResource("20_82xsv")]
 
 [node name="intro" parent="." unique_id=1904465255 instance=ExtResource("21_getpj")]
+play = false
 
 [node name="salt_shaker" parent="." unique_id=499555533 instance=ExtResource("26_h3hwu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0566173, 1.3470322, -2.474979)
 y_offset = 1.0
 strength = 0.055
+
+[node name="stats_paper" parent="." unique_id=440381884 instance=ExtResource("30_uyv2j")]
+transform = Transform3D(3, 0, 0, 0, -0.46155316, -2.964282, 0, 2.964282, -0.46155316, 4.4586487, 2.7652903, -9.1726675)
+freeze = true
+
+[node name="ui_stats" parent="." unique_id=132195318 instance=ExtResource("31_ii2vb")]
 
 [connection signal="close" from="ui_result" to="." method="_on_ui_result_close"]

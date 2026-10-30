@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://3mefly0yrgem"]
+
+[ext_resource type="Script" uid="uid://de5iur75w6plo" path="res://src/stats_paper.gd" id="1_3s56q"]
+[ext_resource type="Shader" uid="uid://b825v5nagc5lj" path="res://shaders/hover_order.gdshader" id="2_2kpjo"]
+[ext_resource type="Shader" uid="uid://cjjmv3b22dr5o" path="res://shaders/crumple.gdshader" id="3_17ed0"]
+[ext_resource type="Texture2D" uid="uid://dj0hbgnlvxlif" path="res://resources/textures/statistics_decal.png" id="6_mjcod"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_pvwrc"]
+noise_type = 3
+offset = Vector3(0, 421.42, 1000)
+domain_warp_frequency = 0.02
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_wm8tb"]
+noise = SubResource("FastNoiseLite_pvwrc")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bhg7l"]
+render_priority = 0
+shader = ExtResource("2_2kpjo")
+shader_parameter/noise = SubResource("NoiseTexture2D_wm8tb")
+shader_parameter/outline_width = 0.01
+shader_parameter/height_scale = 0.04
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3s56q"]
+load_path = "res://.godot/imported/old-paper_albedo.jpg-5b8fb90d81a2a248476daf83d56dc8b3.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2kpjo"]
+load_path = "res://.godot/imported/old-paper_roughness.jpg-f06f5dbc0d4f996bd76b7776d4ef5966.s3tc.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_17ed0"]
+render_priority = 0
+shader = ExtResource("3_17ed0")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = SubResource("CompressedTexture2D_3s56q")
+shader_parameter/albedo_texture_size = Vector2i(2048, 2048)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/texture_roughness = SubResource("CompressedTexture2D_2kpjo")
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/normal_scale = 1.0
+shader_parameter/ao_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/ao_light_affect = 0.0
+shader_parameter/threshold = 0.01
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/height_scale = 0.05
+shader_parameter/noise = SubResource("NoiseTexture2D_wm8tb")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jc6td"]
+material = SubResource("ShaderMaterial_17ed0")
+size = Vector2(0.42, 0.6)
+subdivide_width = 100
+subdivide_depth = 100
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bi3gy"]
+size = Vector3(0.41415405, 0.07019043, 0.5953369)
+
+[node name="stats_paper" type="RigidBody3D" unique_id=440381884]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("1_3s56q")
+
+[node name="offset" type="Node3D" parent="." unique_id=1009222541]
+
+[node name="model" type="MeshInstance3D" parent="offset" unique_id=706384080]
+material_overlay = SubResource("ShaderMaterial_bhg7l")
+mesh = SubResource("PlaneMesh_jc6td")
+
+[node name="hover" type="StaticBody3D" parent="offset" unique_id=1552242477]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="offset/hover" unique_id=928714370]
+shape = SubResource("BoxShape3D_bi3gy")
+
+[node name="Decal" type="Decal" parent="offset" unique_id=251518886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0026855469, 0)
+size = Vector3(0.42, 0.06689453, 0.6)
+texture_albedo = ExtResource("6_mjcod")

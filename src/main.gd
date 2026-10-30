@@ -10,6 +10,7 @@ var CAM_SWITCH_EASE = Tween.EASE_OUT
 var switching = 0
 var current_order:Bestellung
 var served=1
+var statistics:Statistics
 @export var START_CAM:Camera3D
 @onready var held_objs = $cams/trans/held_objs
 @onready var admin_cam= $cams/admin_table
@@ -111,6 +112,9 @@ func _ready():
 		$WorldEnvironment.environment.glow_enabled=false
 	if not Options.enable_anti_alias:
 		get_viewport().screen_space_aa=Viewport.SCREEN_SPACE_AA_DISABLED
+	
+	statistics = Statistics.new()
+	statistics.setup($ui_chest.food_resources.values(), customers, $ui_chest.food_resources)
 func _on_ui_result_close() -> void:
 	$admin.clear()
 	served+=1

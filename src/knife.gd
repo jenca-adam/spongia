@@ -86,6 +86,7 @@ func _input(event):
 		for hit in hits:
 			var collider: Cuttable = hit[0]
 			if is_instance_valid(collider) and collider.cut(hits[0][1]):
+				$/root/main.statistics.log_cut()
 				did_cut = true
 		if did_cut:
 			$/root/main.tutorial.set_variable(&"item_cut",1)

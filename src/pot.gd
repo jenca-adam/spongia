@@ -23,5 +23,6 @@ func _process(delta):
 			if not b:
 				continue
 			b.cook_time+=delta
+		$/root/main.statistics.log_cook_frame(delta)
 func _pot_grabbed():
 	$/root/main.tutorial.set_variable(&"pot_grabbed",1)

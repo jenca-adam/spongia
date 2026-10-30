@@ -15,6 +15,7 @@ func setup_result(bestellung:Bestellung, result_taste_profile:TasteProfile, resu
 		comment_bb+=comment_text+'\n'
 	%comments.text="[ul]%s[/ul]"%comment_bb
 	%rating.text="%.2f"%(score*100.0)+"%"
+	$/root/main.statistics.log_result(bestellung, result_items, score*100.0)
 func _on_ok_pressed():
 	super._on_ok_pressed()
 	$/root/main.tutorial.set_variable(&"meal_submitted", 1)

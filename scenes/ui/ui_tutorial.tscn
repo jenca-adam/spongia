@@ -13,6 +13,14 @@ grow_vertical = 2
 theme = ExtResource("1_u653q")
 script = ExtResource("1_ullr8")
 
+[node name="TextureRect" type="Panel" parent="." unique_id=1335188394]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="1" type="Control" parent="." unique_id=969655554]
 unique_name_in_owner = true
 visible = false
