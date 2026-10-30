@@ -16,6 +16,8 @@ var global_exclude=[]
 var enable_freeze_on_sleep=true
 signal unfrozen
 signal frozen
+signal activate
+signal deactivate
 @export var hangs = false
 @export var thumb:Texture
 @export var duct_tape:Vector3
@@ -153,6 +155,7 @@ func _on_hover_input_event(camera: Node, event: InputEvent, event_position: Vect
 			active=true
 			set_collision_layer_value(11, false)
 			set_collision_mask_value(11, false)
+			activate.emit()
 			print("activating", self)
 func _input(event):
 	if event.is_action_released("rotation_begin") and hovered and rotatable and not rotating:
@@ -178,6 +181,7 @@ func _input(event):
 		$/root/main.held_objs.drop_item(self)
 		model.material_overlay.next_pass.albedo_color=Color(0,1,0,0)
 		release.emit(self)
+		deactivate.emit()
 	if event.is_action_released("cancel_obj_drop") and active:
 		active=false
 		$/root/main.held_objs.active_item=null
@@ -186,7 +190,7 @@ func _input(event):
 		tween.tween_property(self, "position", Vector3.ZERO, 0.2)
 		model.material_overlay.next_pass.albedo_color=Color(0,1,0,0)
 		cancel.emit(self)
-		
+		deactivate.emit()
 
 func _on_ungrab() -> void:
 	model.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_ON

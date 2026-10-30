@@ -7,7 +7,7 @@ var last_entered_tick = -1
 var last_exited_tick = -1
 var moving:bool=false
 var can_tip=false
-
+var cancelling=false
 @export var can_cut_contents=false
 @export var VERTICAL_MOVEMENT_SPEED=1
 @export_range(-180, 180, 0.1, "radians_as_degrees") var rotation_angle: float = -PI
@@ -41,9 +41,13 @@ func _ready():
 	use.connect(_on_use)
 	unuse.connect(_on_unuse)
 	done_check = get_node_or_null("done_check")
-
-
-
+	activate.connect(_on_activated)
+	deactivate.connect(_on_deactivated)
+	use_start.connect(_on_use_start)
+func _on_use_start():
+	for body in bodies:
+		if is_instance_valid(body):
+			neutral_positions[body]=body.position
 func _generate_top_plane_shape()->BoxShape3D:
 	var box_shape = BoxShape3D.new()
 	box_shape.size = aabb.size*0.9
@@ -65,7 +69,7 @@ func _set_contents_collider()->void:
 
 func _physics_process(delta):
 	super._physics_process(delta)
-	if active:
+	if active or tipping:
 		internal_collider.collision_mask = 0
 	else:
 		internal_collider.collision_mask |= (1 << 10)
@@ -182,7 +186,7 @@ func _reparent_body(b: Obj, new_parent: Node, expect_inside: bool) -> void:
 func _release_body(b: Obj) -> void:
 	bodies.erase(b)
 	global_exclude.erase(b.hover.get_rid())
-	neutral_positions.erase(b)
+	#neutral_positions.erase(b)
 	var cb := _on_body_frozen.bind(b)
 	if b.frozen.is_connected(cb):
 		b.frozen.disconnect(cb)
@@ -206,7 +210,7 @@ func _confirm_exit(b: Obj) -> void:
 	await get_tree().physics_frame
 	if not is_instance_valid(b) or b not in bodies:
 		return
-	if contents.overlaps_body(b):
+	if contents.overlaps_body(b) or cancelling:
 		return
 	_release_body(b)
 
@@ -217,35 +221,41 @@ func _on_cancelled(...foo):
 		body.position = neutral_positions.get(body, body.position)
 func _on_activated(...foo):
 	pass
-
-
+func _on_deactivated(...foo):
+	pass
 ## TIPPING
-
+var _collider=-1
 func _on_use():
 	var held_objs = $/root/main.held_objs
 	var surface = held_objs.racist(0b10|(1<<9), [top_plane.get_rid()])
 	if not surface:
+		position=Vector3.ZERO
 		can_tip=false
 		return
-	can_tip=true
 	var pos = surface["position"]
+	print(surface)
 	var gpos = pos#+rotation_axis*aabb.size.x
 	var steepest = min(abs(rotation_angle), PI/2)
 	var big = aabb.size.dot(rotation_axis)*sin(steepest)
 	miny = pos.y+big/2
 	maxy = pos.y+big*3
 	gpos.y=global_position.y
+	if not can_tip or _collider!=surface["collider_id"]:
+		gpos.y=miny
 	global_position=gpos
+	can_tip=true
+	_collider=surface["collider_id"]
 func _reenable_collision():
 	internal_collider.set_collision_layer_value(11, true)
 	set_collision_layer_value(12, true)
 func _tip_reset():
 	tipping=false
 	rot_lock=false
-	internal_collider.set_collision_layer_value(11, false)
-	set_collision_layer_value(12, false)
+#	internal_collider.set_collision_layer_value(11, false)
+	#set_collision_layer_value(12, false)
 	get_tree().create_timer(0.1).timeout.connect(_reenable_collision)
 	_unuse()
+	_on_cancelled()
 func _tip_reset_after_timeout():
 	var timer = get_tree().create_timer(0.5)
 	timer.timeout.connect(_tip_reset)
@@ -281,6 +291,7 @@ func _input(event:InputEvent):
 	deltay+=dy
 
 func _on_unuse():
+	_collider=-1
 	_on_cancelled(67)
 
 func freed_clear():

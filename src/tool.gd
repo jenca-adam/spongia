@@ -25,9 +25,12 @@ func _physics_process(delta):
 func _unuse():
 	$/root/main.held_objs.used_item=null
 	using=false
-	unuse.emit()
+	
 	drop_disabled=false
-	position=Vector3.ZERO
+	var tween=get_tree().create_tween()
+	tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+	tween.tween_property(self, "position", Vector3.ZERO, 0.2)
+	unuse.emit()
 	model.material_overlay.next_pass.albedo_color=Color(1,1,1,0.0)
 	model.material_overlay.set_shader_parameter("outline_color", Color(1,1,1))
 	model.material_overlay.set_shader_parameter("outline_width", 0.0)

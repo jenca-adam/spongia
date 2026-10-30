@@ -32,6 +32,7 @@ theme = ExtResource("1_b04ml")
 script = ExtResource("2_13jq6")
 step = 0.1
 offset = 0.5
+linger = 0.4
 
 [node name="bg" type="ColorRect" parent="." unique_id=646354451]
 unique_name_in_owner = true
@@ -72,6 +73,7 @@ layout_mode = 2
 text = "g"
 
 [node name="g3" type="Label" parent="bg/CenterContainer/text" unique_id=567182652]
+visible = false
 layout_mode = 2
 text = "g"
 
