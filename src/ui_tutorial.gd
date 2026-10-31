@@ -3,6 +3,10 @@ extends Control
 
 var tutorial:Tutorial
 var showing=0
+func _ready():
+	#qol
+	for button in find_children("*", "Button", true, false) as Array[Button]:
+		button.mouse_default_cursor_shape=Control.CURSOR_POINTING_HAND
 func _on_ok_pressed() -> void:
 	var node:=get_node_or_null("%d"%showing)
 	if node: node.hide()

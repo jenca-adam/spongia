@@ -4,6 +4,7 @@ extends Control
 @export var end_fade_time=1.5
 @export var hold_time=3.0
 @export var play=true
+@export var offset=2
 func fade_out():
 	get_tree().create_tween().tween_property($bg, "self_modulate",Color.TRANSPARENT, end_fade_time)
 	
@@ -20,7 +21,7 @@ func _ready():
 	if not play or Options.skip_intro:
 		hide()
 		return
-	var time=0.0
+	var time=offset
 	for line in %lines.get_children():
 		get_tree().create_timer(time).timeout.connect(fade_in_node.bind(line))
 		time+=fade_in_time+hold_time

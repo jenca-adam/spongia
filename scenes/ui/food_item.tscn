@@ -4,12 +4,12 @@
 [ext_resource type="Theme" uid="uid://ook3gn0uv81v" path="res://resources/themes/order.tres" id="1_86774"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tub5n"]
-draw_center = false
+bg_color = Color(1, 1, 1, 0.1882353)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
+border_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6

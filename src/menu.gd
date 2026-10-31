@@ -1,15 +1,18 @@
 extends Node3D
 @export var edge_scroll_speed=20.0
-
+var fade_in_tween:Tween
 func _ready():
 	if not FileAccess.file_exists("user://game.save"):
 		%load.disabled=true
+	%fg.color = Color.BLACK
 	
 	var tween = get_tree().create_tween()
 	var edge_noise:FastNoiseLite=%panel.material.get_shader_parameter("burn_texture").noise
 	tween.tween_property($WorldEnvironment.environment.glow_map.noise, "offset", Vector3(0,0,10000.0),1000)
 	tween.set_parallel(true)
 	tween.tween_property(edge_noise, "offset",  Vector3(10000.0,0,0),1000)
+	fade_in_tween=get_tree().create_tween()
+	fade_in_tween.tween_property(%fg, "color", Color(0,0,0,0), 1.5)
 func _on_quit_pressed() -> void:
 	get_tree().quit()
 
@@ -23,12 +26,13 @@ func load_save():
 	#get_tree().change_scene_to_packed(game)
 func _on_play_pressed() -> void:
 	var tween = get_tree().create_tween()
-
-	tween.tween_property(%fg, "color", Color.BLACK, 0.2)
 	tween.set_parallel(true)
-	tween.tween_property($music, "volume_db", -20, 0.2)
-	tween.tween_property(%bun, "volume_db", -30, 0.2)
-	get_tree().create_timer(0.2).timeout.connect(play_the_game)
+	fade_in_tween.stop()
+	tween.tween_property(%fg, "color", Color.BLACK, 0.2)
+	
+	tween.tween_property($music, "volume_db", linear_to_db(0.01), 0.2)
+	tween.tween_property(%bun, "volume_db", linear_to_db(0.01), 0.2)
+	get_tree().create_timer(0.5).timeout.connect(play_the_game)
 
 
 func _on_options_pressed() -> void:
@@ -50,9 +54,10 @@ func _on_enable_anti_alias_toggled(toggled_on: bool) -> void:
 
 func _on_volume_master_value_changed(value: float) -> void:
 	Options.volume_sfx=value
+	%bun.volume_linear=value
 func _on_volume_music_value_changed(value: float) -> void:
 	Options.volume_music=value
-
+	$music.volume_linear=value
 
 func _on_skip_intro_toggled(toggled_on: bool) -> void:
 	Options.skip_intro=toggled_on

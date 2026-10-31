@@ -168,6 +168,27 @@ Zvukové efekty:
     Solenie:
         https://pixabay.com/sound-effects/film-special-effects-salt-shaker-414324/
         Pixabay Content License
+    Otočenie stránky v slovníku:
+        https://bigsoundbank.com/turned-page-s0164.html
+        CC0
+    Zvonček:
+        https://bigsoundbank.com/counter-bell-3-s2531.html
+        CC0
+    Splash Screen:
+        - Písací stroj:
+            https://bigsoundbank.com/typewriter-s1065.html
+            CC0
+        - Zvonček:
+            https://bigsoundbank.com/typewriter-bell-s2844.html
+            CC0
+        - Whoosh:
+            https://pixabay.com/sound-effects/film-special-effects-whoosh-cinematic-376875/
+            Dragon-Studio
+            Pixabay Content License
+        - Hučanie:
+            https://pixabay.com/sound-effects/film-special-effects-electric-hum-141075/
+            SoundsForYou
+            Pixabay Content License
 Fonty:
     William Morris,Dieter Steffmann - Morris Roman
         https://www.1001fonts.com/morris-roman-font.html

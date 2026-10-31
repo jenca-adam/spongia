@@ -29,6 +29,7 @@ func switch_cam(prev_node:Camera3D, cam_node:Camera3D, rot_offset=Vector3.ZERO):
 	trans.rotation = prev_node.rotation
 	trans.make_current()
 	var tween = get_tree().create_tween()
+	
 	tween.tween_property(trans, "position", cam_node.position, CAM_SWITCH_TIME).set_ease(CAM_SWITCH_EASE)
 	tween.set_parallel()
 	tween.tween_property(trans, "fov", cam_node.fov, CAM_SWITCH_TIME).set_ease(CAM_SWITCH_EASE)
@@ -125,8 +126,13 @@ func _ready():
 		statistics = Statistics.new()
 	else:
 		statistics=Options.stats
+		served = statistics.total_orders[0] # fix
 	
 	statistics.setup($ui_chest.food_resources.values(), customers, $ui_chest.food_resources)
+	get_tree().create_timer(0.5).timeout.connect(fade_in)
+func fade_in():
+	var tween=get_tree().create_tween()
+	tween.tween_property($fg, "color", Color(0,0,0,0), 1.5)
 func _on_ui_result_close() -> void:
 	$admin.clear()
 	served+=1

@@ -28,3 +28,5 @@ text = "VEGETABLES"
 uppercase = true
 
 [connection signal="gui_input" from="margin" to="." method="_on_margin_gui_input"]
+[connection signal="mouse_entered" from="margin" to="." method="_on_margin_mouse_entered"]
+[connection signal="mouse_exited" from="margin" to="." method="_on_margin_mouse_exited"]

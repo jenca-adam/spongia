@@ -13,7 +13,6 @@ streams_count = 1
 stream_0/stream = ExtResource("4_uyd48")
 
 [node name="ui_dictionary" type="Control" unique_id=1299941157]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,8 +75,10 @@ theme_override_constants/margin_right = 15
 layout_mode = 2
 size_flags_vertical = 6
 bbcode_enabled = true
-text = "[center][font_size=60]DICTIONARY[/font_size]
-[font_size=30]or how to read Sindarin[/font_size]
+text = "[center][font_size=60]DICTIONARY
+
+[/font_size]
+[font_size=30]or how to speak Sindarin[/font_size]
 [font_size=40]a handy-book by one[/font_size]
 [font_size=60]Bilbo Baggins[/font_size]
 [font_size=30]a hobbit[/font_size][/center]
@@ -89,7 +90,7 @@ visible = false
 layout_mode = 2
 size_flags_vertical = 6
 bbcode_enabled = true
-text = "[font_size=40]MUCH[/font_size] has been written about the Elven languages. Scholars write at great lengths about their grammatical features, and similar outlandish concepts that are of no concern to the common hobbit. However, they tend to omit such commonalities as basic vocabularyand conversational phrases that might be useful for someone travelling to Elven lands. 
+text = "[font_size=40]MUCH[/font_size] has been written about the Elven languages. Scholars write at great lengths about their grammatical features, and similar outlandish concepts that are of no concern to the common hobbit. However, they tend to omit such commonalities as basic vocabulary and conversational phrases that might be useful for someone travelling to Elven lands. 
 
 This is likely because most Elves, especially ones one is likely to meet on his travels, tend to have excellent command of Common Speech as well. Therefore, there's no interest 
 (or, indeed, much of a reason) in learning the language for the ordinary hobbit.
@@ -257,11 +258,11 @@ bbcode_enabled = true
 text = "One would be a fool to teach what he himself knows not, so this booklet shall only focus on a particular member of the extensive Elvish language family. This is, coincidentally, also the form of Elvish you, dear reader, are likely to encounter. 
 
 This language is called Sindarin, and was originally spoken by the Sindar, or Grey Elves. It has since, however, spread across the entirety of Middle-Earth.
-Usually, Sindari is written down using the Tengwar script, which looks a little like this:
+Usually, Sindarin is written down using the Tengwar script, which looks a little like this:
 
 [center][font=res://fonts/tengwar_annatar/tnganb.ttf]5^È 7x%P 1`N 7j&L 3t$ j#°[/font][/center]
 
-It is, however, quite painful to write for my old, tired, hands. Therefore, I've decided to not include a guide to reading Tengwar. The reader can acquire one of these at any book-shop. Additionally, this booklet shall focus on the spoken form of the language, being centralised on pronounciation rather than grammar or similar abstract nonsense.
+It is, however, quite painful to write for my old, tired, hands. Therefore, I've decided not to include a guide to reading Tengwar. The reader can acquire one of these at any book-shop. Additionally, this booklet shall focus on the spoken form of the language, being centralised on pronounciation rather than grammar or similar abstract nonsense.
  
 However, be warned: it's been ages since I've used Sindarin in conversation!"
 fit_content = true
@@ -273,7 +274,7 @@ size_flags_vertical = 6
 bbcode_enabled = true
 text = "[font_size=40]WHAT[/font_size] follows is, to my knowledge. a list of words in Sindarin, along with their meanings.
 
-In real situations, you might notice slight alterations due to dialectical differences or grammar.
+In real situations, you might notice slight alterations due to dialectal differences or grammar.
 
 One grammatical rule you are particularly likely to struggle with is this:
 words can sometimes undergo soft mutation, where the first con-sonant of the word changes. This occurs for example if a noun is a direct object, follows an article, an adjective following a noun or a negative form with the prefix ú-. The pattern is as follows:

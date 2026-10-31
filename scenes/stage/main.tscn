@@ -74,7 +74,7 @@ plane = Plane(0, 1, 0, 1.96)
 
 [node name="main" type="Node3D" unique_id=20799515 node_paths=PackedStringArray("START_CAM")]
 script = ExtResource("1_lquwl")
-customers = Array[ExtResource("2_0odxb")]([ExtResource("3_lswn8"), ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("5_xuqvo"), ExtResource("3_pklfo"), ExtResource("3_ndyaf")])
+customers = Array[ExtResource("2_0odxb")]([ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("3_lswn8"), ExtResource("5_xuqvo"), ExtResource("3_pklfo"), ExtResource("3_ndyaf")])
 CAM_SWITCH_TIME = 0.5
 START_CAM = NodePath("cams/prep_table")
 tutorial_enable = true
@@ -188,7 +188,6 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.4319277, 1.1703095, 7
 [node name="intro" parent="." unique_id=1904465255 instance=ExtResource("21_getpj")]
 offset_top = -2.0
 offset_bottom = -2.0
-play = false
 
 [node name="salt_shaker" parent="." unique_id=499555533 instance=ExtResource("26_h3hwu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0566173, 1.3470322, -2.474979)
@@ -208,5 +207,16 @@ update_mode = 1
 heightfield_mask = 1040383
 
 [node name="ui_dictionary" parent="." unique_id=1299941157 instance=ExtResource("32_lqbou")]
+visible = false
+
+[node name="fg" type="ColorRect" parent="." unique_id=1516309151]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="close" from="ui_result" to="." method="_on_ui_result_close"]

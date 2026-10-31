@@ -23,8 +23,10 @@ func _on_hover_mouse_entered():
 		return
 	hovered=true
 	set_hover_outline()
+	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 func _on_hover_mouse_exited():
 	if disable_hover_set:
 		return
 	hovered=false
 	set_hover_outline()
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
