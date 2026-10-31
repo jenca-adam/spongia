@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch0ha2orh6134"
 path.s3tc="res://.godot/imported/carrot_Albedo.jpg-6a32b5c1140fbd9d81f3d728cabcb58d.s3tc.ctex"
+path.etc2="res://.godot/imported/carrot_Albedo.jpg-6a32b5c1140fbd9d81f3d728cabcb58d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://resources/textures/carrot_Albedo.jpg"
-dest_files=["res://.godot/imported/carrot_Albedo.jpg-6a32b5c1140fbd9d81f3d728cabcb58d.s3tc.ctex"]
+dest_files=["res://.godot/imported/carrot_Albedo.jpg-6a32b5c1140fbd9d81f3d728cabcb58d.s3tc.ctex", "res://.godot/imported/carrot_Albedo.jpg-6a32b5c1140fbd9d81f3d728cabcb58d.etc2.ctex"]
 
 [params]
 

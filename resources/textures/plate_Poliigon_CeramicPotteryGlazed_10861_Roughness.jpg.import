@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bljuo7qlw0jwj"
 path.s3tc="res://.godot/imported/plate_Poliigon_CeramicPotteryGlazed_10861_Roughness.jpg-1191b7a705edeffed7b5754ddcf6bd59.s3tc.ctex"
+path.etc2="res://.godot/imported/plate_Poliigon_CeramicPotteryGlazed_10861_Roughness.jpg-1191b7a705edeffed7b5754ddcf6bd59.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://resources/textures/plate_Poliigon_CeramicPotteryGlazed_10861_Roughness.jpg"
-dest_files=["res://.godot/imported/plate_Poliigon_CeramicPotteryGlazed_10861_Roughness.jpg-1191b7a705edeffed7b5754ddcf6bd59.s3tc.ctex"]
+dest_files=["res://.godot/imported/plate_Poliigon_CeramicPotteryGlazed_10861_Roughness.jpg-1191b7a705edeffed7b5754ddcf6bd59.s3tc.ctex", "res://.godot/imported/plate_Poliigon_CeramicPotteryGlazed_10861_Roughness.jpg-1191b7a705edeffed7b5754ddcf6bd59.etc2.ctex"]
 
 [params]
 

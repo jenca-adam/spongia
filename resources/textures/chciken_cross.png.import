@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3a6f0emv0qtr"
 path.s3tc="res://.godot/imported/chciken_cross.png-31b1411109f4a5150b460a49869e9e33.s3tc.ctex"
+path.etc2="res://.godot/imported/chciken_cross.png-31b1411109f4a5150b460a49869e9e33.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/chciken_cross.png"
-dest_files=["res://.godot/imported/chciken_cross.png-31b1411109f4a5150b460a49869e9e33.s3tc.ctex"]
+dest_files=["res://.godot/imported/chciken_cross.png-31b1411109f4a5150b460a49869e9e33.s3tc.ctex", "res://.godot/imported/chciken_cross.png-31b1411109f4a5150b460a49869e9e33.etc2.ctex"]
 
 [params]
 

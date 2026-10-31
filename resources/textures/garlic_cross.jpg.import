@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cagxmwet6qwpk"
 path.s3tc="res://.godot/imported/garlic_cross.jpg-0570d2221e1e2d2e5b1743ff919af8f7.s3tc.ctex"
+path.etc2="res://.godot/imported/garlic_cross.jpg-0570d2221e1e2d2e5b1743ff919af8f7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/garlic_cross.jpg"
-dest_files=["res://.godot/imported/garlic_cross.jpg-0570d2221e1e2d2e5b1743ff919af8f7.s3tc.ctex"]
+dest_files=["res://.godot/imported/garlic_cross.jpg-0570d2221e1e2d2e5b1743ff919af8f7.s3tc.ctex", "res://.godot/imported/garlic_cross.jpg-0570d2221e1e2d2e5b1743ff919af8f7.etc2.ctex"]
 
 [params]
 

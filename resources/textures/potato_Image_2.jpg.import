@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1qjdxsi03anj"
 path.s3tc="res://.godot/imported/potato_Image_2.jpg-e0950e2ce9016cc15c1cfc553d72f72c.s3tc.ctex"
+path.etc2="res://.godot/imported/potato_Image_2.jpg-e0950e2ce9016cc15c1cfc553d72f72c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/potato_Image_2.jpg"
-dest_files=["res://.godot/imported/potato_Image_2.jpg-e0950e2ce9016cc15c1cfc553d72f72c.s3tc.ctex"]
+dest_files=["res://.godot/imported/potato_Image_2.jpg-e0950e2ce9016cc15c1cfc553d72f72c.s3tc.ctex", "res://.godot/imported/potato_Image_2.jpg-e0950e2ce9016cc15c1cfc553d72f72c.etc2.ctex"]
 
 [params]
 

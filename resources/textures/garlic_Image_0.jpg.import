@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://nnw1cfeoxq0f"
 path.s3tc="res://.godot/imported/garlic_Image_0.jpg-2fa6749664c8d931efac269fb7747a41.s3tc.ctex"
+path.etc2="res://.godot/imported/garlic_Image_0.jpg-2fa6749664c8d931efac269fb7747a41.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://resources/textures/garlic_Image_0.jpg"
-dest_files=["res://.godot/imported/garlic_Image_0.jpg-2fa6749664c8d931efac269fb7747a41.s3tc.ctex"]
+dest_files=["res://.godot/imported/garlic_Image_0.jpg-2fa6749664c8d931efac269fb7747a41.s3tc.ctex", "res://.godot/imported/garlic_Image_0.jpg-2fa6749664c8d931efac269fb7747a41.etc2.ctex"]
 
 [params]
 

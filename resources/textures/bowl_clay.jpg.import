@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://drb1d5an18ujy"
 path.s3tc="res://.godot/imported/bowl_clay.jpg-98fe778482d915f5befd591dd5879435.s3tc.ctex"
+path.etc2="res://.godot/imported/bowl_clay.jpg-98fe778482d915f5befd591dd5879435.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://resources/textures/bowl_clay.jpg"
-dest_files=["res://.godot/imported/bowl_clay.jpg-98fe778482d915f5befd591dd5879435.s3tc.ctex"]
+dest_files=["res://.godot/imported/bowl_clay.jpg-98fe778482d915f5befd591dd5879435.s3tc.ctex", "res://.godot/imported/bowl_clay.jpg-98fe778482d915f5befd591dd5879435.etc2.ctex"]
 
 [params]
 

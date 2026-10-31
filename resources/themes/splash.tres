@@ -1,9 +1,8 @@
 [gd_resource type="Theme" format=3 uid="uid://43mp4k25ramx"]
 
-[sub_resource type="SystemFont" id="SystemFont_eqgt8"]
-font_names = PackedStringArray("Courier New", "Hack", "Monospace")
+[ext_resource type="FontFile" uid="uid://cwmejvdrtydip" path="res://fonts/morris-roman/MorrisRoman-Black.ttf" id="1_x2yum"]
 
 [resource]
 Label/colors/font_color = Color(0.78999996, 1, 0.64, 1)
 Label/font_sizes/font_size = 150
-Label/fonts/font = SubResource("SystemFont_eqgt8")
+Label/fonts/font = ExtResource("1_x2yum")

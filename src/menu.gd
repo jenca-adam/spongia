@@ -1,13 +1,15 @@
 extends Node3D
+@export var edge_scroll_speed=20.0
 
 func _ready():
 	if not FileAccess.file_exists("user://game.save"):
 		%load.disabled=true
+	
 	var tween = get_tree().create_tween()
-	var texture=%panel.get_theme_stylebox("panel").texture as MaterialTexture2D
-	if texture:
-		texture.update_texture()
+	var edge_noise:FastNoiseLite=%panel.material.get_shader_parameter("burn_texture").noise
 	tween.tween_property($WorldEnvironment.environment.glow_map.noise, "offset", Vector3(0,0,10000.0),1000)
+	tween.set_parallel(true)
+	tween.tween_property(edge_noise, "offset",  Vector3(10000.0,0,0),1000)
 func _on_quit_pressed() -> void:
 	get_tree().quit()
 

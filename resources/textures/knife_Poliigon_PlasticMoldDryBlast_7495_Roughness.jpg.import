@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7kxsdgh6wvfc"
 path.s3tc="res://.godot/imported/knife_Poliigon_PlasticMoldDryBlast_7495_Roughness.jpg-0f5a2f8a74b8573b1e34babf1c6fa8b5.s3tc.ctex"
+path.etc2="res://.godot/imported/knife_Poliigon_PlasticMoldDryBlast_7495_Roughness.jpg-0f5a2f8a74b8573b1e34babf1c6fa8b5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://resources/textures/knife_Poliigon_PlasticMoldDryBlast_7495_Roughness.jpg"
-dest_files=["res://.godot/imported/knife_Poliigon_PlasticMoldDryBlast_7495_Roughness.jpg-0f5a2f8a74b8573b1e34babf1c6fa8b5.s3tc.ctex"]
+dest_files=["res://.godot/imported/knife_Poliigon_PlasticMoldDryBlast_7495_Roughness.jpg-0f5a2f8a74b8573b1e34babf1c6fa8b5.s3tc.ctex", "res://.godot/imported/knife_Poliigon_PlasticMoldDryBlast_7495_Roughness.jpg-0f5a2f8a74b8573b1e34babf1c6fa8b5.etc2.ctex"]
 
 [params]
 

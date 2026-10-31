@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0cb05o682icg"
 path.s3tc="res://.godot/imported/potato_cross.jpg-e364a17381ac6ab1d229b0917c1c677c.s3tc.ctex"
+path.etc2="res://.godot/imported/potato_cross.jpg-e364a17381ac6ab1d229b0917c1c677c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/potato_cross.jpg"
-dest_files=["res://.godot/imported/potato_cross.jpg-e364a17381ac6ab1d229b0917c1c677c.s3tc.ctex"]
+dest_files=["res://.godot/imported/potato_cross.jpg-e364a17381ac6ab1d229b0917c1c677c.s3tc.ctex", "res://.godot/imported/potato_cross.jpg-e364a17381ac6ab1d229b0917c1c677c.etc2.ctex"]
 
 [params]
 

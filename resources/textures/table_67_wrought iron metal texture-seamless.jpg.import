@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://druccjjgo1shc"
 path.s3tc="res://.godot/imported/table_67_wrought iron metal texture-seamless.jpg-b3c642e136944ca97717e134a2a1d482.s3tc.ctex"
+path.etc2="res://.godot/imported/table_67_wrought iron metal texture-seamless.jpg-b3c642e136944ca97717e134a2a1d482.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://resources/textures/table_67_wrought iron metal texture-seamless.jpg"
-dest_files=["res://.godot/imported/table_67_wrought iron metal texture-seamless.jpg-b3c642e136944ca97717e134a2a1d482.s3tc.ctex"]
+dest_files=["res://.godot/imported/table_67_wrought iron metal texture-seamless.jpg-b3c642e136944ca97717e134a2a1d482.s3tc.ctex", "res://.godot/imported/table_67_wrought iron metal texture-seamless.jpg-b3c642e136944ca97717e134a2a1d482.etc2.ctex"]
 
 [params]
 

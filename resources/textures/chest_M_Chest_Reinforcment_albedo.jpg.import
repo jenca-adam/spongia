@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7y6h6gj1rpxi"
 path.s3tc="res://.godot/imported/chest_M_Chest_Reinforcment_albedo.jpg-fa97168a637855e57494c3230a75c533.s3tc.ctex"
+path.etc2="res://.godot/imported/chest_M_Chest_Reinforcment_albedo.jpg-fa97168a637855e57494c3230a75c533.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://resources/textures/chest_M_Chest_Reinforcment_albedo.jpg"
-dest_files=["res://.godot/imported/chest_M_Chest_Reinforcment_albedo.jpg-fa97168a637855e57494c3230a75c533.s3tc.ctex"]
+dest_files=["res://.godot/imported/chest_M_Chest_Reinforcment_albedo.jpg-fa97168a637855e57494c3230a75c533.s3tc.ctex", "res://.godot/imported/chest_M_Chest_Reinforcment_albedo.jpg-fa97168a637855e57494c3230a75c533.etc2.ctex"]
 
 [params]
 

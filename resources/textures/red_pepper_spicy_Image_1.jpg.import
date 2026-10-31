@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://btq71s03v3gf7"
 path.s3tc="res://.godot/imported/red_pepper_spicy_Image_1.jpg-5237c66765d6abe91924531ac4438cb8.s3tc.ctex"
+path.etc2="res://.godot/imported/red_pepper_spicy_Image_1.jpg-5237c66765d6abe91924531ac4438cb8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/red_pepper_spicy_Image_1.jpg"
-dest_files=["res://.godot/imported/red_pepper_spicy_Image_1.jpg-5237c66765d6abe91924531ac4438cb8.s3tc.ctex"]
+dest_files=["res://.godot/imported/red_pepper_spicy_Image_1.jpg-5237c66765d6abe91924531ac4438cb8.s3tc.ctex", "res://.godot/imported/red_pepper_spicy_Image_1.jpg-5237c66765d6abe91924531ac4438cb8.etc2.ctex"]
 
 [params]
 

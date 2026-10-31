@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cju2i126bmesj"
 path.s3tc="res://.godot/imported/shelf_hobbithouse_94_cracked paint wood PBR texture-seamless.jpg-763418d0389f32b501a3c796f38276b5.s3tc.ctex"
+path.etc2="res://.godot/imported/shelf_hobbithouse_94_cracked paint wood PBR texture-seamless.jpg-763418d0389f32b501a3c796f38276b5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://resources/textures/shelf_hobbithouse_94_cracked paint wood PBR texture-seamless.jpg"
-dest_files=["res://.godot/imported/shelf_hobbithouse_94_cracked paint wood PBR texture-seamless.jpg-763418d0389f32b501a3c796f38276b5.s3tc.ctex"]
+dest_files=["res://.godot/imported/shelf_hobbithouse_94_cracked paint wood PBR texture-seamless.jpg-763418d0389f32b501a3c796f38276b5.s3tc.ctex", "res://.godot/imported/shelf_hobbithouse_94_cracked paint wood PBR texture-seamless.jpg-763418d0389f32b501a3c796f38276b5.etc2.ctex"]
 
 [params]
 

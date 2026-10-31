@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://h5x3qnynu5qd"
 path.s3tc="res://.godot/imported/board_Poliigon_WoodVeneerOak_7760_BaseColor.jpg-fad01d18cd526a1aa80df8ea38a7d8a5.s3tc.ctex"
+path.etc2="res://.godot/imported/board_Poliigon_WoodVeneerOak_7760_BaseColor.jpg-fad01d18cd526a1aa80df8ea38a7d8a5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://resources/textures/board_Poliigon_WoodVeneerOak_7760_BaseColor.jpg"
-dest_files=["res://.godot/imported/board_Poliigon_WoodVeneerOak_7760_BaseColor.jpg-fad01d18cd526a1aa80df8ea38a7d8a5.s3tc.ctex"]
+dest_files=["res://.godot/imported/board_Poliigon_WoodVeneerOak_7760_BaseColor.jpg-fad01d18cd526a1aa80df8ea38a7d8a5.s3tc.ctex", "res://.godot/imported/board_Poliigon_WoodVeneerOak_7760_BaseColor.jpg-fad01d18cd526a1aa80df8ea38a7d8a5.etc2.ctex"]
 
 [params]
 

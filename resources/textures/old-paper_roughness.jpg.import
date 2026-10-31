@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckgbj1vcjjs6x"
 path.s3tc="res://.godot/imported/old-paper_roughness.jpg-f06f5dbc0d4f996bd76b7776d4ef5966.s3tc.ctex"
+path.etc2="res://.godot/imported/old-paper_roughness.jpg-f06f5dbc0d4f996bd76b7776d4ef5966.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/old-paper_roughness.jpg"
-dest_files=["res://.godot/imported/old-paper_roughness.jpg-f06f5dbc0d4f996bd76b7776d4ef5966.s3tc.ctex"]
+dest_files=["res://.godot/imported/old-paper_roughness.jpg-f06f5dbc0d4f996bd76b7776d4ef5966.s3tc.ctex", "res://.godot/imported/old-paper_roughness.jpg-f06f5dbc0d4f996bd76b7776d4ef5966.etc2.ctex"]
 
 [params]
 

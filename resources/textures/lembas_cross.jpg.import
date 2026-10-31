@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b87oveg8es4tc"
 path.s3tc="res://.godot/imported/lembas_cross.jpg-a82abcebf7cc2cf72176a22d11e8ca9a.s3tc.ctex"
+path.etc2="res://.godot/imported/lembas_cross.jpg-a82abcebf7cc2cf72176a22d11e8ca9a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/lembas_cross.jpg"
-dest_files=["res://.godot/imported/lembas_cross.jpg-a82abcebf7cc2cf72176a22d11e8ca9a.s3tc.ctex"]
+dest_files=["res://.godot/imported/lembas_cross.jpg-a82abcebf7cc2cf72176a22d11e8ca9a.s3tc.ctex", "res://.godot/imported/lembas_cross.jpg-a82abcebf7cc2cf72176a22d11e8ca9a.etc2.ctex"]
 
 [params]
 

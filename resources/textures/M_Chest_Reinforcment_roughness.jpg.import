@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dq8o3n25avlpr"
 path.s3tc="res://.godot/imported/M_Chest_Reinforcment_roughness.jpg-a122fba3de8bf86a63f39ebee628a59c.s3tc.ctex"
+path.etc2="res://.godot/imported/M_Chest_Reinforcment_roughness.jpg-a122fba3de8bf86a63f39ebee628a59c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/M_Chest_Reinforcment_roughness.jpg"
-dest_files=["res://.godot/imported/M_Chest_Reinforcment_roughness.jpg-a122fba3de8bf86a63f39ebee628a59c.s3tc.ctex"]
+dest_files=["res://.godot/imported/M_Chest_Reinforcment_roughness.jpg-a122fba3de8bf86a63f39ebee628a59c.s3tc.ctex", "res://.godot/imported/M_Chest_Reinforcment_roughness.jpg-a122fba3de8bf86a63f39ebee628a59c.etc2.ctex"]
 
 [params]
 

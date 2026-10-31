@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk3psxfqwqpyr"
 path.s3tc="res://.godot/imported/plate_Poliigon_CeramicPotteryGlazed_10861_BaseColor.jpg-e5b9073d1d7ff5a698a5883eefd9c0e3.s3tc.ctex"
+path.etc2="res://.godot/imported/plate_Poliigon_CeramicPotteryGlazed_10861_BaseColor.jpg-e5b9073d1d7ff5a698a5883eefd9c0e3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://resources/textures/plate_Poliigon_CeramicPotteryGlazed_10861_BaseColor.jpg"
-dest_files=["res://.godot/imported/plate_Poliigon_CeramicPotteryGlazed_10861_BaseColor.jpg-e5b9073d1d7ff5a698a5883eefd9c0e3.s3tc.ctex"]
+dest_files=["res://.godot/imported/plate_Poliigon_CeramicPotteryGlazed_10861_BaseColor.jpg-e5b9073d1d7ff5a698a5883eefd9c0e3.s3tc.ctex", "res://.godot/imported/plate_Poliigon_CeramicPotteryGlazed_10861_BaseColor.jpg-e5b9073d1d7ff5a698a5883eefd9c0e3.etc2.ctex"]
 
 [params]
 

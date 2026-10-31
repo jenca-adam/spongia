@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cahftspml70b8"
 path.s3tc="res://.godot/imported/carrot_cross2.jpg-915e9e0d3464b9e514cbcca687ac57fd.s3tc.ctex"
+path.etc2="res://.godot/imported/carrot_cross2.jpg-915e9e0d3464b9e514cbcca687ac57fd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/carrot_cross2.jpg"
-dest_files=["res://.godot/imported/carrot_cross2.jpg-915e9e0d3464b9e514cbcca687ac57fd.s3tc.ctex"]
+dest_files=["res://.godot/imported/carrot_cross2.jpg-915e9e0d3464b9e514cbcca687ac57fd.s3tc.ctex", "res://.godot/imported/carrot_cross2.jpg-915e9e0d3464b9e514cbcca687ac57fd.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://h8t3fgcttxa5"
 path.s3tc="res://.godot/imported/raw_chicken_Image_0.jpg-cb71e0924331d8762f3f13810f4b7477.s3tc.ctex"
+path.etc2="res://.godot/imported/raw_chicken_Image_0.jpg-cb71e0924331d8762f3f13810f4b7477.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/raw_chicken_Image_0.jpg"
-dest_files=["res://.godot/imported/raw_chicken_Image_0.jpg-cb71e0924331d8762f3f13810f4b7477.s3tc.ctex"]
+dest_files=["res://.godot/imported/raw_chicken_Image_0.jpg-cb71e0924331d8762f3f13810f4b7477.s3tc.ctex", "res://.godot/imported/raw_chicken_Image_0.jpg-cb71e0924331d8762f3f13810f4b7477.etc2.ctex"]
 
 [params]
 

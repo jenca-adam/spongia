@@ -107,8 +107,6 @@ func would_collide(exclude) -> bool:
 	
 	var space := get_world_3d().direct_space_state
 	var result=space.intersect_shape(query, 1)
-	if result:
-		print(result[0].collider.get_parent().get_parent())
 	
 	return result.size()>0
 func _physics_process(delta):

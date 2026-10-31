@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2evw36x3rjw4"
 path.s3tc="res://.godot/imported/raw_pork_Material_46_metallicRoughness_metal-Material_46_metallicRoughness_rough.jpg-b1351b31774d79a266ddd0d46187f00b.s3tc.ctex"
+path.etc2="res://.godot/imported/raw_pork_Material_46_metallicRoughness_metal-Material_46_metallicRoughness_rough.jpg-b1351b31774d79a266ddd0d46187f00b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/raw_pork_Material_46_metallicRoughness_metal-Material_46_metallicRoughness_rough.jpg"
-dest_files=["res://.godot/imported/raw_pork_Material_46_metallicRoughness_metal-Material_46_metallicRoughness_rough.jpg-b1351b31774d79a266ddd0d46187f00b.s3tc.ctex"]
+dest_files=["res://.godot/imported/raw_pork_Material_46_metallicRoughness_metal-Material_46_metallicRoughness_rough.jpg-b1351b31774d79a266ddd0d46187f00b.s3tc.ctex", "res://.godot/imported/raw_pork_Material_46_metallicRoughness_metal-Material_46_metallicRoughness_rough.jpg-b1351b31774d79a266ddd0d46187f00b.etc2.ctex"]
 
 [params]
 

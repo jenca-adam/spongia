@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://rfa1v7fsxuv2"
 path.s3tc="res://.godot/imported/M_Chest_Reinforcment_metallic.jpg-508434ec2ce682d548c781a0c515c308.s3tc.ctex"
+path.etc2="res://.godot/imported/M_Chest_Reinforcment_metallic.jpg-508434ec2ce682d548c781a0c515c308.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/M_Chest_Reinforcment_metallic.jpg"
-dest_files=["res://.godot/imported/M_Chest_Reinforcment_metallic.jpg-508434ec2ce682d548c781a0c515c308.s3tc.ctex"]
+dest_files=["res://.godot/imported/M_Chest_Reinforcment_metallic.jpg-508434ec2ce682d548c781a0c515c308.s3tc.ctex", "res://.godot/imported/M_Chest_Reinforcment_metallic.jpg-508434ec2ce682d548c781a0c515c308.etc2.ctex"]
 
 [params]
 

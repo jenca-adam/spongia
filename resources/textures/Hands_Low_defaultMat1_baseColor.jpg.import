@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b78a3627c87k4"
 path.s3tc="res://.godot/imported/Hands_Low_defaultMat1_baseColor.jpg-7d985d7c7a42320f0adc28dff72f8179.s3tc.ctex"
+path.etc2="res://.godot/imported/Hands_Low_defaultMat1_baseColor.jpg-7d985d7c7a42320f0adc28dff72f8179.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://resources/textures/Hands_Low_defaultMat1_baseColor.jpg"
-dest_files=["res://.godot/imported/Hands_Low_defaultMat1_baseColor.jpg-7d985d7c7a42320f0adc28dff72f8179.s3tc.ctex"]
+dest_files=["res://.godot/imported/Hands_Low_defaultMat1_baseColor.jpg-7d985d7c7a42320f0adc28dff72f8179.s3tc.ctex", "res://.godot/imported/Hands_Low_defaultMat1_baseColor.jpg-7d985d7c7a42320f0adc28dff72f8179.etc2.ctex"]
 
 [params]
 

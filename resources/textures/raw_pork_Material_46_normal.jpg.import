@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsx5bbmw7s7da"
 path.s3tc="res://.godot/imported/raw_pork_Material_46_normal.jpg-efe7f0ea617375c18b1dc0ba35e8d2bc.s3tc.ctex"
+path.etc2="res://.godot/imported/raw_pork_Material_46_normal.jpg-efe7f0ea617375c18b1dc0ba35e8d2bc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://resources/textures/raw_pork_Material_46_normal.jpg"
-dest_files=["res://.godot/imported/raw_pork_Material_46_normal.jpg-efe7f0ea617375c18b1dc0ba35e8d2bc.s3tc.ctex"]
+dest_files=["res://.godot/imported/raw_pork_Material_46_normal.jpg-efe7f0ea617375c18b1dc0ba35e8d2bc.s3tc.ctex", "res://.godot/imported/raw_pork_Material_46_normal.jpg-efe7f0ea617375c18b1dc0ba35e8d2bc.etc2.ctex"]
 
 [params]
 

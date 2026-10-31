@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://sohusn0txnsj"
 path.s3tc="res://.godot/imported/onion_Image_0.jpg-2d5c8a6e160cf631c3de85e0c62e2cda.s3tc.ctex"
+path.etc2="res://.godot/imported/onion_Image_0.jpg-2d5c8a6e160cf631c3de85e0c62e2cda.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/textures/onion_Image_0.jpg"
-dest_files=["res://.godot/imported/onion_Image_0.jpg-2d5c8a6e160cf631c3de85e0c62e2cda.s3tc.ctex"]
+dest_files=["res://.godot/imported/onion_Image_0.jpg-2d5c8a6e160cf631c3de85e0c62e2cda.s3tc.ctex", "res://.godot/imported/onion_Image_0.jpg-2d5c8a6e160cf631c3de85e0c62e2cda.etc2.ctex"]
 
 [params]
 
