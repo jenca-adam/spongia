@@ -193,6 +193,9 @@ Obrázky:
         Silar - Tolkien Orc
         https://commons.wikimedia.org/wiki/File:Tolkien_Orc.png
         CC-BY-SA
+    Ikona:
+        Upravená z https://www.magnific.com/icon/chef-hat_12093245
+        Magnific Content License
 Kód:
     pluginy:
         SceneTexture - https://godotengine.org/asset-library/asset/3506 - MIT

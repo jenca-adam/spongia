@@ -72,7 +72,7 @@ plane = Plane(0, 1, 0, 1.96)
 
 [node name="main" type="Node3D" unique_id=20799515 node_paths=PackedStringArray("START_CAM")]
 script = ExtResource("1_lquwl")
-customers = Array[ExtResource("2_0odxb")]([ExtResource("4_a6jrf"), ExtResource("3_lswn8"), ExtResource("3_i6r6c"), ExtResource("3_ndyaf"), ExtResource("5_xuqvo"), ExtResource("3_pklfo")])
+customers = Array[ExtResource("2_0odxb")]([ExtResource("3_lswn8"), ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("3_ndyaf"), ExtResource("5_xuqvo"), ExtResource("3_pklfo")])
 CAM_SWITCH_TIME = 0.5
 START_CAM = NodePath("cams/prep_table")
 tutorial_enable = true
@@ -184,6 +184,9 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.4319277, 1.1703095, 7
 [node name="ui_tutorial" parent="." unique_id=1443564730 instance=ExtResource("20_82xsv")]
 
 [node name="intro" parent="." unique_id=1904465255 instance=ExtResource("21_getpj")]
+offset_top = -2.0
+offset_bottom = -2.0
+play = false
 
 [node name="salt_shaker" parent="." unique_id=499555533 instance=ExtResource("26_h3hwu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0566173, 1.3470322, -2.474979)

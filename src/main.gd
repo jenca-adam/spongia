@@ -89,6 +89,7 @@ func save_game():
 func next_customer():
 	var customer = customers.slice(0,served).pick_random()
 	current_order = Bestellung.from_customer(customer)
+	print(customer.orders.items)
 	$ui_order.setup(current_order)
 func _ready():
 	switch_cam(START_CAM, START_CAM)
