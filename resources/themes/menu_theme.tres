@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://btiq5bi6kd1wr"]
 
 [ext_resource type="FontFile" uid="uid://cwmejvdrtydip" path="res://fonts/morris-roman/MorrisRoman-Black.ttf" id="1_gmdkk"]
-[ext_resource type="Texture2D" uid="uid://c2ffl6fbmn7pr" path="res://new_dpi_texture.tres" id="1_wnm0q"]
+[ext_resource type="Texture2D" uid="uid://c2ffl6fbmn7pr" path="res://resources/textures/new_dpi_texture.tres" id="1_wnm0q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmdkk"]
 content_margin_left = 4.0

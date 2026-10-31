@@ -192,5 +192,8 @@ Kód:
         SceneTexture - https://godotengine.org/asset-library/asset/3506 - MIT
         Mesh Tools - https://store.godotengine.org/asset/ar3d/mesh-tools/ -MIT
         MaterialTextures - https://store.godotengine.org/asset/andicraft/materialtextures/ - MIT
+    shadery:
+        outline.gdshader - https://godotshaders.com/shader/pixel-perfect-outline-shader/ (CC0)
+        round.gdshader - https://godotshaders.com/shader/rounded-corners/ (CC0)
     AI pomohlo s debugovaním, ale všetok kód mimo pluginov je vlastný
 
