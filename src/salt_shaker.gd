@@ -12,7 +12,6 @@ func _on_use():
 	var held_objs=$/root/main.held_objs
 	var result = held_objs.racist(1<<31)
 	if result:
-		print(result)
 		var cont = result["collider"].get_parent().get_parent()
 		if not (cont is ObjContainer):
 			self.position=Vector3.ZERO

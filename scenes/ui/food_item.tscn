@@ -1,6 +1,19 @@
 [gd_scene format=3 uid="uid://rt3qh2oi1w8u"]
 
 [ext_resource type="Script" uid="uid://0fm5ifomr7ie" path="res://src/food_item.gd" id="1_0na5k"]
+[ext_resource type="Theme" uid="uid://ook3gn0uv81v" path="res://resources/themes/order.tres" id="1_86774"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tub5n"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_0na5k"]
 
@@ -12,14 +25,16 @@ noise = SubResource("FastNoiseLite_0na5k")
 [node name="food_item" type="PanelContainer" unique_id=1003258387]
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("1_86774")
+theme_override_styles/panel = SubResource("StyleBoxFlat_tub5n")
 script = ExtResource("1_0na5k")
 
 [node name="margin" type="MarginContainer" parent="." unique_id=158951593]
 layout_mode = 2
-theme_override_constants/margin_left = 2
-theme_override_constants/margin_top = 2
-theme_override_constants/margin_right = 2
-theme_override_constants/margin_bottom = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
 [node name="box" type="VBoxContainer" parent="margin" unique_id=1356471400]
 layout_mode = 2
@@ -30,15 +45,15 @@ texture = SubResource("NoiseTexture2D_xlgsp")
 
 [node name="name" type="Label" parent="margin/box" unique_id=1645838308]
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "POTATO"
 horizontal_alignment = 1
 
 [node name="desc" type="Label" parent="margin/box" unique_id=1113431006]
 layout_mode = 2
 size_flags_vertical = 2
-theme_override_colors/font_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+theme_override_font_sizes/font_size = 20
 text = "Boil 'em, mash 'em, stick 'em in a stew"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -51,6 +66,9 @@ alignment = 1
 [node name="grab" type="Button" parent="margin/box/buttons" unique_id=547239826]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ChestButton"
+theme_override_font_sizes/font_size = 30
 text = "Grab"
 
 [node name="stow" type="Button" parent="margin/box/buttons" unique_id=1237368606]

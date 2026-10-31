@@ -1,15 +1,7 @@
 [gd_scene format=3 uid="uid://o20xbya0jn82"]
 
+[ext_resource type="Theme" uid="uid://ook3gn0uv81v" path="res://resources/themes/order.tres" id="1_3bw6n"]
 [ext_resource type="Script" uid="uid://dcs21yc38sq5g" path="res://src/ui_chest.gd" id="1_bu7k1"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdjtx"]
-bg_color = Color(0, 0, 0, 0.39215687)
-border_width_right = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1ji4"]
-bg_color = Color(0, 0, 0, 0.39215687)
-border_width_left = 1
-expand_margin_left = 5.0
 
 [node name="ui_chest" type="Control" unique_id=1664958176]
 visible = false
@@ -19,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_3bw6n")
 script = ExtResource("1_bu7k1")
 
 [node name="lr" type="HBoxContainer" parent="." unique_id=1483808128]
@@ -33,7 +26,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
-theme_override_styles/panel = SubResource("StyleBoxFlat_fdjtx")
+theme_type_variation = &"ChestPanel"
 
 [node name="margin" type="MarginContainer" parent="lr/cat_outer" unique_id=1104467733]
 layout_mode = 2
@@ -48,7 +41,7 @@ layout_mode = 2
 [node name="items_outer" type="PanelContainer" parent="lr" unique_id=1440038661]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_d1ji4")
+theme_type_variation = &"ChestPanel"
 
 [node name="margin" type="MarginContainer" parent="lr/items_outer" unique_id=1854659600]
 layout_mode = 2
@@ -62,7 +55,7 @@ layout_mode = 2
 
 [node name="kys_outer" type="PanelContainer" parent="lr" unique_id=1391108230]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_d1ji4")
+theme_type_variation = &"ChestPanel"
 
 [node name="margin" type="MarginContainer" parent="lr/kys_outer" unique_id=727479818]
 layout_mode = 2
@@ -76,6 +69,7 @@ layout_mode = 2
 
 [node name="close" type="Button" parent="lr/kys_outer/margin/kys" unique_id=1322480905]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "Close
 "
 

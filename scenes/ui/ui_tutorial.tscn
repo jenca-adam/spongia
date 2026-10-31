@@ -378,7 +378,8 @@ text = "Press the [color=\"yellow\"]E[/color] key while your cursor is over the 
 While the [color=\"cyan\"]knife[/color] is being used, move your cursor over the [color=\"orange\"]ingredient.[/color]
 If a [color=\"yellow\"]yellow line[/color] is showing on its surface, click to cut.
 Press [color=\"yellow\"]Z[/color] or [color=\"yellow\"]X[/color] to change the cut axis.
-Don't worry if the [color=\"orange\"]ingredient [/color]rolls away."
+Don't worry if the [color=\"orange\"]ingredient [/color]rolls away.
+When you're done, press [color=\"Yellow\"]Escape[/color] to stop using the [color=\"cyan\"]knife[/color]."
 fit_content = true
 autowrap_mode = 0
 

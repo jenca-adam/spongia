@@ -136,6 +136,7 @@ CheckBox/font_sizes/font_size = 30
 CheckBox/icons/checked = SubResource("DPITexture_5mavb")
 CheckBox/icons/unchecked = ExtResource("1_wnm0q")
 CheckButton/font_sizes/font_size = 50
+ChestPanel/base_type = &"PanelContainer"
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_wnm0q")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_cu6mo")
 HSlider/styles/slider = SubResource("StyleBoxFlat_aq7pu")

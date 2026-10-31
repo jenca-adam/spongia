@@ -233,7 +233,6 @@ func _on_use():
 		can_tip=false
 		return
 	var pos = surface["position"]
-	print(surface)
 	var gpos = pos#+rotation_axis*aabb.size.x
 	var steepest = min(abs(rotation_angle), PI/2)
 	var big = aabb.size.dot(rotation_axis)*sin(steepest)

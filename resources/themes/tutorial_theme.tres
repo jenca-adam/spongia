@@ -1,9 +1,19 @@
 [gd_resource type="Theme" format=3 uid="uid://wi81rk5bi76t"]
 
+[ext_resource type="FontFile" uid="uid://cwmejvdrtydip" path="res://fonts/morris-roman/MorrisRoman-Black.ttf" id="1_3jxu4"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_getpj"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ox0n"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65dsl"]
 bg_color = Color(0, 0, 0, 0.5019608)
@@ -17,7 +27,8 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [resource]
-Button/font_sizes/font_size = 20
+default_font = ExtResource("1_3jxu4")
+Button/font_sizes/font_size = 25
 Button/styles/hover = SubResource("StyleBoxFlat_getpj")
 Button/styles/normal = SubResource("StyleBoxEmpty_0ox0n")
 MarginContainer/constants/margin_bottom = 20
@@ -25,4 +36,4 @@ MarginContainer/constants/margin_left = 50
 MarginContainer/constants/margin_right = 50
 MarginContainer/constants/margin_top = 20
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_65dsl")
-RichTextLabel/font_sizes/normal_font_size = 20
+RichTextLabel/font_sizes/normal_font_size = 25
