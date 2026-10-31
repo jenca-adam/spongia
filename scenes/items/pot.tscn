@@ -169,6 +169,7 @@ shape = SubResource("ConvexPolygonShape3D_e5jjy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.039431274, 0)
 collision_layer = 0
 collision_mask = 16777216
+input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="turkey" unique_id=545789585]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.036002636, -0.04228267, -1.5737252e-09)

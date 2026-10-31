@@ -52,6 +52,7 @@ ambient_light_source = 3
 ssil_intensity = 16.0
 glow_enabled = true
 glow_strength = 0.95
+glow_mix = 0.161
 glow_bloom = 1.0
 glow_blend_mode = 0
 glow_map_strength = 1.0
@@ -72,7 +73,7 @@ plane = Plane(0, 1, 0, 1.96)
 
 [node name="main" type="Node3D" unique_id=20799515 node_paths=PackedStringArray("START_CAM")]
 script = ExtResource("1_lquwl")
-customers = Array[ExtResource("2_0odxb")]([ExtResource("3_lswn8"), ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("3_ndyaf"), ExtResource("5_xuqvo"), ExtResource("3_pklfo")])
+customers = Array[ExtResource("2_0odxb")]([ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("3_lswn8"), ExtResource("5_xuqvo"), ExtResource("3_pklfo"), ExtResource("3_ndyaf")])
 CAM_SWITCH_TIME = 0.5
 START_CAM = NodePath("cams/prep_table")
 tutorial_enable = true
@@ -201,6 +202,7 @@ freeze = true
 
 [node name="salt_physics" type="GPUParticlesCollisionHeightField3D" parent="." unique_id=910437271]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6262817, 1.656311, -2.3763428)
+visible = false
 size = Vector3(21.737183, 5.312622, 26.079834)
 update_mode = 1
 heightfield_mask = 1040383
