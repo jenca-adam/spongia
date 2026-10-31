@@ -3,6 +3,12 @@ Názov hry: One Cook To Rule Them All
 Vývojové prostredie a prostriedky: Godot
 
 Textúry:
+    UI papierová textúra:
+        Lumber Film: https://www.pexels.com/photo/yellow-plain-surface-16557322/
+        Pexels Free license
+    Papierová textúra objektov (objednávky, štatistiky):
+        FreePBR: https://freepbr.com/product/old-paper-pbr/
+        Licencia: https://freepbr.com/about-free-pbr/
     Rezová textúra cibule:
         https://commons.wikimedia.org/wiki/File:White_onion_cross_section.jpg
         orezané.
