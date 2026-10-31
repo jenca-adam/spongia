@@ -53,7 +53,6 @@ shadow_mesh = SubResource("ArrayMesh_18uc7")
 
 [node name="lembas" type="RigidBody3D" unique_id=1245699015]
 script = ExtResource("1_hljk1")
-cut_highlight_width = 0.1
 cut_material_z = SubResource("StandardMaterial3D_hljk1")
 cut_material_x = SubResource("StandardMaterial3D_hljk1")
 cut_material_y = SubResource("StandardMaterial3D_hljk1")

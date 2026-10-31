@@ -19,4 +19,5 @@ func setup_result(bestellung:Bestellung, result_taste_profile:TasteProfile, resu
 func _on_ok_pressed():
 	super._on_ok_pressed()
 	$/root/main.tutorial.set_variable(&"meal_submitted", 1)
+	$/root/main.save_game()
 	close.emit()

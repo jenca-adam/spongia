@@ -14,7 +14,10 @@ func _ready():
 	grab_timeout=Timer.new()
 	add_child(grab_timeout)
 	grab_timeout.wait_time=0.1
+func recalc_free_slots():
+	return slot1.get_child_count()|(slot2.get_child_count()<<1)
 func grab_item(item:Obj):
+	recalc_free_slots()
 	if (free_slots)==0 or active_item!=null:
 		return
 	if (item.get_parent() in [slot1, slot2]): return
@@ -36,6 +39,8 @@ func drop_item(item:Obj):
 		free_slots|=1
 	else:
 		free_slots|=2
+	if item.original_parent in [slot1, slot2]:
+		item.original_parent=$/root/main
 	item.reparent(item.original_parent)
 	item.ungrab.emit()
 

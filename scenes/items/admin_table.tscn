@@ -111,7 +111,7 @@ transform = Transform3D(0.7055482, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14242864, 0)
 mesh = SubResource("ArrayMesh_b6cjp")
 
 [node name="collider" type="StaticBody3D" parent="." unique_id=1475375233]
-collision_layer = 38912
+collision_layer = 38914
 collision_mask = 2048
 physics_material_override = ExtResource("3_dwa7e")
 

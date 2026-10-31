@@ -1,9 +1,11 @@
 class_name Tutorial
 
+
+
 var root_node:Main
 var ui:UiTutorial
-var enabled=true
-var state=0
+@export var enabled=true
+@export var state=0
 
 var state_to_check:Dictionary[int, Callable] = {
 	0: func(): return true,
@@ -31,7 +33,6 @@ func setup(root:Main):
 	ui.setup(self)
 func set_variable(name:StringName, val:Variant=1):
 	if not enabled:return
-	if ui.showing:return
 	_variables[name]=val
 	tutorial_check()
 func advance():

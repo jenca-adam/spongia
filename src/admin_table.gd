@@ -36,7 +36,7 @@ func get_food_containers() -> Array[ObjContainer]:
 	var containers: Array[ObjContainer] = []
 	for area in $done_check.get_overlapping_areas():
 		var container = area.get_parent() as ObjContainer
-		if container == null:
+		if container == null or not container.presentable:
 			continue
 		containers.append(container)
 	return containers

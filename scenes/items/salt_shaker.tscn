@@ -8,6 +8,9 @@
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fdjtx"]
 emission_shape = 3
 emission_box_extents = Vector3(0.1, 0.1, 0.1)
+collision_mode = 1
+collision_friction = 0.5
+collision_bounce = 0.1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4i7l"]
 shading_mode = 0
@@ -175,6 +178,7 @@ draw_pass_1 = SubResource("SphereMesh_3p65x")
 [node name="offset" type="Node3D" parent="." unique_id=535230883]
 
 [node name="model" type="MeshInstance3D" parent="offset" unique_id=249889273]
+layers = 8192
 mesh = SubResource("ArrayMesh_jr4c2")
 
 [node name="hover" type="StaticBody3D" parent="offset" unique_id=2105594152]

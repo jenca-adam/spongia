@@ -776,6 +776,7 @@ bbcode_enabled = true
 text = "That concludes the [color=\"magenta\"]tutorial[/color]!
 Your next [color=\"cyan\"]order[/color] is on the table.
 Try to figure out what each type of [color=\"royal_blue\"]customer[/color] likes!.
+Keep track of your [color=\"cyan\"]statistics[/color]. They save after every completed order!
 [color=\"green\"]H[/color][color=\"yellow\"]a[/color][color=\"lightblue\"]v[/color][color=\"red\"]e [/color][color=\"pink\"]f[/color][color=\"violet\"]u[/color][color=\"orange\"]n[/color][color=\"cyan\"]![/color]"
 fit_content = true
 autowrap_mode = 0

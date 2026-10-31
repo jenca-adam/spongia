@@ -32,6 +32,12 @@
 [ext_resource type="PackedScene" uid="uid://3mefly0yrgem" path="res://scenes/items/stats_paper.tscn" id="30_uyv2j"]
 [ext_resource type="PackedScene" uid="uid://bnabklagri7ae" path="res://scenes/ui/ui_stats.tscn" id="31_ii2vb"]
 
+[sub_resource type="Gradient" id="Gradient_lqbou"]
+colors = PackedColorArray(1, 0.5, 0, 1, 1, 0.7166667, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ii2vb"]
+gradient = SubResource("Gradient_lqbou")
+
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_3p65x"]
 rayleigh_color = Color(0.1292, 0.32197994, 0.68, 1)
 energy_multiplier = 3.88
@@ -43,13 +49,18 @@ sky_material = SubResource("PhysicalSkyMaterial_3p65x")
 background_mode = 2
 sky = SubResource("Sky_fdjtx")
 ambient_light_source = 3
-reflected_light_source = 1
 ssil_intensity = 16.0
 glow_enabled = true
 glow_strength = 0.95
 glow_bloom = 1.0
 glow_blend_mode = 0
+glow_map_strength = 1.0
+glow_map = SubResource("GradientTexture2D_ii2vb")
 volumetric_fog_emission = Color(0.8862616, 0.88626146, 0.8862615, 1)
+adjustment_enabled = true
+adjustment_brightness = 0.9
+adjustment_contrast = 1.1
+adjustment_saturation = 1.1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_texture = ExtResource("2_0xm2m")
@@ -173,6 +184,7 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.4319277, 1.1703095, 7
 [node name="ui_tutorial" parent="." unique_id=1443564730 instance=ExtResource("20_82xsv")]
 
 [node name="intro" parent="." unique_id=1904465255 instance=ExtResource("21_getpj")]
+play = false
 
 [node name="salt_shaker" parent="." unique_id=499555533 instance=ExtResource("26_h3hwu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0566173, 1.3470322, -2.474979)
@@ -184,5 +196,11 @@ transform = Transform3D(3, 0, 0, 0, -0.46155316, -2.964282, 0, 2.964282, -0.4615
 freeze = true
 
 [node name="ui_stats" parent="." unique_id=132195318 instance=ExtResource("31_ii2vb")]
+
+[node name="salt_physics" type="GPUParticlesCollisionHeightField3D" parent="." unique_id=910437271]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6262817, 1.656311, -2.3763428)
+size = Vector3(21.737183, 5.312622, 26.079834)
+update_mode = 1
+heightfield_mask = 1040383
 
 [connection signal="close" from="ui_result" to="." method="_on_ui_result_close"]

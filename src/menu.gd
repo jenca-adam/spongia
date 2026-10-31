@@ -1,7 +1,8 @@
 extends Node3D
 
 func _ready():
-	
+	if not FileAccess.file_exists("user://game.save"):
+		%load.disabled=true
 	var tween = get_tree().create_tween()
 	var texture=%panel.get_theme_stylebox("panel").texture as MaterialTexture2D
 	if texture:
@@ -13,6 +14,11 @@ func _on_quit_pressed() -> void:
 func play_the_game():
 	var game = load("res://scenes/stage/main.tscn")
 	get_tree().change_scene_to_packed(game)
+func load_save():
+	# disabled
+	return
+	#var game = load("user://save.scn")
+	#get_tree().change_scene_to_packed(game)
 func _on_play_pressed() -> void:
 	var tween = get_tree().create_tween()
 
@@ -51,3 +57,16 @@ func _on_skip_intro_toggled(toggled_on: bool) -> void:
 
 func _on_skip_tutorial_toggled(toggled_on: bool) -> void:
 	Options.skip_tutorial=toggled_on
+func _on_salt_physics_toggled(toggled_on: bool) -> void:
+	Options.salt_physics=toggled_on
+
+func _on_load_pressed() -> void:
+	if not FileAccess.file_exists("user://game.save"):
+		return
+	var file = FileAccess.open("user://game.save", FileAccess.READ)
+	var stats:Statistics = file.get_var(true) as Statistics
+	if stats:
+		Options.stats=stats
+		Options.skip_intro=true
+		Options.skip_tutorial=true
+		_on_play_pressed()

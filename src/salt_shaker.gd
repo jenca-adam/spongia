@@ -4,6 +4,10 @@ var salted_container:ObjContainer
 @export var y_offset=0.5;
 @export var strength=0.1;
 var shaking=false
+func _ready():
+	super._ready()
+	if not Options.salt_physics:
+		$particles.process_material.collision_mode=ParticleProcessMaterial.COLLISION_DISABLED
 func _on_use():
 	var held_objs=$/root/main.held_objs
 	var result = held_objs.racist(1<<31)

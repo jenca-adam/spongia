@@ -199,3 +199,37 @@ func _on_ungrab() -> void:
 func _on_sleeping_state_changed() -> void:
 	if (sleeping and not freeze and enable_freeze_on_sleep):
 		freeze_()
+
+func save_state()->Dictionary[StringName, Variant]:
+	var state:Dictionary[StringName, Variant] = {}
+	state[&"scn"]=scene_file_path
+	state[&"trf"]=global_transform
+	state[&"bas"]=global_basis
+	state[&"typ"]="Obj"
+	state[&"vln"]=linear_velocity
+	state[&"vag"]=angular_velocity
+	state[&"prt"]=get_parent().get_path()
+	state[&"hld"]=grabbed
+	state[&"act"]=active
+	state[&"cnt"]=container
+	state[&"frz"]=freeze
+	state[&"slp"]=sleeping
+	return state
+static func load_state(state:Dictionary[StringName, Variant])->Obj:
+	var ins:Obj = load(state[&"scn"]).instantiate()
+	return ins
+func post_load(state:Dictionary[StringName, Variant]):
+	global_transform=state[&"trf"]
+	global_basis=state[&"bas"]
+	neutral_rotation=global_rotation
+	linear_velocity=state[&"vln"]
+	angular_velocity=state[&"vag"]
+	grabbed=state[&"hld"]
+	active=state[&"act"]
+	container=state[&"cnt"]
+	in_container=container!=null
+	freeze=state[&"frz"]
+	sleeping=state[&"slp"]
+	if grabbed:
+		$/root/main.held_objs.grab_item(self)
+	

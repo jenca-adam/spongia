@@ -83,7 +83,9 @@ func _input(event: InputEvent):
 		cur_cam = next_cam
 		tutorial.set_variable(&"cam_%d"%(cams.find(cams[cur_cam])), 1)
 	if event.is_action_released("DEBUG"):
-		print(held_objs.active_item)
+		SaveGame.save_scene(self, "user://game.save")
+func save_game():
+	SaveGame.save_scene(self, "user://game.save")
 func next_customer():
 	var customer = customers.slice(0,served).pick_random()
 	current_order = Bestellung.from_customer(customer)
@@ -96,8 +98,11 @@ func _ready():
 	tutorial.setup(self)
 	tutorial.enabled=tutorial_enable and not Options.skip_tutorial
 	tutorial.set_variable(&"cam_%d"%cur_cam, 1)
+	tutorial.tutorial_check()
 	if not tutorial.enabled:
 		$ui_tutorial.hide()
+	else:
+		$ui_tutorial.show()
 	var sfx_index = AudioServer.get_bus_index(&"SFX")
 	var music_index = AudioServer.get_bus_index(&"Music")
 	AudioServer.set_bus_volume_linear(sfx_index, Options.volume_sfx)
@@ -112,8 +117,14 @@ func _ready():
 		$WorldEnvironment.environment.glow_enabled=false
 	if not Options.enable_anti_alias:
 		get_viewport().screen_space_aa=Viewport.SCREEN_SPACE_AA_DISABLED
+	if not Options.salt_physics:
+		$salt_physics.queue_free()
+		
+	if Options.stats==null:
+		statistics = Statistics.new()
+	else:
+		statistics=Options.stats
 	
-	statistics = Statistics.new()
 	statistics.setup($ui_chest.food_resources.values(), customers, $ui_chest.food_resources)
 func _on_ui_result_close() -> void:
 	$admin.clear()
