@@ -184,7 +184,6 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.4319277, 1.1703095, 7
 [node name="ui_tutorial" parent="." unique_id=1443564730 instance=ExtResource("20_82xsv")]
 
 [node name="intro" parent="." unique_id=1904465255 instance=ExtResource("21_getpj")]
-play = false
 
 [node name="salt_shaker" parent="." unique_id=499555533 instance=ExtResource("26_h3hwu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0566173, 1.3470322, -2.474979)

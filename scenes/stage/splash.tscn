@@ -2,10 +2,16 @@
 
 [ext_resource type="Theme" uid="uid://43mp4k25ramx" path="res://resources/themes/splash.tres" id="1_b04ml"]
 [ext_resource type="Script" uid="uid://wdwbr7t1vlaw" path="res://src/splash.gd" id="2_13jq6"]
+[ext_resource type="Shader" uid="uid://bvom647g67o25" path="res://shaders/flicker.gdshader" id="3_c8qmv"]
 [ext_resource type="AudioStream" uid="uid://c2j0qbxj7qmhq" path="res://sound/typekey.wav" id="3_xoh7v"]
 [ext_resource type="Texture2D" uid="uid://c5lpxtl0enwsx" path="res://resources/godot.svg" id="3_xrohh"]
 [ext_resource type="AudioStream" uid="uid://c4q221xrxjqa6" path="res://sound/typebell.wav" id="4_xoh7v"]
 [ext_resource type="AudioStream" uid="uid://cled6eckt2lfa" path="res://sound/hum.mp3" id="5_wyt6d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ii2vb"]
+shader = ExtResource("3_c8qmv")
+shader_parameter/freq = 0.2
+shader_parameter/min_alpha = 0.6
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_v7d2s"]
 random_pitch = 1.4142135
@@ -46,6 +52,7 @@ script = ExtResource("2_13jq6")
 step = 0.1
 offset = 0.5
 linger = 0.4
+logo_zoom_amount = 1.5
 
 [node name="bg" type="ColorRect" parent="." unique_id=646354451]
 unique_name_in_owner = true
@@ -121,6 +128,7 @@ grow_vertical = 2
 
 [node name="logo" type="TextureRect" parent="bg/logo_container" unique_id=1767449133]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_ii2vb")
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(0.5, 0.5)

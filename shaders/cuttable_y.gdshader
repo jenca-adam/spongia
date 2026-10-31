@@ -1,3 +1,4 @@
+/* UNUSED */
 shader_type spatial;
 render_mode  unshaded;
 uniform float model_ymin = -0.1;

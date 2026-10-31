@@ -40,7 +40,7 @@ func typewrite():
 func zoom_logo():
 	var tween = get_tree().create_tween()
 	var zoom = logo_zoom_amount*%logo.offset_transform_scale.x
-	tween.tween_property(%logo, "offset_transform_scale", Vector2(zoom, zoom), logo_zoom_time).set_ease(Tween.EASE_IN)
+	tween.tween_property(%logo, "offset_transform_scale", Vector2(zoom, zoom), logo_zoom_time).set_ease(Tween.EASE_OUT)
 func fade_logo():
 	var tween = get_tree().create_tween()
 	var target_color = Color.hex(0xc9ffa300)
