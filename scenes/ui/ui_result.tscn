@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c3vq4i5og5llv" path="res://src/ui_result.gd" id="1_jwial"]
 [ext_resource type="Shader" uid="uid://dujsif34aci4n" path="res://shaders/round.gdshader" id="2_4ridy"]
 [ext_resource type="Texture2D" uid="uid://bsncc4lw0kyrk" path="res://customers/hobbit/face.jpg" id="4_3c6jk"]
+[ext_resource type="Texture2D" uid="uid://boff57gfjqqht" path="res://resources/dictionary.png" id="5_qkuxc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7bup1"]
 shader = ExtResource("2_4ridy")
@@ -21,7 +22,16 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nn0ru"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0)
+
 [node name="ui_result" type="Control" unique_id=1853153314]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -243,4 +253,31 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
 text = "OK"
 
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1274780439]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -372.0
+offset_top = -544.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="dictionary" type="PanelContainer" parent="MarginContainer" unique_id=1089596710]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nn0ru")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/dictionary" unique_id=1447185177]
+layout_mode = 2
+texture = ExtResource("5_qkuxc")
+
 [connection signal="pressed" from="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer3/ok" to="." method="_on_ok_pressed"]
+[connection signal="gui_input" from="MarginContainer/dictionary" to="." method="_on_dictionary_gui_input"]
+[connection signal="mouse_entered" from="MarginContainer/dictionary" to="." method="_on_dictionary_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/dictionary" to="." method="_on_dictionary_mouse_exited"]

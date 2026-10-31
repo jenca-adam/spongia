@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://dgl6mi0jvno63" path="res://scenes/items/salt_shaker.tscn" id="26_h3hwu"]
 [ext_resource type="PackedScene" uid="uid://3mefly0yrgem" path="res://scenes/items/stats_paper.tscn" id="30_uyv2j"]
 [ext_resource type="PackedScene" uid="uid://bnabklagri7ae" path="res://scenes/ui/ui_stats.tscn" id="31_ii2vb"]
+[ext_resource type="PackedScene" uid="uid://cpimlj1kx4y0m" path="res://scenes/ui/ui_dictionary.tscn" id="32_lqbou"]
 
 [sub_resource type="Gradient" id="Gradient_lqbou"]
 colors = PackedColorArray(1, 0.5, 0, 1, 1, 0.7166667, 0, 1)
@@ -73,7 +74,7 @@ plane = Plane(0, 1, 0, 1.96)
 
 [node name="main" type="Node3D" unique_id=20799515 node_paths=PackedStringArray("START_CAM")]
 script = ExtResource("1_lquwl")
-customers = Array[ExtResource("2_0odxb")]([ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("3_lswn8"), ExtResource("5_xuqvo"), ExtResource("3_pklfo"), ExtResource("3_ndyaf")])
+customers = Array[ExtResource("2_0odxb")]([ExtResource("3_lswn8"), ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("5_xuqvo"), ExtResource("3_pklfo"), ExtResource("3_ndyaf")])
 CAM_SWITCH_TIME = 0.5
 START_CAM = NodePath("cams/prep_table")
 tutorial_enable = true
@@ -202,9 +203,10 @@ freeze = true
 
 [node name="salt_physics" type="GPUParticlesCollisionHeightField3D" parent="." unique_id=910437271]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6262817, 1.656311, -2.3763428)
-visible = false
 size = Vector3(21.737183, 5.312622, 26.079834)
 update_mode = 1
 heightfield_mask = 1040383
+
+[node name="ui_dictionary" parent="." unique_id=1299941157 instance=ExtResource("32_lqbou")]
 
 [connection signal="close" from="ui_result" to="." method="_on_ui_result_close"]

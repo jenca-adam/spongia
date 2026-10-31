@@ -1,7 +1,16 @@
 extends UiOrder
 signal close
+var dictionary_stylebox:StyleBoxFlat
+func _ready():
+	super._ready()
+	dictionary_stylebox=%dictionary.get_theme_stylebox("panel")
+	%dictionary.hide()
 func setup_result(bestellung:Bestellung, result_taste_profile:TasteProfile, result_items:Array[Cuttable]):
 	super.setup(bestellung)
+	if bestellung.customer.name=="Elf":
+		%dictionary.show()
+	else:
+		%dictionary.hide()
 	var target = bestellung.customer
 	var score = target.score(result_taste_profile, result_items)
 	var comment_scores = target.get_comment_scores(result_taste_profile, result_items)
@@ -21,3 +30,17 @@ func _on_ok_pressed():
 	$/root/main.tutorial.set_variable(&"meal_submitted", 1)
 	$/root/main.save_game()
 	close.emit()
+
+
+func _on_dictionary_mouse_entered() -> void:
+	dictionary_stylebox.border_color=Color.WHITE
+
+
+
+func _on_dictionary_mouse_exited() -> void:
+	dictionary_stylebox.border_color=Color.TRANSPARENT
+
+
+func _on_dictionary_gui_input(event: InputEvent) -> void:
+	if (event.is_action_pressed("interact")):
+		$/root/main/ui_dictionary.show()

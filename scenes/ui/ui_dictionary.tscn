@@ -1,0 +1,388 @@
+[gd_scene format=3 uid="uid://cpimlj1kx4y0m"]
+
+[ext_resource type="Theme" uid="uid://ook3gn0uv81v" path="res://resources/themes/order.tres" id="1_jfu8i"]
+[ext_resource type="Texture2D" uid="uid://cclal82gbnbk4" path="res://resources/dictionary_no_title.png" id="2_34oby"]
+[ext_resource type="Script" uid="uid://pc1rmxsr43u3" path="res://src/ui_dictionary.gd" id="2_uyd48"]
+[ext_resource type="AudioStream" uid="uid://02e605xlga4o" path="res://sound/page_turn.wav" id="4_uyd48"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ox0n"]
+texture = ExtResource("2_34oby")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0i6pm"]
+streams_count = 1
+stream_0/stream = ExtResource("4_uyd48")
+
+[node name="ui_dictionary" type="Control" unique_id=1299941157]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jfu8i")
+script = ExtResource("2_uyd48")
+
+[node name="TextureRect" type="Panel" parent="." unique_id=235321446]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=716859739]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="book" type="PanelContainer" parent="CenterContainer" unique_id=701916543]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0ox0n")
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/book" unique_id=463344424]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/book/MarginContainer" unique_id=1659866343]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="left" type="PanelContainer" parent="CenterContainer/book/MarginContainer/HBoxContainer" unique_id=1459116644]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/book/MarginContainer/HBoxContainer/left" unique_id=328360903]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/book/MarginContainer/HBoxContainer/left/VBoxContainer" unique_id=500985300]
+layout_mode = 2
+
+[node name="left" type="MarginContainer" parent="CenterContainer/book/MarginContainer/HBoxContainer/left/VBoxContainer" unique_id=1770478361]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+
+[node name="1" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/left/VBoxContainer/left" unique_id=1469880926]
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "[center][font_size=60]DICTIONARY[/font_size]
+[font_size=30]or how to read Sindarin[/font_size]
+[font_size=40]a handy-book by one[/font_size]
+[font_size=60]Bilbo Baggins[/font_size]
+[font_size=30]a hobbit[/font_size][/center]
+"
+fit_content = true
+
+[node name="2" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/left/VBoxContainer/left" unique_id=53763721]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "[font_size=40]MUCH[/font_size] has been written about the Elven languages. Scholars write at great lengths about their grammatical features, and similar outlandish concepts that are of no concern to the common hobbit. However, they tend to omit such commonalities as basic vocabularyand conversational phrases that might be useful for someone travelling to Elven lands. 
+
+This is likely because most Elves, especially ones one is likely to meet on his travels, tend to have excellent command of Common Speech as well. Therefore, there's no interest 
+(or, indeed, much of a reason) in learning the language for the ordinary hobbit.
+
+However, if one seeks to become close acquaintances with the Elves, or just add a little bit of flair to one's speech, possessing some rudimentary knowledge of Elvish can be quite helpful.
+
+It is for this reason, as well as for a multitude of others I can't afford to bore you, dear reader, with, that I've decided to put what little I know of Elvish to writing."
+fit_content = true
+
+[node name="3" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/left/VBoxContainer/left" unique_id=1293638637]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "[center]
+Chapter Two:
+[font_size=50]VOCABULARY[/font_size]
+[/center]"
+fit_content = true
+
+[node name="4" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/left/VBoxContainer/left" unique_id=830448929]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "[font_size=30]A[/font_size]
+
+Ach : but
+Ah  : and
+Alu : health
+Am : more
+Amman : why
+Aeglir : mountain range
+
+[font_size=30]B[/font_size]
+
+Be : like, as
+Boe : must
+Brant : burnt, overcooked
+
+[font_size=30]C[/font_size]
+
+Caeth : reason
+Cauda- : to notice
+Caudol : tasteful
+Caw- : to taste
+Cen- : to see
+Cethiol : interesting
+Crista- : to cut
+Cuith : life
+Cum: belly"
+fit_content = true
+
+[node name="5" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/left/VBoxContainer/left" unique_id=1542215569]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "[font_size=30]I[/font_size]
+I, in : the
+I : that, who, which
+Iâf: fruit
+
+[font_size=30]L[/font_size]
+
+Lam: tongue
+Lavan: animal
+Le: you (plural)
+Lith: ash
+Lost: empty
+
+[font_size=30]M[/font_size]
+
+Mad-: to eat
+Maetha- : to use
+Math: food
+Mav-: to like
+Mer-: to want
+
+[font_size=30]N[/font_size]
+Nabant: almost
+Naw: yes
+Nin: I, me
+Nín: my"
+fit_content = true
+
+[node name="6" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/left/VBoxContainer/left" unique_id=224407379]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "[font_size=30]Ú[/font_size]
+
+Ú-: not
+
+[font_size=30]V[/font_size]
+
+Vi: in
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+fit_content = true
+
+[node name="prev" type="Button" parent="CenterContainer/book/MarginContainer/HBoxContainer/left/VBoxContainer" unique_id=308889155]
+layout_mode = 2
+theme_type_variation = &"BookButton"
+text = "Previous page"
+alignment = 0
+
+[node name="right" type="PanelContainer" parent="CenterContainer/book/MarginContainer/HBoxContainer" unique_id=185147434]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/book/MarginContainer/HBoxContainer/right" unique_id=2017712505]
+layout_mode = 2
+
+[node name="close" type="Button" parent="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer" unique_id=458869436]
+layout_mode = 2
+theme_type_variation = &"BookButton"
+text = "Close "
+alignment = 2
+
+[node name="right" type="MarginContainer" parent="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer" unique_id=3089280]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 0
+
+[node name="1" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer/right" unique_id=62977643]
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "[center]
+Chapter One:
+[font_size=50]INTRODUCTION[/font_size]
+[/center]"
+fit_content = true
+
+[node name="2" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer/right" unique_id=1170668357]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "One would be a fool to teach what he himself knows not, so this booklet shall only focus on a particular member of the extensive Elvish language family. This is, coincidentally, also the form of Elvish you, dear reader, are likely to encounter. 
+
+This language is called Sindarin, and was originally spoken by the Sindar, or Grey Elves. It has since, however, spread across the entirety of Middle-Earth.
+Usually, Sindari is written down using the Tengwar script, which looks a little like this:
+
+[center][font=res://fonts/tengwar_annatar/tnganb.ttf]5^È 7x%P 1`N 7j&L 3t$ j#°[/font][/center]
+
+It is, however, quite painful to write for my old, tired, hands. Therefore, I've decided to not include a guide to reading Tengwar. The reader can acquire one of these at any book-shop. Additionally, this booklet shall focus on the spoken form of the language, being centralised on pronounciation rather than grammar or similar abstract nonsense.
+ 
+However, be warned: it's been ages since I've used Sindarin in conversation!"
+fit_content = true
+
+[node name="3" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer/right" unique_id=420910431]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "[font_size=40]WHAT[/font_size] follows is, to my knowledge. a list of words in Sindarin, along with their meanings.
+
+In real situations, you might notice slight alterations due to dialectical differences or grammar.
+
+One grammatical rule you are particularly likely to struggle with is this:
+words can sometimes undergo soft mutation, where the first con-sonant of the word changes. This occurs for example if a noun is a direct object, follows an article, an adjective following a noun or a negative form with the prefix ú-. The pattern is as follows:
+
+p=>b t=>d c=>g b=>v d=>dh g=>’ s=>h h=>ch
+
+The vowels of a verb or a plural noun can also change, depending on the form.
+
+So very complicated, isn't it? I've asked Elves why they wouldn't change it to something more sensible, but they would not answer. Queer!
+"
+fit_content = true
+
+[node name="4" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer/right" unique_id=1270626511]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "[font_size=30]D[/font_size]
+
+Dod : berry
+Drinna- : to twist
+
+[font_size=30]E[/font_size]
+
+Edhel: elf
+Elefhrim: elves (race)
+Eno: still
+
+[font_size=30]F[/font_size]
+
+Fel-: to feel
+Fesga-: to itch
+Fir-: to die
+
+[font_size=30]G[/font_size]
+
+Gar-: to have, hold
+Gerf: knife
+Gobem: mouth
+Gonn: rock
+Groga: to feel fear
+
+
+"
+fit_content = true
+
+[node name="5" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer/right" unique_id=256945880]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "[font_size=30]O[/font_size]
+
+Olost: lazy
+Othovor: too much
+
+[font_size=30]P[/font_size]
+
+Perian: hobbit
+Pol- : to be able to
+Pruin : charcoal
+
+[font_size=30]R[/font_size]
+
+Rag- : burst, break
+
+[font_size=30]S[/font_size]
+
+Saeb: hungry
+San: it
+San- : to think (of)
+Sen: this
+Sing: salt
+
+[font_size=30]T[/font_size]
+Tev- : to hate
+Tolph: bowl
+"
+fit_content = true
+
+[node name="6" type="RichTextLabel" parent="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer/right" unique_id=136770630]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "That concludes this booklet. 
+
+Dear reader, I hope you've found it useful!
+
+Good luck on all your future endevaours.
+[center]
+[font_size=40]Bilbo Baggins[/font_size]
+[/center]"
+fit_content = true
+
+[node name="next" type="Button" parent="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer" unique_id=630408739]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"BookButton"
+text = "Next page "
+alignment = 2
+
+[node name="COLLECT_MY_PAGES" type="Control" parent="." unique_id=1097986744]
+custom_maximum_size = Vector2(0, 0)
+anchors_preset = 0
+
+[node name="turn" type="AudioStreamPlayer" parent="." unique_id=1477854181]
+stream = SubResource("AudioStreamRandomizer_0i6pm")
+
+[connection signal="pressed" from="CenterContainer/book/MarginContainer/HBoxContainer/left/VBoxContainer/prev" to="." method="_on_prev_pressed"]
+[connection signal="pressed" from="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer/next" to="." method="_on_next_pressed"]

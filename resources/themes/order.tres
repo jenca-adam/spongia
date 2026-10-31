@@ -7,6 +7,12 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sb26r"]
 texture = ExtResource("1_kqddg")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jfu8i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_34oby"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uyd48"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygd1g"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_bottom = 2
@@ -74,6 +80,10 @@ texture = ExtResource("1_kqddg")
 default_font = ExtResource("2_ygd1g")
 default_font_size = 22
 /styles/ui_panel = SubResource("StyleBoxTexture_sb26r")
+BookButton/base_type = &"Button"
+BookButton/styles/focus = SubResource("StyleBoxEmpty_jfu8i")
+BookButton/styles/hover = SubResource("StyleBoxEmpty_34oby")
+BookButton/styles/hover_pressed = SubResource("StyleBoxEmpty_uyd48")
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(0.2303147, 0.23031497, 0.23031548, 1)
 Button/styles/hover = SubResource("StyleBoxFlat_ygd1g")

@@ -10,7 +10,7 @@
 [sub_resource type="Resource" id="Resource_llo0o"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/lembas.json"
-items = Array[String](["Oh! I see you're a hobbit of culture!"])
+items = Array[String](["Oh! Caudan i de berian gaudol!"])
 metadata/_custom_type_script = "uid://cp601goyny8yk"
 
 [sub_resource type="Resource" id="Resource_cu83l"]
@@ -61,7 +61,7 @@ items = Array[String](["In Eledhrim medir dod a iâf!"])
 [sub_resource type="Resource" id="Resource_xkvvx"]
 script = ExtResource("1_4xr2c")
 json_path = "res://customers/elf/comments/not_textured.json"
-items = Array[String](["<REPLACE>"])
+items = Array[String](["Cristel i vath othovor!"])
 
 [sub_resource type="Resource" id="Resource_mh33d"]
 script = ExtResource("1_4xr2c")
