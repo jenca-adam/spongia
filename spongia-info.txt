@@ -1,5 +1,5 @@
 Názov tímu: Giggler
-Názov hry: ????
+Názov hry: One Cook To Rule Them All
 Vývojové prostredie a prostriedky: Godot
 
 Textúry:
@@ -15,6 +15,32 @@ Textúry:
         https://en.wikipedia.org/wiki/File:Potato_and_cross_section.jpg
         Creative Commons BY-ND
         Attribution must be provided in a prominent location to "Fir0002/Flagstaffotos".
+    Rezová textúra kapusty:
+        https://unsplash.com/photos/halved-red-cabbage-on-red-background-ZC28GN29qpo
+        Mustafa akın
+        Unsplash License
+        Zmenené farby
+    Rezová textúra ryby:
+        Andrey Filippov - https://commons.wikimedia.org/wiki/File:Danilovsky_Market,_Moscow,_Russia_(25840008187).jpg
+        Creative Commons BY
+        orezané
+    Rezová textúra lembasu:
+        kspoddar - https://commons.wikimedia.org/wiki/File:Breadindia.jpg 
+        Creative Commons BY-SA
+        orezané
+    Rezová textúra hrušky:
+        Augustus Binu - https://commons.wikimedia.org/wiki/File:Pear_DS.jpg
+        Creative Commons BY-SA
+        orezané
+    Rezová textúra paprík:
+        Mustafa akın - https://unsplash.com/photos/two-halves-of-a-red-bell-pepper-on-pink-fabric-t0HqyCamTZI
+        Unsplash License
+        orezané
+    Rezová textúra jahody:
+        Jeff Kubina - https://commons.wikimedia.org/wiki/File:Half_a_strawberry.jpg
+        Creative Commons BY-SA
+        orezané
+    (ostatné rezové textúry sú buď screenshoty modelov alebo jednofarebné)
     Tmavé drevo:
         https://www.sketchuptextureclub.com/textures/architecture/wood/cracking-paint/cracked-paint-wood-pbr-texture-seamless-21862
          https://www.sketchuptextureclub.com/terms-of-use
@@ -41,9 +67,12 @@ Textúry:
         -||-
     Svetlé drevo
         https://www.poliigon.com/texture/slip-match-oak-wood-veneer-texture/7760        -||-
+    Povrch lembasu
+        https://commons.wikimedia.org/wiki/File:Half_a_strawberry.jpg
+        -||-    
     Miska
         https://www.filterforge.com/filters/14730.html
-
+    
 3D Modely:
     Truhlica
         Multipainkiller Studio - Treasure Chest
@@ -60,13 +89,63 @@ Textúry:
         rhcreations - Onion
         CC-BY
         https://sketchfab.com/3d-models/onion-1eb9bc82080f4d9a98ad696f26ab1576
-    Mäso 1
+    Bravčové
         Plaggy_CC0 - Raw Meat
         https://pixabay.com/3d-models/raw-meat-meat-food-red-uncooked-584/
         Pixabay Content License https://pixabay.com/service/license-summary/
-    Ostatné 3D modely vytvoril Adam Jenča v Blenderi
+    Jablko
+        Meerschaum Digital - Apple (Game Ready / 2K PBR)
+        CC-BY
+        https://sketchfab.com/3d-models/apple-game-ready-2k-pbr-21a4f0b780494b529272a5e6785537db
+    Kapusta
+        Meerschaum Digital - Cabbage
+        CC-BY
+        https://sketchfab.com/3d-models/cabbage-654306fc3ae344c7b9e7a9a40faca45b
+    Ryba
+        Yimit - Fish
+        CC-BY
+        https://sketchfab.com/3d-models/fish-c4328d6c1ae445198abc1a3d4c1e2570
+        Aplikovaný Solidify Modifier v Blenderi
+    Cesnak
+        Meerschaum Digital - Garlic (Game Ready / 2K PBR)
+        CC-BY
+        https://sketchfab.com/3d-models/garlic-game-ready-2k-pbr-65c61cd8b9be4d7eb66c201833cb7765
+    Huba
+        Meerschaum Digital - Mushroom (Game Ready / 2K PBR)
+        CC-BY
+        https://sketchfab.com/3d-models/mushroom-game-ready-2k-pbr-155b0d74385347a0ada78e8b3492fe87
+    Hruška
+        Boris Veremeenko - Pear
+        CC-BY
+        https://sketchfab.com/3d-models/pear-03-128b95a54ba04a988f9ad676f276b341
+    Kura
+        Nathan Sioui - Raw Chicken
+        CC-BY-NC
+        https://sketchfab.com/3d-models/raw-chicken-baf467fc0357419bb492b7077591d5b8
+    Sladká paprika
+        Meerschaum Digital - Red Bell Pepper
+        https://sketchfab.com/3d-models/red-bell-pepper-7dceb5e3fa574027b6b8c6ffff8c980c
+        CC-BY
+    Štipľavá paprika
+        Meerschaum Digital - Red Pepper
+        https://sketchfab.com/3d-models/red-pepper-ea9f3e4b09d048988864d6d373567b9b
+        CC-BY
+    Jahoda
+        Nolan Wazni - Strawberry
+        https://sketchfab.com/3d-models/strawberry-ece47c71254f48ada992a1304008d20a
+        CC-BY
+        odstránené listy v Blenderi
+    Soľnička:
+        Yanez Design - Salt and Pepper Shaker
+        https://sketchfab.com/3d-models/salt-and-pepper-shakers-5f2adebdda754e40915d1330a61fa70c
+        CC-BY
+    Ostatné 3D modely vlastné
 Hudba:
-        Gustav Mahler - Sinfonie No.1 D-dur "Titan" - II. Blumine: Andante Allegretto. Eugene Ormandy, Philadelphia Orchestra. Public Domain.
+        V hre:
+            Gustav Mahler - Sinfonie No.1 D-dur "Titan" - II. Blumine: Andante Allegretto. Eugene Ormandy, Philadelphia Orchestra. Public Domain.
+        V menu:
+            Gustav Holst - The Planets, Op. 32. - I. Mars, Bringer of War. USAF Heritage of America Band. Public Domain.
+            https://musopen.org/music/43775-the-planets-op-32/
 Zvukové efekty:
     Vŕzganie:
         https://bigsoundbank.com/creaking-door-2-s3205.html
@@ -80,7 +159,38 @@ Zvukové efekty:
     Úder noža o podložku
         https://bigsoundbank.com/door-s0015.html
         CC0
+    Solenie:
+        https://pixabay.com/sound-effects/film-special-effects-salt-shaker-414324/
+        Pixabay Content License
+Fonty:
+    William Morris,Dieter Steffmann - Morris Roman
+        https://www.1001fonts.com/morris-roman-font.html
+        https://www.1001fonts.com/licenses/ffc.html
+Obrázky:
+    Hobbit:
+        Khaerr - Un hobbit-Terre du Milieu
+        https://commons.wikimedia.org/wiki/File:Un_hobbit.jpg
+        CC-BY-SA
+    Elf:
+        Benjamin Drake - Legolas Greenleaf
+        https://commons.wikimedia.org/wiki/File:Legolas_Greenleaf_by_Benjamin_Drake.png
+        CC-BY-SA
+    Trpaslík:
+        Ballakallab - Old dwarf
+        https://commons.wikimedia.org/wiki/File:Old_dwarf.jpg
+        Public Domain
+    Kôň:
+        Jennifer C. - Horse
+        https://commons.wikimedia.org/wiki/File:Horse_(4159155767).jpg
+        CC-BY
+    Ork:
+        Silar - Tolkien Orc
+        https://commons.wikimedia.org/wiki/File:Tolkien_Orc.png
+        CC-BY-SA
 Kód:
     pluginy:
         SceneTexture - https://godotengine.org/asset-library/asset/3506 - MIT
-        Mesh Tools - https://store.godotengine.org/asset/ar3d/mesh-tools/
+        Mesh Tools - https://store.godotengine.org/asset/ar3d/mesh-tools/ -MIT
+        MaterialTextures - https://store.godotengine.org/asset/andicraft/materialtextures/ - MIT
+    AI pomohlo s debugovaním, ale všetok kód mimo pluginov je vlastný
+
