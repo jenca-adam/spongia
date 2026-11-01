@@ -22,6 +22,7 @@ corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
 [node name="ui_order" type="Control" unique_id=588159274]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
