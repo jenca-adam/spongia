@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://casyras0bryah" path="res://src/customer.gd" id="2_0odxb"]
 [ext_resource type="Texture2D" uid="uid://m2wwxs3pkq6g" path="res://resources/textures/158_green grass PBR texture_seamless.jpg" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://b47lcdxl176ux" path="res://scenes/stage/held_objs.tscn" id="2_4c57u"]
+[ext_resource type="Resource" uid="uid://c8v14lvf8c72i" path="res://customers/nazgul/nazgul.tres" id="3_5ycn6"]
 [ext_resource type="PackedScene" uid="uid://cugldkvsjdxmt" path="res://scenes/items/table.tscn" id="3_h2yge"]
 [ext_resource type="Resource" uid="uid://r6j87b8y1t50" path="res://customers/dwarf/dwarf.tres" id="3_i6r6c"]
 [ext_resource type="Resource" uid="uid://sb8xujv0m2fo" path="res://customers/elf/elf.tres" id="3_lswn8"]
@@ -83,7 +84,7 @@ plane = Plane(0, 1, 0, 1.96)
 
 [node name="main" type="Node3D" unique_id=20799515 node_paths=PackedStringArray("START_CAM")]
 script = ExtResource("1_lquwl")
-customers = Array[ExtResource("2_0odxb")]([ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("3_lswn8"), ExtResource("5_xuqvo"), ExtResource("3_pklfo"), ExtResource("3_ndyaf")])
+customers = Array[ExtResource("2_0odxb")]([ExtResource("3_5ycn6"), ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("3_lswn8"), ExtResource("5_xuqvo"), ExtResource("3_pklfo"), ExtResource("3_ndyaf")])
 CAM_SWITCH_TIME = 0.5
 START_CAM = NodePath("cams/prep_table")
 tutorial_enable = true
@@ -221,6 +222,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.322, -2.5)
 [node name="intro" parent="." unique_id=1904465255 instance=ExtResource("21_getpj")]
 offset_top = -2.0
 offset_bottom = -2.0
+play = false
 
 [node name="ui_pause" parent="." unique_id=726946907 instance=ExtResource("34_xdo5p")]
 visible = false

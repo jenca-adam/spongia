@@ -129,11 +129,13 @@ text = "[b]Customer:[/b]"
 fit_content = true
 autowrap_mode = 0
 
-[node name="customer_type" type="Label" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=733324371]
+[node name="customer_type" type="RichTextLabel" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=602499303]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 2
 text = "Hobbit"
+fit_content = true
+autowrap_mode = 0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer" unique_id=2142386673]
 layout_mode = 2
@@ -148,11 +150,14 @@ text = "[b]Name:[/b]"
 fit_content = true
 autowrap_mode = 0
 
-[node name="customer_name" type="Label" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1388989433]
+[node name="customer_name" type="RichTextLabel" parent="CenterContainer/panel/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=356009776]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 2
+bbcode_enabled = true
 text = "Hobbit"
+fit_content = true
+autowrap_mode = 0
 
 [node name="MarginContainer6" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=1387507594]
 layout_mode = 2
