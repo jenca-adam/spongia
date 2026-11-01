@@ -260,7 +260,10 @@ Obrázky:
         CC-BY
     Panvica, ktorú drží Samwise Gamgee:
         https://commons.wikimedia.org/wiki/File:Frying_pan_with_black_handle.jpg
-        GFDL 
+        GFDL
+    Oheň:
+        https://giphy.com/stickers/fire-short-photobucket-issHYYSN6OW3K
+        https://support.giphy.com/hc/en-us/articles/360020027752-GIPHY-User-Terms-of-Service 
 Kód:
     pluginy:
         SceneTexture - https://godotengine.org/asset-library/asset/3506 - MIT
