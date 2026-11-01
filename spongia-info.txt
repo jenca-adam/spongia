@@ -258,6 +258,9 @@ Obrázky:
         Álvaro Fernández González - Nazgûl - Ringwraiths
         https://commons.wikimedia.org/wiki/File:Nazg%C3%BBl_-_Ringwraiths.jpg
         CC-BY
+    Panvica, ktorú drží Samwise Gamgee:
+        https://commons.wikimedia.org/wiki/File:Frying_pan_with_black_handle.jpg
+        GFDL 
 Kód:
     pluginy:
         SceneTexture - https://godotengine.org/asset-library/asset/3506 - MIT

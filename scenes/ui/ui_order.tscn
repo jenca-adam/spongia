@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://duixv1tilt07h" path="res://src/ui_order.gd" id="1_eiqw6"]
 [ext_resource type="Theme" uid="uid://ook3gn0uv81v" path="res://resources/themes/order.tres" id="1_sqbd2"]
 [ext_resource type="Shader" uid="uid://dujsif34aci4n" path="res://shaders/round.gdshader" id="3_7bup1"]
-[ext_resource type="Texture2D" uid="uid://dn0d7084q3ugj" path="res://customers/nazgul/face.jpg" id="4_chnn0"]
+[ext_resource type="Texture2D" uid="uid://db3dh31438yel" path="res://customers/samwise/face.jpg" id="4_chnn0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d1ji4"]
 shader = ExtResource("3_7bup1")
@@ -22,7 +22,6 @@ corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
 [node name="ui_order" type="Control" unique_id=588159274]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
