@@ -158,6 +158,8 @@ bbcode_enabled = true
 text = "Hobbit"
 fit_content = true
 autowrap_mode = 0
+text_direction = 1
+language = "en"
 
 [node name="MarginContainer6" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=1387507594]
 layout_mode = 2
@@ -184,6 +186,8 @@ size_flags_horizontal = 3
 bbcode_enabled = true
 text = "[font=res://fonts/tengwar_annatar/tngan.ttf]`B jhE8 q2R6T 55%--- 8lEwÁ q2R`N= t5# x7VaG r3C jhEaÀ[/font]"
 fit_content = true
+text_direction = 1
+language = "en"
 
 [node name="MarginContainer4" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=1111684460]
 layout_mode = 2
@@ -214,6 +218,8 @@ too cold
 idk
 [/ul]"
 fit_content = true
+text_direction = 1
+language = "en"
 
 [node name="MarginContainer5" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=1930113468]
 layout_mode = 2

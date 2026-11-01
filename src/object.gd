@@ -155,6 +155,18 @@ func _on_hover_input_event(camera: Node, event: InputEvent, event_position: Vect
 			set_collision_mask_value(11, false)
 			activate.emit()
 			print("activating", self)
+func force_drop():
+	set_collision_layer_value(11, containable)
+	set_collision_mask_value(11, containable)
+	active=false
+	grabbed=false
+	$/root/main.held_objs.active_item=null
+	#print("starting?")
+	grab_timeout.start(0.1)
+	$/root/main.held_objs.drop_item(self)
+	model.material_overlay.next_pass.albedo_color=Color(0,1,0,0)
+	release.emit(self)
+	deactivate.emit()
 func _input(event):
 	if event.is_action_released("rotation_begin") and hovered and rotatable and not rotating:
 		rotating=true
@@ -168,18 +180,7 @@ func _input(event):
 	if drop_disabled:
 		return
 	if event.is_action_released("drop_obj") and active and can_drop:
-		print("deactivating (dropping)", self)
-		set_collision_layer_value(11, containable)
-		set_collision_mask_value(11, containable)
-		active=false
-		grabbed=false
-		$/root/main.held_objs.active_item=null
-		#print("starting?")
-		grab_timeout.start(0.1)
-		$/root/main.held_objs.drop_item(self)
-		model.material_overlay.next_pass.albedo_color=Color(0,1,0,0)
-		release.emit(self)
-		deactivate.emit()
+		force_drop()
 	if event.is_action_released("cancel_obj_drop") and active:
 		active=false
 		$/root/main.held_objs.active_item=null
@@ -197,7 +198,8 @@ func _on_ungrab() -> void:
 func _on_sleeping_state_changed() -> void:
 	if (sleeping and not freeze and enable_freeze_on_sleep):
 		freeze_()
-
+### unused
+"""
 func save_state()->Dictionary[StringName, Variant]:
 	var state:Dictionary[StringName, Variant] = {}
 	state[&"scn"]=scene_file_path
@@ -231,3 +233,4 @@ func post_load(state:Dictionary[StringName, Variant]):
 	if grabbed:
 		$/root/main.held_objs.grab_item(self)
 	
+"""

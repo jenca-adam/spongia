@@ -6,7 +6,7 @@ var used_item = null
 var grab_timeout:Timer
 @onready var slot1 = get_node("slot1")
 @onready var slot2 = get_node("slot2")
-
+var killed_hand=false
 @export var GRAB_ANIM_TIME = 0.2
 @export var GRAB_ANIM_EASING:Tween.EaseType
 @onready var neutral_position = position
@@ -14,10 +14,7 @@ func _ready():
 	grab_timeout=Timer.new()
 	add_child(grab_timeout)
 	grab_timeout.wait_time=0.1
-func recalc_free_slots():
-	return slot1.get_child_count()|(slot2.get_child_count()<<1)
 func grab_item(item:Obj):
-	recalc_free_slots()
 	if (free_slots)==0 or active_item!=null:
 		return
 	if (item.get_parent() in [slot1, slot2]): return
@@ -42,9 +39,22 @@ func drop_item(item:Obj):
 		free_slots|=2
 	if item.original_parent in [slot1, slot2]:
 		item.original_parent=$/root/main
+	item.grabbed=false
 	item.reparent(item.original_parent)
 	item.ungrab.emit()
-
+func kill_hand():
+	if killed_hand:
+		return
+	
+	if slot2.get_child_count()>0:
+		var item = slot2.get_child(0) as Obj
+		if not item:
+			return
+	
+		item.force_drop() # it's better to handle this in object.gd
+		item.unfreeze() # london brideg
+	free_slots&=~2 # do this after force_drop() since drop_item() frees the slot again
+	killed_hand=true
 func _input(event):
 	if (event.is_action_released("hide_grabbed_items")):
 		### DISABLED

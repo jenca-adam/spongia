@@ -185,7 +185,7 @@ Zvukové efekty:
             https://pixabay.com/sound-effects/film-special-effects-whoosh-cinematic-376875/
             Dragon-Studio
             Pixabay Content License
-        - Hučanie:
+        - Bzučanie:
             https://pixabay.com/sound-effects/film-special-effects-electric-hum-141075/
             SoundsForYou
             Pixabay Content License
@@ -221,6 +221,8 @@ Fonty:
         Please note that for you to use J. R. R. Tolkien's tengwar
         script in a commercial production you may have to have permis-
         sion from the Tolkien Estate.
+    Shankar Sivarajan - Tengwar Artano
+        https://github.com/shankarsivarajan/TengwarArtano
  
 Obrázky:
     Hobbit:
@@ -249,7 +251,10 @@ Obrázky:
     Slovník:
         Vyrenderovaný z https://opengameart.org/content/spell-book-of-fire
         CC-BY
-        
+    Nazgûl:
+        Álvaro Fernández González - Nazgûl - Ringwraiths
+        https://commons.wikimedia.org/wiki/File:Nazg%C3%BBl_-_Ringwraiths.jpg
+        CC-BY
 Kód:
     pluginy:
         SceneTexture - https://godotengine.org/asset-library/asset/3506 - MIT

@@ -222,7 +222,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.322, -2.5)
 [node name="intro" parent="." unique_id=1904465255 instance=ExtResource("21_getpj")]
 offset_top = -2.0
 offset_bottom = -2.0
-play = false
 
 [node name="ui_pause" parent="." unique_id=726946907 instance=ExtResource("34_xdo5p")]
 visible = false

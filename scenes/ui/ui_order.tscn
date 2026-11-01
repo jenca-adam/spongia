@@ -152,6 +152,8 @@ bbcode_enabled = true
 text = "Hobbit"
 fit_content = true
 autowrap_mode = 0
+text_direction = 1
+language = "en"
 
 [node name="MarginContainer4" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=766589262]
 layout_mode = 2
@@ -178,6 +180,8 @@ size_flags_horizontal = 3
 bbcode_enabled = true
 text = "[font=fonts/tengwar_artano/TengwarArtano.ttf]. .[/font]"
 fit_content = true
+text_direction = 1
+language = "en"
 
 [node name="MarginContainer3" type="MarginContainer" parent="CenterContainer/panel/MarginContainer/VBoxContainer" unique_id=536928588]
 layout_mode = 2
