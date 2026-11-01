@@ -32,6 +32,7 @@ func grab_item(item:Obj):
 		free_slots&=~2
 	item.reparent(target)
 	var pos_tween = get_tree().create_tween()
+	pos_tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 	pos_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	pos_tween.tween_property(item, "position", Vector3.ZERO, GRAB_ANIM_TIME).set_ease(GRAB_ANIM_EASING)
 func drop_item(item:Obj):

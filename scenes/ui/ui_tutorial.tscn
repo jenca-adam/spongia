@@ -54,7 +54,8 @@ layout_mode = 2
 layout_mode = 2
 bbcode_enabled = true
 text = "Hi! Welcome to [color=\"green\"]One Cook[/color]!
-Use the [color=\"yellow\"]A[/color] and [color=\"yellow\"]D[/color] keys to switch cameras. Take a look around!"
+Use the [color=\"yellow\"]A[/color] and [color=\"yellow\"]D[/color] keys to switch cameras. Take a look around!
+You can also press [color=\"yellow\"]Tab[/color] to pause the game."
 fit_content = true
 autowrap_mode = 0
 
@@ -662,7 +663,7 @@ layout_mode = 2
 layout_mode = 2
 bbcode_enabled = true
 text = "Go to the [color=\"green\"]shelf[/color] and grab a plate or bowl. Place it on the [color=\"green\"]order table[/color].
-If you'd like to season the [color=\"orange\"]food[/color], just grab the [color=\"cyan\"]salt shaker[/color] from the
+Should you wish to season the [color=\"orange\"]food[/color], just grab the [color=\"cyan\"]salt or pepper shaker[/color] from the
 [color=\"green\"]prep table[/color].  While [color=\"yellow\"]using[/color] it, [color=\"yellow\"]hold left click[/color] while hovering over a container
 to season everything in it."
 fit_content = true

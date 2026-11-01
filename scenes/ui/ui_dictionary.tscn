@@ -3,16 +3,29 @@
 [ext_resource type="Theme" uid="uid://ook3gn0uv81v" path="res://resources/themes/order.tres" id="1_jfu8i"]
 [ext_resource type="Texture2D" uid="uid://cclal82gbnbk4" path="res://resources/dictionary_no_title.png" id="2_34oby"]
 [ext_resource type="Script" uid="uid://pc1rmxsr43u3" path="res://src/ui_dictionary.gd" id="2_uyd48"]
+[ext_resource type="Texture2D" uid="uid://d2rfu8l80g5a6" path="res://resources/textures/parchment.jpg" id="4_na360"]
 [ext_resource type="AudioStream" uid="uid://02e605xlga4o" path="res://sound/page_turn.wav" id="4_uyd48"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ox0n"]
 texture = ExtResource("2_34oby")
+
+[sub_resource type="Gradient" id="Gradient_na360"]
+offsets = PackedFloat32Array(0.9, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.5019608)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0ox0n"]
+gradient = SubResource("Gradient_na360")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uyd48"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_na360"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0i6pm"]
 streams_count = 1
 stream_0/stream = ExtResource("4_uyd48")
 
 [node name="ui_dictionary" type="Control" unique_id=1299941157]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +34,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_jfu8i")
 script = ExtResource("2_uyd48")
+page_flip_time = 0.25
+page_flip_ease = 0
 
 [node name="TextureRect" type="Panel" parent="." unique_id=235321446]
 layout_mode = 1
@@ -39,8 +54,102 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="book" type="PanelContainer" parent="CenterContainer" unique_id=701916543]
+custom_minimum_size = Vector2(830, 660)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0ox0n")
+
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/book" unique_id=338830126]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/book/MarginContainer2" unique_id=1277391227]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="left_pages" type="Control" parent="CenterContainer/book/MarginContainer2/HBoxContainer" unique_id=1898121509]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="left_page1" type="TextureRect" parent="CenterContainer/book/MarginContainer2/HBoxContainer/left_pages" unique_id=1190403648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_na360")
+expand_mode = 1
+
+[node name="left_page" type="TextureRect" parent="CenterContainer/book/MarginContainer2/HBoxContainer/left_pages" unique_id=952055070]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_pivot = Vector2(200, 0)
+texture = ExtResource("4_na360")
+expand_mode = 1
+
+[node name="gradient" type="TextureRect" parent="CenterContainer/book/MarginContainer2/HBoxContainer/left_pages" unique_id=2146959808]
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_0ox0n")
+
+[node name="right_pages" type="Control" parent="CenterContainer/book/MarginContainer2/HBoxContainer" unique_id=2137072544]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="right_page1" type="TextureRect" parent="CenterContainer/book/MarginContainer2/HBoxContainer/right_pages" unique_id=1935990079]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_na360")
+expand_mode = 1
+
+[node name="right_page" type="TextureRect" parent="CenterContainer/book/MarginContainer2/HBoxContainer/right_pages" unique_id=1400677007]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_pivot = Vector2(-200, 0)
+texture = ExtResource("4_na360")
+expand_mode = 1
+
+[node name="gradient" type="TextureRect" parent="CenterContainer/book/MarginContainer2/HBoxContainer/right_pages" unique_id=1298977441]
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(-1, 1)
+texture = SubResource("GradientTexture1D_0ox0n")
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/book" unique_id=463344424]
 layout_mode = 2
@@ -51,11 +160,12 @@ theme_override_constants/margin_bottom = 10
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/book/MarginContainer" unique_id=1659866343]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 0
 
 [node name="left" type="PanelContainer" parent="CenterContainer/book/MarginContainer/HBoxContainer" unique_id=1459116644]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uyd48")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/book/MarginContainer/HBoxContainer/left" unique_id=328360903]
 layout_mode = 2
@@ -213,19 +323,22 @@ Vi: in
 fit_content = true
 
 [node name="prev" type="Button" parent="CenterContainer/book/MarginContainer/HBoxContainer/left/VBoxContainer" unique_id=308889155]
+z_index = 3
 layout_mode = 2
 theme_type_variation = &"BookButton"
-text = "Previous page"
+text = "  Previous page"
 alignment = 0
 
 [node name="right" type="PanelContainer" parent="CenterContainer/book/MarginContainer/HBoxContainer" unique_id=185147434]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_na360")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/book/MarginContainer/HBoxContainer/right" unique_id=2017712505]
 layout_mode = 2
 
 [node name="close" type="Button" parent="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer" unique_id=458869436]
+z_index = 3
 layout_mode = 2
 theme_type_variation = &"BookButton"
 text = "Close "
@@ -372,6 +485,7 @@ fit_content = true
 
 [node name="next" type="Button" parent="CenterContainer/book/MarginContainer/HBoxContainer/right/VBoxContainer" unique_id=630408739]
 unique_name_in_owner = true
+z_index = 3
 layout_mode = 2
 theme_type_variation = &"BookButton"
 text = "Next page "

@@ -269,6 +269,7 @@ func _tip():
 		body.tipped_on=Time.get_ticks_msec()
 		#body.frozen.connect(func():breakpoint)
 	var tween = get_tree().create_tween()
+	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 	tipping=true
 	rot_lock=true
 	tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
@@ -300,8 +301,8 @@ func freed_clear():
 			new_bodies.append(body)
 	bodies=new_bodies
 
-func add_salt(amount):
+func add_salt(amount, taste:StringName=&"salty"):
 	freed_clear()
 	for body in bodies:
 		if body.has_method(&"add_salt"):
-			body.add_salt(amount)
+			body.add_salt(amount, taste)

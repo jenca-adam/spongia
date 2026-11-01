@@ -34,11 +34,11 @@ func score(other:TasteVector)->float:
 	for prop in PROPERTIES:
 		result += abs(get(prop)-other.get(prop))
 	return result
-func salted(amount:float)->TasteVector:
+func salted(amount:float, taste:StringName=&"salty")->TasteVector:
 	var new_vector = duplicate()
-	amount+=salty
+	amount+=get(taste)
 	if amount>1.0:
 		for prop in PROPERTIES:
 			new_vector.set(prop, new_vector.get(prop)/amount)
-	new_vector.salty=amount
+	new_vector.set(taste,amount)
 	return new_vector

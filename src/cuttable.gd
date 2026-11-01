@@ -34,10 +34,12 @@ var volume
 var _cut_colls = []
 var _cut_shapes = []
 var cook_time= 0.0
-var added_salt=0.0
+var added_salt:Dictionary[StringName, float]={}
 
-func add_salt(amount):
-	added_salt+=amount
+func add_salt(amount, taste:StringName=&"salty"):
+	if taste not in added_salt:
+		added_salt[taste]=0.0
+	added_salt[taste]+=amount
 func get_mesh_volume(mesh: Mesh) -> float:
 	# use this since it doesn't have bugs
 	return MeshTools.Islands.calculate_mesh_volume(mesh)

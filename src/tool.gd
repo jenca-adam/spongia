@@ -28,6 +28,7 @@ func _unuse():
 	
 	drop_disabled=false
 	var tween=get_tree().create_tween()
+	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 	tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	tween.tween_property(self, "position", Vector3.ZERO, 0.2)
 	unuse.emit()
@@ -45,5 +46,7 @@ func _input(event):
 		model.material_overlay.set_shader_parameter("outline_width", 1.0)
 		model.material_overlay.next_pass.albedo_color=Color(1,1,0,0.2)
 		use_start.emit()
+		model.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
 	elif (event.is_action_released("cancel_tool_use") and using and grabbed):
+		model.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		_unuse()

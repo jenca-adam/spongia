@@ -91,7 +91,7 @@ data = PackedVector3Array(-0.0002, 5.35, -8.4488, 0.4078, 5.5557, -8.3047, -0.00
 [node name="hobbithouse" type="Node3D" unique_id=824726559]
 
 [node name="Cylinder" type="MeshInstance3D" parent="." unique_id=1428786760]
-transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 0.45284653, 0, 0)
+transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 0.453, -0.058599472, 0)
 mesh = SubResource("ArrayMesh_qd5ur")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Cylinder" unique_id=238147913]
@@ -102,17 +102,17 @@ autoplay = true
 max_distance = 15.0
 bus = &"SFX"
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Cylinder" unique_id=152107169]
-transform = Transform3D(0.9523809, 0, 0, 0, 0.9146766, 0.26532254, 0, -0.26532254, 0.9146766, 0, 4.658785, 0)
+[node name="Sphere" type="MeshInstance3D" parent="." unique_id=1728968985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0052490234, 0.024586558, 0.07727122)
+mesh = SubResource("ArrayMesh_6odjr")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Sphere" unique_id=152107169]
+transform = Transform3D(1, 0, 0, 0, 0.96041054, 0.27858868, 0, -0.27858868, 0.96041054, 0.45809555, 4.8671374, -0.07727122)
 light_color = Color(0.88805115, 0.6579854, 0.24597842, 1)
 light_energy = 2.426
 shadow_enabled = true
 omni_range = 17.197
 omni_attenuation = 0.406
-
-[node name="Sphere" type="MeshInstance3D" parent="." unique_id=1728968985]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0052490234, 0.024586558, 0.07727122)
-mesh = SubResource("ArrayMesh_6odjr")
 
 [node name="collider" type="StaticBody3D" parent="." unique_id=536930767]
 collision_layer = 6146
