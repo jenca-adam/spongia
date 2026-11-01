@@ -46,7 +46,7 @@ func typewrite():
 		time+=step
 	get_tree().create_timer(time).timeout.connect(tween_glow)
 func zoom_logo():
-	$whoosh.play()
+	get_tree().create_timer(0.1).timeout.connect($whoosh.play)
 	var tween = get_tree().create_tween()
 	var zoom = logo_zoom_amount*%logo.offset_transform_scale.x
 	tween.tween_property(%logo, "offset_transform_scale", Vector2(zoom, zoom), logo_zoom_time).set_ease(Tween.EASE_OUT)

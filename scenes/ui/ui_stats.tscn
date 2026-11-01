@@ -83,13 +83,19 @@ text = " "
 layout_mode = 2
 text = "Average score: %.2f%%"
 
-[node name="best_score" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/fields" unique_id=2138367900]
+[node name="best_score" type="RichTextLabel" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/fields" unique_id=1680333804]
 layout_mode = 2
+bbcode_enabled = true
 text = "Best score: %.2f%% (%s)"
+fit_content = true
+autowrap_mode = 0
 
-[node name="worst_score" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/fields" unique_id=1106744889]
+[node name="worst_score" type="RichTextLabel" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/fields" unique_id=1310034847]
 layout_mode = 2
+bbcode_enabled = true
 text = "Worst score: %.2f%% (%s)"
+fit_content = true
+autowrap_mode = 0
 
 [node name="best_customer" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/fields" unique_id=2100684161]
 layout_mode = 2
@@ -130,6 +136,10 @@ text = "Total cook time: %.2f s"
 [node name="total_cuts_made" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/fields" unique_id=622547771]
 layout_mode = 2
 text = "Total cuts made: %d"
+
+[node name="lost_hand" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/fields" unique_id=902582395]
+layout_mode = 2
+text = "Lost hand: %s"
 
 [node name="_GAP_4" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/fields" unique_id=268939980]
 layout_mode = 2

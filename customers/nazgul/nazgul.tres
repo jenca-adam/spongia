@@ -29,18 +29,18 @@ json_path = "res://customers/nazgul/good2.json"
 items = Array[String](["[font=fonts/tengwar_artano/TengwarArtano.ttf]. [/font]"])
 metadata/_custom_type_script = "uid://cp601goyny8yk"
 
-[sub_resource type="Resource" id="Resource_xdo5p"]
-script = ExtResource("1_dt2du")
-json_path = "res://customers/nazgul/hand_warn.json"
-items = Array[String](["[color=red]Your right hand has been taken from you.[/color]
-You remember reading somewhere that the Nazgul do not eat...[color=transparent]__KILL_HAND[/color]"])
-metadata/_custom_type_script = "uid://cp601goyny8yk"
-
 [sub_resource type="Resource" id="Resource_5ycn6"]
 script = ExtResource("1_dt2du")
 json_path = "res://customers/nazgul/hand_ok.json"
 items = Array[String](["[color=dark_green]You live, for now.[/color]
 You remembered reading somewhere that the Nazgul do not eat..."])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_xdo5p"]
+script = ExtResource("1_dt2du")
+json_path = "res://customers/nazgul/hand_warn.json"
+items = Array[String](["[color=red]Your right hand has been taken from you.[/color]
+You remember reading somewhere that the Nazgul do not eat...[color=transparent]__KILL_HAND[/color]"])
 metadata/_custom_type_script = "uid://cp601goyny8yk"
 
 [sub_resource type="Resource" id="Resource_wnm7m"]

@@ -14,6 +14,7 @@ func _ready():
 	fade_in_tween=get_tree().create_tween()
 	fade_in_tween.tween_property(%fg, "color", Color(0,0,0,0), 1.5)
 func _on_quit_pressed() -> void:
+	$ui.play()
 	get_tree().quit()
 
 func play_the_game():
@@ -25,6 +26,7 @@ func load_save():
 	#var game = load("user://save.scn")
 	#get_tree().change_scene_to_packed(game)
 func _on_play_pressed() -> void:
+	$ui.play()
 	var tween = get_tree().create_tween()
 	tween.set_parallel(true)
 	fade_in_tween.stop()
@@ -36,38 +38,52 @@ func _on_play_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
+	$ui.play()
 	%buttons.hide()
 	%options.show()
 
 
 func _on_back_pressed() -> void:
+	$ui.play()
 	%options.hide()
 	%buttons.show()
 
 
 func _on_enable_shadows_toggled(toggled_on: bool) -> void:
+	$ui.play()
 	Options.enable_shadows=toggled_on
 func _on_enable_bloom_toggled(toggled_on: bool) -> void:
+	$ui.play()
 	Options.enable_bloom=toggled_on
 func _on_enable_anti_alias_toggled(toggled_on: bool) -> void:
+	$ui.play()
 	Options.enable_anti_alias=toggled_on
 
 func _on_volume_master_value_changed(value: float) -> void:
 	Options.volume_sfx=value
 	%bun.volume_linear=value
+	$ui2.volume_linear=value
+	if not $ui2.playing or $ui2.get_playback_position()>0.1:
+		$ui2.play()
 func _on_volume_music_value_changed(value: float) -> void:
 	Options.volume_music=value
 	$music.volume_linear=value
-
+	$ui3.volume_linear=value
+	if not $ui3.playing or  $ui3.get_playback_position()>0.1:
+		$ui3.play()
 func _on_skip_intro_toggled(toggled_on: bool) -> void:
+	$ui.play()
 	Options.skip_intro=toggled_on
 
 func _on_skip_tutorial_toggled(toggled_on: bool) -> void:
+	$ui.play()
 	Options.skip_tutorial=toggled_on
 func _on_salt_physics_toggled(toggled_on: bool) -> void:
+	$ui.play()
 	Options.salt_physics=toggled_on
 
 func _on_load_pressed() -> void:
+	$ui.play()
 	if not FileAccess.file_exists("user://game.save"):
 		return
 	var file = FileAccess.open("user://game.save", FileAccess.READ)
@@ -77,3 +93,7 @@ func _on_load_pressed() -> void:
 		Options.skip_intro=true
 		Options.skip_tutorial=true
 		_on_play_pressed()
+
+
+func _on_options_tab_clicked(tab: int) -> void:
+	$ui.play()

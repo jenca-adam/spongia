@@ -129,6 +129,8 @@ func _ready():
 		statistics = Statistics.new()
 	else:
 		statistics=Options.stats
+		if statistics.lost_hand[0]=="Yes":
+			held_objs.kill_hand()
 		served = statistics.total_orders[0]# fix
 	
 	statistics.setup($ui_chest.food_resources.values(), customers, $ui_chest.food_resources)

@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dx2m42jeibym6" path="res://scenes/items/fireplace.tscn" id="6_7mycd"]
 [ext_resource type="AudioStream" uid="uid://w80lt8fmqexc" path="res://sound/LSC3107 Ormandy Mahler 1 (ii).mp3" id="8_kek77"]
 [ext_resource type="PackedScene" uid="uid://ca2qd327o4unc" path="res://scenes/items/bowl.tscn" id="9_kek77"]
+[ext_resource type="Resource" uid="uid://ddel75j2na2dn" path="res://customers/samwise/samwise.tres" id="10_wnm7m"]
 [ext_resource type="PackedScene" uid="uid://bgw2bg1o55wcm" path="res://scenes/items/pot.tscn" id="11_efxa6"]
 [ext_resource type="PackedScene" uid="uid://iii5g0bsx0qy" path="res://scenes/items/board.tscn" id="13_w48qg"]
 [ext_resource type="PackedScene" uid="uid://0sgn0wdcmned" path="res://scenes/items/knife.tscn" id="13_ycdy4"]
@@ -84,7 +85,7 @@ plane = Plane(0, 1, 0, 1.96)
 
 [node name="main" type="Node3D" unique_id=20799515 node_paths=PackedStringArray("START_CAM")]
 script = ExtResource("1_lquwl")
-customers = Array[ExtResource("2_0odxb")]([ExtResource("3_5ycn6"), ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("3_lswn8"), ExtResource("5_xuqvo"), ExtResource("3_pklfo"), ExtResource("3_ndyaf")])
+customers = Array[ExtResource("2_0odxb")]([ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("10_wnm7m"), ExtResource("3_lswn8"), ExtResource("5_xuqvo"), ExtResource("3_pklfo"), ExtResource("3_ndyaf"), ExtResource("3_5ycn6"), ExtResource("4_a6jrf"), ExtResource("3_i6r6c"), ExtResource("3_lswn8"), ExtResource("3_ndyaf"), ExtResource("5_xuqvo"), ExtResource("3_i6r6c"), ExtResource("4_a6jrf"), ExtResource("3_pklfo"), ExtResource("3_lswn8"), ExtResource("3_lswn8"), ExtResource("3_i6r6c"), ExtResource("4_a6jrf"), ExtResource("3_5ycn6")])
 CAM_SWITCH_TIME = 0.5
 START_CAM = NodePath("cams/prep_table")
 tutorial_enable = true

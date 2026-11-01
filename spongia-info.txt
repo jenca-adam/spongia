@@ -174,6 +174,9 @@ Zvukové efekty:
     Zvonček:
         https://bigsoundbank.com/counter-bell-3-s2531.html
         CC0
+    UI:
+        https://pixabay.com/sound-effects/technology-ui-hover-sfx-513360/
+        Pixabay content License
     Splash Screen:
         - Písací stroj:
             https://bigsoundbank.com/typewriter-s1065.html

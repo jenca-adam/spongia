@@ -1,0 +1,183 @@
+[gd_resource type="Resource" script_class="Samwise" format=3 uid="uid://ddel75j2na2dn"]
+
+[ext_resource type="Script" uid="uid://cp601goyny8yk" path="res://src/json_loader.gd" id="1_5ahwt"]
+[ext_resource type="Script" uid="uid://23fgsnyaetea" path="res://src/comments.gd" id="2_4asj6"]
+[ext_resource type="Texture2D" uid="uid://db3dh31438yel" path="res://customers/samwise/face.jpg" id="3_wttdg"]
+[ext_resource type="Script" uid="uid://dre6wcbt0cfsu" path="res://customers/samwise/samwise.gd" id="4_624wr"]
+[ext_resource type="Script" uid="uid://dxpm23s7hgj3k" path="res://src/taste_profile.gd" id="5_0adju"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://src/taste_vector.gd" id="6_owctn"]
+
+[sub_resource type="Resource" id="Resource_5giio"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/potato.json"
+items = Array[String](["Boil 'em, mash 'em, stick 'em in a stew!", "I see you share my love for spud!"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_5ahwt"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/not_cooked.json"
+items = Array[String](["This is raw.", "I say, this could use some more time over the old fire-place, couldn't it?"])
+
+[sub_resource type="Resource" id="Resource_4asj6"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/not_filling.json"
+items = Array[String](["This does not satisfy the old wamblecropt"])
+
+[sub_resource type="Resource" id="Resource_wttdg"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/not_healthy.json"
+items = Array[String](["That almost gave me a heart attack."])
+
+[sub_resource type="Resource" id="Resource_624wr"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/not_meaty.json"
+items = Array[String](["I say, some more meat wouldn't hurt!"])
+
+[sub_resource type="Resource" id="Resource_0adju"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/not_much.json"
+items = Array[String](["I'm not a little bird.", "My friend, if you don't have food, just tell me! There's plenty of vegetables in me garden!"])
+
+[sub_resource type="Resource" id="Resource_owctn"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/not_salty.json"
+items = Array[String](["I say, salt is necessary for a Hobbit's survival! Even more so than second breakfast!", "It's a little bland, one must say."])
+
+[sub_resource type="Resource" id="Resource_sse5q"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/not_sour.json"
+items = Array[String](["Could use a tad more tang, couldn't it?"])
+
+[sub_resource type="Resource" id="Resource_o7u7c"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/not_spicy.json"
+items = Array[String](["When I was travelling with Mister Frodo, I had to endure many a bland meal. But this might just top all of them!", "Do you not have the money for spices?"])
+
+[sub_resource type="Resource" id="Resource_tjkn2"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/not_sweet.json"
+items = Array[String](["I say, this is not exactly a dessert, is it?"])
+
+[sub_resource type="Resource" id="Resource_4c4ye"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/not_textured.json"
+items = Array[String](["I still have teeth, you know."])
+
+[sub_resource type="Resource" id="Resource_og0dj"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/too_cooked.json"
+items = Array[String](["This reminds me of the time I saved Middle-Earth on Mount Doom! But even that was colder than this.", "I don't eat charcoal, sorry."])
+
+[sub_resource type="Resource" id="Resource_am5v2"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/too_filling.json"
+items = Array[String](["This feels like a rock in me ole wamblecropt."])
+
+[sub_resource type="Resource" id="Resource_gmrwc"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/too_healthy.json"
+items = Array[String](["Do I look like a rabbit to you?"])
+
+[sub_resource type="Resource" id="Resource_6xdqy"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/too_meaty.json"
+items = Array[String](["I'm no Green-Elf, but did you really have to use up a whole slaughter-house?"])
+
+[sub_resource type="Resource" id="Resource_csao3"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/too_much.json"
+items = Array[String](["I might not exactly be of the slimmest nature, but this might be too much, even for me."])
+
+[sub_resource type="Resource" id="Resource_o5vka"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/too_salty.json"
+items = Array[String](["If I were a snail, I would've died.", "Have you perchance mistaken me for a donkey?"])
+
+[sub_resource type="Resource" id="Resource_f6t5b"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/too_sour.json"
+items = Array[String]([" My tongue’s all curled up!"])
+
+[sub_resource type="Resource" id="Resource_n4g0v"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/too_spicy.json"
+items = Array[String](["I say, this makes me feel like a dragon!"])
+
+[sub_resource type="Resource" id="Resource_ud5bs"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/too_sweet.json"
+items = Array[String](["My teeth hurt!"])
+
+[sub_resource type="Resource" id="Resource_crmku"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/samwise/comments/too_textured.json"
+items = Array[String](["Mister Frodo would've known better! He would've cut and sliced and clobbered it up with Sting!"])
+
+[sub_resource type="Resource" id="Resource_wnm0q"]
+script = ExtResource("2_4asj6")
+not_cooked = SubResource("Resource_5ahwt")
+not_healthy = SubResource("Resource_wttdg")
+not_meaty = SubResource("Resource_624wr")
+not_much = SubResource("Resource_0adju")
+not_salty = SubResource("Resource_owctn")
+not_sour = SubResource("Resource_sse5q")
+not_sweet = SubResource("Resource_tjkn2")
+not_textured = SubResource("Resource_4c4ye")
+not_spicy = SubResource("Resource_o7u7c")
+not_filling = SubResource("Resource_4asj6")
+too_cooked = SubResource("Resource_og0dj")
+too_healthy = SubResource("Resource_gmrwc")
+too_meaty = SubResource("Resource_6xdqy")
+too_much = SubResource("Resource_csao3")
+too_salty = SubResource("Resource_o5vka")
+too_sour = SubResource("Resource_f6t5b")
+too_sweet = SubResource("Resource_ud5bs")
+too_textured = SubResource("Resource_crmku")
+too_spicy = SubResource("Resource_n4g0v")
+too_filling = SubResource("Resource_am5v2")
+extras = Dictionary[String, ExtResource("1_5ahwt")]({
+"potato": SubResource("Resource_5giio")
+})
+dir_path = "res://customers/samwise/comments"
+metadata/_custom_type_script = "uid://23fgsnyaetea"
+
+[sub_resource type="Resource" id="Resource_eiqw6"]
+script = ExtResource("1_5ahwt")
+items = Array[String](["Samwise Gamgee"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_sqbd2"]
+script = ExtResource("1_5ahwt")
+json_path = "res://customers/hobbit/orders.json"
+items = Array[String](["Just give me whatever.", "What do you have on offer?", "What would you recommend?", "You can't do a whole lot of gardening on an empty stomach!", "I'm honestly not that hungry, I'm just here to check this place out.", "How do you do?", "I want something boiled or mashed or in a stew!"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_5vacq"]
+script = ExtResource("6_owctn")
+sweet = 0.5
+sour = 0.5
+salty = 0.7
+meaty = 0.5
+healthy = 0.3
+filling = 1.0
+spicy = 0.6
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Resource" id="Resource_7bup1"]
+script = ExtResource("5_0adju")
+taste_vector = SubResource("Resource_5vacq")
+cook_time = 20.0
+amount = 1.5
+texture = 0.1
+metadata/_custom_type_script = "uid://dxpm23s7hgj3k"
+
+[resource]
+script = ExtResource("4_624wr")
+potato_threshold = 0.4
+name = &"Hobbit"
+image = ExtResource("3_wttdg")
+orders = SubResource("Resource_sqbd2")
+names = SubResource("Resource_eiqw6")
+comments = SubResource("Resource_wnm0q")
+taste_profile = SubResource("Resource_7bup1")
+metadata/_custom_type_script = "uid://casyras0bryah"

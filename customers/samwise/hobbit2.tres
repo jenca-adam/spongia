@@ -1,0 +1,174 @@
+[gd_resource type="Resource" script_class="Customer" format=3 uid="uid://du4q2nvu05dn5"]
+
+[ext_resource type="Script" uid="uid://cp601goyny8yk" path="res://src/json_loader.gd" id="1_3b8dc"]
+[ext_resource type="Script" uid="uid://23fgsnyaetea" path="res://src/comments.gd" id="2_0lwg5"]
+[ext_resource type="Texture2D" uid="uid://db3dh31438yel" path="res://customers/samwise/face.jpg" id="3_f5ig6"]
+[ext_resource type="Script" uid="uid://casyras0bryah" path="res://src/customer.gd" id="4_uqris"]
+[ext_resource type="Script" uid="uid://dxpm23s7hgj3k" path="res://src/taste_profile.gd" id="5_xmmb3"]
+[ext_resource type="Script" uid="uid://dmor3qc07dgge" path="res://src/taste_vector.gd" id="6_klm6u"]
+
+[sub_resource type="Resource" id="Resource_3b8dc"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/not_cooked.json"
+items = Array[String](["This is raw.", "Did you even cook this??"])
+
+[sub_resource type="Resource" id="Resource_0lwg5"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/not_filling.json"
+items = Array[String](["Not too much of a meal"])
+
+[sub_resource type="Resource" id="Resource_f5ig6"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/not_healthy.json"
+items = Array[String](["That almost gave me a heart attack."])
+
+[sub_resource type="Resource" id="Resource_uqris"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/not_meaty.json"
+items = Array[String](["I like me some vegetables, don't get me wrong. But this is a little too much."])
+
+[sub_resource type="Resource" id="Resource_xmmb3"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/not_much.json"
+items = Array[String](["I'm not a little bird.", "Are you trying to scam me??"])
+
+[sub_resource type="Resource" id="Resource_klm6u"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/not_salty.json"
+items = Array[String](["Did your mother not teach you to salt food!?", "It's a little bland, one must say."])
+
+[sub_resource type="Resource" id="Resource_s3q2e"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/not_sour.json"
+items = Array[String](["Could use a tad more tang, couldn't it?"])
+
+[sub_resource type="Resource" id="Resource_enuhc"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/not_spicy.json"
+items = Array[String](["I like my food a little less boring.", "Do you not have the money for spices?"])
+
+[sub_resource type="Resource" id="Resource_vfuqs"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/not_sweet.json"
+items = Array[String](["I'm craving some cake..."])
+
+[sub_resource type="Resource" id="Resource_2nevl"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/not_textured.json"
+items = Array[String](["I still have teeth, you know."])
+
+[sub_resource type="Resource" id="Resource_qiye0"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/too_cooked.json"
+items = Array[String](["Did you drop this into Mount Doom to cook it?", "I don't eat charcoal, sorry."])
+
+[sub_resource type="Resource" id="Resource_ccsx1"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/too_filling.json"
+items = Array[String](["This feels like a rock in my stomach."])
+
+[sub_resource type="Resource" id="Resource_f2r0o"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/too_healthy.json"
+items = Array[String](["Do I look like a rabbit to you?"])
+
+[sub_resource type="Resource" id="Resource_8a0u3"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/too_meaty.json"
+items = Array[String](["I'm no Green-Elf, but did you really have to use up a whole slaughter-house?"])
+
+[sub_resource type="Resource" id="Resource_68mu8"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/too_much.json"
+items = Array[String](["Are you saying I look fat?"])
+
+[sub_resource type="Resource" id="Resource_x3oby"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/too_salty.json"
+items = Array[String](["If I were a snail, I would've died.", "Have you perchance mistaken me for a donkey?"])
+
+[sub_resource type="Resource" id="Resource_74fg4"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/too_sour.json"
+items = Array[String]([" My tongue’s all curled up!"])
+
+[sub_resource type="Resource" id="Resource_5o6qq"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/too_spicy.json"
+items = Array[String](["My tongue hurts."])
+
+[sub_resource type="Resource" id="Resource_ne44h"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/too_sweet.json"
+items = Array[String](["My teeth hurt!"])
+
+[sub_resource type="Resource" id="Resource_ivsgc"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/comments/too_textured.json"
+items = Array[String](["Have you never learnt to use a knife?"])
+
+[sub_resource type="Resource" id="Resource_jwial"]
+script = ExtResource("2_0lwg5")
+not_cooked = SubResource("Resource_3b8dc")
+not_healthy = SubResource("Resource_f5ig6")
+not_meaty = SubResource("Resource_uqris")
+not_much = SubResource("Resource_xmmb3")
+not_salty = SubResource("Resource_klm6u")
+not_sour = SubResource("Resource_s3q2e")
+not_sweet = SubResource("Resource_vfuqs")
+not_textured = SubResource("Resource_2nevl")
+not_spicy = SubResource("Resource_enuhc")
+not_filling = SubResource("Resource_0lwg5")
+too_cooked = SubResource("Resource_qiye0")
+too_healthy = SubResource("Resource_f2r0o")
+too_meaty = SubResource("Resource_8a0u3")
+too_much = SubResource("Resource_68mu8")
+too_salty = SubResource("Resource_x3oby")
+too_sour = SubResource("Resource_74fg4")
+too_sweet = SubResource("Resource_ne44h")
+too_textured = SubResource("Resource_ivsgc")
+too_spicy = SubResource("Resource_5o6qq")
+too_filling = SubResource("Resource_ccsx1")
+dir_path = "res://customers/hobbit/comments"
+metadata/_custom_type_script = "uid://23fgsnyaetea"
+
+[sub_resource type="Resource" id="Resource_eiqw6"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/names.json"
+items = Array[String](["Samwise Gamgee"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_sqbd2"]
+script = ExtResource("1_3b8dc")
+json_path = "res://customers/hobbit/orders.json"
+items = Array[String](["Just give me whatever.", "What do you have on offer?", "What would you recommend?", "You can't do a whole lot of gardening on an empty stomach!", "I'm honestly not that hungry, I'm just here to check this place out.", "How do you do?", "I want something boiled or mashed or in a stew!"])
+metadata/_custom_type_script = "uid://cp601goyny8yk"
+
+[sub_resource type="Resource" id="Resource_5vacq"]
+script = ExtResource("6_klm6u")
+sweet = 0.5
+sour = 0.5
+salty = 0.7
+meaty = 0.5
+healthy = 0.3
+filling = 1.0
+spicy = 0.6
+metadata/_custom_type_script = "uid://dmor3qc07dgge"
+
+[sub_resource type="Resource" id="Resource_7bup1"]
+script = ExtResource("5_xmmb3")
+taste_vector = SubResource("Resource_5vacq")
+cook_time = 20.0
+amount = 1.5
+texture = 0.1
+metadata/_custom_type_script = "uid://dxpm23s7hgj3k"
+
+[resource]
+script = ExtResource("4_uqris")
+name = &"Hobbit"
+image = ExtResource("3_f5ig6")
+orders = SubResource("Resource_sqbd2")
+names = SubResource("Resource_eiqw6")
+comments = SubResource("Resource_jwial")
+taste_profile = SubResource("Resource_7bup1")
+metadata/_custom_type_script = "uid://casyras0bryah"

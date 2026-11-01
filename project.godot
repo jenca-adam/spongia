@@ -12,6 +12,7 @@ config_version=5
 
 config/name="One Cook To Rule Them All"
 config/description="A cooking game set in the LOTR universe."
+config/version="1.0.1a"
 run/main_scene="uid://be2co7l2qne48"
 config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0.16862746, 1)

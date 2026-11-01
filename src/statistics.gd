@@ -21,7 +21,7 @@ var total_food_served= [0.0]
 
 var total_cook_time= [0.0]
 var total_cuts_made= [0]
-
+var lost_hand = ["No"]
 var _customer_visits: Dictionary[String, int]={}
 var _customer_avg_scores: Dictionary[String, float]={}
 
@@ -90,3 +90,5 @@ func log_cut():
 
 func log_cook_frame(delta: float):
 	total_cook_time[0] += delta
+func log_hand_loss():
+	lost_hand[0]="Yes"

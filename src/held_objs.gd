@@ -14,6 +14,7 @@ func _ready():
 	grab_timeout=Timer.new()
 	add_child(grab_timeout)
 	grab_timeout.wait_time=0.1
+	
 func grab_item(item:Obj):
 	if (free_slots)==0 or active_item!=null:
 		return
@@ -55,6 +56,8 @@ func kill_hand():
 		item.unfreeze() # london brideg
 	free_slots&=~2 # do this after force_drop() since drop_item() frees the slot again
 	killed_hand=true
+	var root:=$/root/main as Main
+	root.statistics.log_hand_loss()
 func _input(event):
 	if (event.is_action_released("hide_grabbed_items")):
 		### DISABLED
